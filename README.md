@@ -1,4 +1,6 @@
 ## Uncrustify Documentation Project
+![uncrustify](https://img.shields.io/badge/Uncrustify-0.78.1-green)
+![license](https://img.shields.io/badge/Licence-CC--by--nc--sa-green)
 
 **[Uncrustify](https://github.com/uncrustify/)** is a powerfull source code beautifier for 
 [C](https://www.open-std.org/jtc1/sc22/wg14/), 
