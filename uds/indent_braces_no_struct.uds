@@ -1,0 +1,22 @@
+==== NAME indent_braces_no_struct  
+==== CODE
+struct S {
+    void f(int i){
+       a=i;
+    };
+    int a;
+};
+
+struct S
+{
+    void f(int i)
+    {
+       a=i;
+    };
+    int a;
+};
+==== SET indent_braces_no_struct=false indent_braces=true
+==== SET indent_braces_no_struct=true  indent_braces=true
+
+==== INFO
+  Edited by JEAYNE

@@ -1,0 +1,25 @@
+==== NAME: sp_after_semi_for
+for(i=0;`sp`i<9;`sp`i++)
+==== CODE
+void f(){
+    for(i=0;i<9;i++)x++;
+    for(j=0   ;   j<9   ;   j++)y++;
+  for(k=0;k<9;k++)z++;
+}
+
+==== SET sp_after_semi_for=ignore
+==== SET sp_after_semi_for=add
+==== SET sp_after_semi_for=remove
+==== SET sp_after_semi_for=force
+
+==== TRACK sp sp_after_semi_for
+
+==== INFO
+  Take care: the default is 'force'.
+  See also: sp_after_semi_for_empty.
+  Notes:
+  - The option 'sp_before_semi_for' doesn't exist. Why?
+    The option @sp_before_semi (default to 'remove') as no effect here. Why? BUG?
+  - When spaces are deleted the position of the 'y++' is unmodifier (like for comments), BUG?
+  - Why a space is added before 'z++' but not before 'x++' or 'y++', BUG.
+  Edited by JEAYNE

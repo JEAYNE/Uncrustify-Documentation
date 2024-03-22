@@ -1,0 +1,24 @@
+==== NAME: sp_before_comma
+int a`sp`,b;
+f(a`sp`,b);
+==== CODE
+int a,b,c;
+int a   ,   b   ,   c;
+
+int f(a,b,c);
+int f(a   ,   b   ,   c);
+
+printf("fmt",a,b,c);
+printf("fmt"   ,   a   ,   b);
+
+==== SET sp_before_comma=ignore
+==== SET sp_before_comma=add
+==== SET sp_before_comma=remove
+==== SET sp_before_comma=force
+
+==== TRACK sp sp_before_comma
+
+==== INFO
+  Take care: the default is 'remove'.
+  See also: @sp_after_comma
+  Edited by JEAYNE

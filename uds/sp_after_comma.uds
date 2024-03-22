@@ -1,0 +1,23 @@
+==== NAME: sp_after_comma
+int a,`sp`b;
+f(a,`sp`b);
+==== CODE
+int a,b,c;
+int a   ,   b   ,   c;
+
+int f(a,b,c);
+int f(a   ,   b   ,   c);
+
+printf("fmt",a,b,c);
+printf("fmt"   ,   a   ,   b);
+
+==== SET sp_after_comma=ignore sp_before_comma=ignore
+==== SET sp_after_comma=add    sp_before_comma=ignore
+==== SET sp_after_comma=remove sp_before_comma=ignore
+==== SET sp_after_comma=force  sp_before_comma=ignore
+
+==== TRACK sp sp_after_comma
+
+==== INFO
+  See also: @sp_before_comma
+  Edited by JEAYNE

@@ -1,0 +1,55 @@
+==== NAME: sp_after_type
+int`sp`i;
+class/enum/struct/union X`sp`{
+
+==== CODE
+int     i;
+vector  v;
+
+int(*f)(int*);
+int   (*f)(int*);
+
+enum Color{red,green,blue};
+enum Color    {red,green,blue};
+
+enum struct Color{red,green,blue};
+enum struct Color    {red,green,blue};
+
+enum class Color{red,green,blue};
+enum class Color    {red,green,blue};
+
+enum struct Color:int{red,green,blue};
+enum struct Color:int    {red,green,blue};
+
+class C{int a;int b;};
+class C    {int    a;int    b;};
+
+struct S{int a;int b;};
+struct S    {int    a;int    b;};
+
+union U{int a;int b;};
+union U    {int    a;int    b;};
+
+// but no effect on that
+
+int*p;
+int   *   p;
+int&r;
+int   &   r;
+
+int   f();
+char   *   f();
+
+enum{red,green,blue};
+enum    {red,green,blue};
+
+==== SET sp_after_type=ignore
+==== SET sp_after_type=add
+==== SET sp_after_type=remove
+==== SET sp_after_type=force
+
+==== TRACK sp sp_after_type
+
+==== INFO
+  Take care: the default is 'force'
+  Edited by JEAYNE

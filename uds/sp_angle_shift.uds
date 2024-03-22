@@ -1,0 +1,23 @@
+==== NAME: sp_angle_shift
+vector<vector<int>`sp`>
+==== CODE
+vector<vector<int>> v1;
+vector<vector<int>   > v2;
+
+array<int,(8>>2)> a1;
+array<array<int,(8>>2)>,4> a2;
+
+==== SET sp_angle_shift=ignore
+==== SET sp_angle_shift=add
+==== SET sp_angle_shift=remove
+==== SET sp_angle_shift=force
+
+==== INFO
+  Take care: the default is 'add'.
+  BUG: Why a space is ALWAYS added to v1, even with 'ignore' or 'remove'?
+  BUG: Why spaces are NEVER removed to v2, even with 'remove'?
+
+  array&lt;int,8>>2> a;   // is an Error for a compiler
+  array&lt;int,(8>>2)> a; // is Ok;
+
+  Edited by JEAYNE

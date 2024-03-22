@@ -1,0 +1,21 @@
+==== NAME: sp_after_constr_colon
+  MyClass(int A):`sp`a(A){
+    b=0;
+  };
+==== CODE
+class MyClass {
+MyClass(int I):i(I){
+    //...
+};
+MyClass(char C)   :   c(C){
+    //...
+};
+}
+==== SET sp_after_constr_colon=ignore
+==== SET sp_after_constr_colon=add
+==== SET sp_after_constr_colon=remove
+==== SET sp_after_constr_colon=force
+
+==== INFO
+  Take care: the default is 'add' for both @sp_before_constr_colon and @sp_after_constr_colon
+  Edited by JEAYNE

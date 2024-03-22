@@ -1,0 +1,24 @@
+==== NAME: align_typedef_span
+==== CODE
+typedef char*t;
+typedef unsigned char*t;
+//1
+typedef int*t;
+typedef unsigned*t;
+//1
+//2
+typedef float*t;
+typedef long double*t;
+//1
+//2
+//3
+typedef long long double*t;
+typedef double double*t;
+
+==== SET align_typedef_span=0
+==== SET align_typedef_span=1
+==== SET align_typedef_span=2
+==== SET align_typedef_span=3
+
+==== INFO
+  Edited by JEAYNE

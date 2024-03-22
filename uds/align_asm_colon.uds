@@ -1,0 +1,26 @@
+==== NAME: align_asm_colon
+==== CODE
+void align_asm_colon(){
+
+    asm ("bsfl %1,%0"
+       : "=r" (dwRes)
+         : "r" (dwSomeValue)
+      : "cc");
+
+    asm volatile ( "rdtsc\n\t"    // Returns the time in EDX:EAX.
+        "shl $32, %%rdx\n\t"  // Shift the upper bits left.
+        "or %%rdx, %0"     // 'Or' in the lower bits.
+       : "=a" (msr)
+     :
+         : "rdx");
+
+ asm volatile ("mtfsf 255,%1" : "=X" (sum) : "f" (fpenv));
+
+}
+==== SET align_asm_colon=false
+==== SET align_asm_colon=true
+
+==== INFO
+  code sample based on https://gcc.gnu.org/onlinedocs/gcc/Extended-Asm.html
+  BUG: same result for false and true: always aligned.
+  Edited by JEAYNE

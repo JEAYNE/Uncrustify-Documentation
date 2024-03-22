@@ -1,0 +1,28 @@
+==== NAME: sp_return_paren
+  return`sp`(expr);
+==== CODE
+int f(){
+    return(a+b);
+}
+int f(){
+    return    (a+b);
+}
+
+// No effect on that
+int f(){
+    return a+b;
+}
+int f(){
+    return    a+b;
+}
+
+==== SET sp_return_paren=ignore
+==== SET sp_return_paren=add
+==== SET sp_return_paren=remove
+==== SET sp_return_paren=force
+
+==== TRACK sp sp_return_paren
+
+==== INFO
+  See also: @sp_return
+  Edited by JEAYNE

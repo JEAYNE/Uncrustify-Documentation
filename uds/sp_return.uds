@@ -1,0 +1,40 @@
+==== NAME: sp_return
+  return`sp`expr;
+==== CODE
+void f(){
+    return;
+}
+
+int f(){
+    return+1;
+}
+int f(){
+    return   +1;
+}
+
+int f(){
+    return a+b;
+}
+int f(){
+    return    a+b;
+}
+
+// No effect on that
+int f(){
+    return(a+b);
+}
+int f(){
+    return    (a+b);
+}
+
+==== SET sp_return=ignore
+==== SET sp_return=add
+==== SET sp_return=remove
+==== SET sp_return=force
+
+==== TRACK sp sp_return
+
+==== INFO
+  Take care: the default is force.
+  This option has no effect on "return(a+b)" or "return   (a+b)" See @sp_return_paren
+  Edited by JEAYNE

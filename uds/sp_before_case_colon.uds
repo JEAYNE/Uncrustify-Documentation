@@ -1,0 +1,25 @@
+==== NAME: sp_before_case_colon
+switch(a){
+  case +1`sp`:
+    ...
+  default`sp`:
+    ...
+}
+==== CODE
+switch(a){
+case +1:a++;break;
+case -1   :a--;break;
+default   :   a=0;
+};
+
+==== SET sp_before_case_colon=ignore
+==== SET sp_before_case_colon=add
+==== SET sp_before_case_colon=remove
+==== SET sp_before_case_colon=force
+
+==== INFO
+  Take care: the default is 'remove'.
+  Notes:
+  - Why a space is added AFTER the colon ? How to disable this space ?
+  - There is no option 'sp_after_case_colon'. Why?
+  Edited by JEAYNE

@@ -1,0 +1,16 @@
+==== NAME align_assign_decl_func
+==== CODE
+class foo {
+  public:
+    virtual void foo() =0;
+    int var1= 1;
+  private:
+    int var2 =  2;
+    ~foo() =    default;
+    int var3=3;
+}
+==== SET align_assign_decl_func=0 align_assign_span=8
+==== SET align_assign_decl_func=1 align_assign_span=8
+==== SET align_assign_decl_func=2 align_assign_span=8
+==== INFO
+Edited by JEAYNE

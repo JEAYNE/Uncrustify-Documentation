@@ -1,0 +1,31 @@
+==== NAME: align_typedef_gap
+==== CODE
+//1
+typedef char t;
+
+typedef char*t;
+
+//2
+typedef char  t;
+
+typedef char* t;
+
+typedef char *t;
+
+//3
+typedef char   t;
+
+typedef char * t;
+
+typedef char* *t;
+
+==== SET align_typedef_gap=0 align_typedef_span=0
+==== SET align_typedef_gap=1 align_typedef_span=0
+==== SET align_typedef_gap=2 align_typedef_span=0
+==== SET align_typedef_gap=3 align_typedef_span=0
+==== SET align_typedef_gap=4 align_typedef_span=0
+
+==== INFO
+  BUG: where is the gap ? Is there a link with @align_typedef_span ?
+  BUG/Strange: When it works the * and & are included in the gap
+  Edited by JEAYNE

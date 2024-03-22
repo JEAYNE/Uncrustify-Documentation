@@ -1,0 +1,30 @@
+==== NAME: sp_addr
+ptr=&`sp`var
+==== CODE
+char*p=&c;
+char*p=&   c;
+
+cout<<&c;
+cout<<&   c;
+
+fcall(&c);
+fcall(&   c);
+
+// but no effect on that
+char&r=c;
+char&   r=c;
+f(char&,int&);
+f(c&   ,int&    );
+
+==== SET sp_addr=ignore
+==== SET sp_addr=add
+==== SET sp_addr=remove
+==== SET sp_addr=force
+
+==== TRACK sp sp_addr
+
+==== INFO
+  Take care: the default is 'remove'
+  BUG in TRACK "cout<<&c;" ==> "cout <> <<&c;"
+  Edited by JEAYNE
+

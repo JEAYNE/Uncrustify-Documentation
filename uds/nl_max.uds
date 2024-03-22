@@ -1,0 +1,46 @@
+==== NAME: nl_max
+==== CODE
+void f5nl(){
+
+
+
+
+	return;
+}
+//-------------
+void f10nl(){
+
+
+
+
+
+
+
+
+
+	return;
+}
+//-------------
+int a0;
+
+
+
+
+
+
+
+
+
+int a9;
+
+==== SET nl_max=0
+==== SET nl_max=9
+==== SET nl_max=6
+==== SET nl_max=3
+
+==== TRACK nl nl_max
+
+==== INFO
+  Notes:
+  - many options (nl_after_* nl_before_* ...) are limited by the value of nl_max.
+  Edited by JEAYNE

@@ -1,0 +1,46 @@
+==== NAME indent_braces  
+==== CODE
+int main(int argc,char**argv){
+    if(argc>1){
+        printf("Hello %s!\n",argv[1]);
+    }else{
+        puts("Hello world!");
+    }
+}
+
+class C {
+    void f(int i){
+       a=i;
+    };
+    int a;
+};
+
+//------------------------------------
+
+int main(int argc,char**argv)
+{
+    if(argc>1)
+    {
+        printf("Hello %s!\n",argv[1]);
+    }
+    else
+    {
+        puts("Hello world!");
+    }
+}
+
+class C
+{
+    void f(int i)
+    {
+       a=i;
+    };
+    int a;
+};
+
+==== SET indent_braces=false
+==== SET indent_braces=true
+
+==== INFO
+  See also: @indent_braces_no_class @indent_braces_no_func @indent_braces_no_struct
+  Edited by JEAYNE

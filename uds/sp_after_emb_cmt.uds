@@ -1,0 +1,30 @@
+==== NAME: sp_after_emb_cmt
+==== CODE
+// ??
+int a,/**/b/**/,c;
+int a,   /**/   b   /**/   ,c;
+
+// ??
+a=b>c?b/*max*/:c/*min*/;
+a=b>c?b   /*max*/   :c   /*min*/   ;
+
+// ??
+void/**/f();
+void   /**/   f();
+
+// ??
+void f(/*noparam*/);
+void f(   /*noparam*/   );
+
+==== SET sp_after_emb_cmt=ignore sp_after_type=ignore
+==== SET sp_after_emb_cmt=add    sp_after_type=ignore
+==== SET sp_after_emb_cmt=remove sp_after_type=ignore
+==== SET sp_after_emb_cmt=force  sp_after_type=ignore
+
+==== INFO
+  What is the definition of 'embedded comment' ?
+  BUG ? Interactions with other options ?
+  Take care: the default is 'force' for both @sp_before_emb_cmt and @sp_after_emb_cmt
+  Edited by JEAYNE
+
+
