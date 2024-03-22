@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>gap span threshold - Uncrustify Documentation Project</title>
+  <link rel="stylesheet" href="static/uncrustify.css">
+</head>
+<body>
+<a href="./" style="text-decoration: none;"><img src="./static/home-16.png"> home</a>
+<hr>
+<p>
+Uncrustify use the words « <b>gap</b> », « <b>span</b> » and « <b>threshold</b> » 
+in a way that <a href="https://github.com/uncrustify/uncrustify/issues/3762" target="_blank">some people</a> find confusing.
+</p>
+
+<h2>The uses</h2>
+The uses are fairly homogenous:
+<ul>
+  <li>11 options are using <a href="index_keyword.html#gap">gap</a> (<code>align_xxxx_gap</code>).<br/>
+      They all take a numerical value in [0 .. 16], 0 being the default value.<br/>
+      No exceptions.<br/>
+      <br/>
+  <li>18 options are using <a href="index_keyword.html#span">span</a> (<code>align_xxxx_span</code>)<br/>
+      They all take a numerical value in [0 .. 5000], 0 being the default value.<br/>
+      Exceptions:<br/>
+      - <code>align_constr_value_span</code> and <code>align_typedef_span</code> are in [0 .. 16].<br/>
+      - <code>align_func_proto_span_ignore_cont_lines</code> is a boolean.<br/>
+      <br/>
+      
+  <li>12 options are using <a href="index_keyword.html#thresh">thresh or threshold</a> (<code>align_xxxx_thresh</code>)<br/>
+      They all take a numerical value in [-1000 .. 5000], 0 being the default value.<br/>
+      A positive value is a relative value, a negative value is used as an absolute value.<br/>
+      Exceptions:<br/>
+      - <code>indent_comment_align_thresh</code> is in [0 .. 16], 3 being the default value.<br/>
+      - <code>indent_func_def_param_paren_pos_threshold</code> is in [0 .. 160].<br/>
+      <br/>
+</ul>
+
+<h2>Definitions</h2>
+Here the definitions found in <a href="https://github.com/uncrustify/uncrustify/blob/master/documentation/htdocs/configuration.txt" target="_blank">documentation/htdocs/configuration.txt</a>
+
+<div style="margin-left:2em">
+<dl>
+
+  <dt><b>gap</b></dt>
+  <dd>
+    A 'gap' is the minimum spacing for aligned items.<br/>
+    So, if it is set to 3 for typedefs, then there are a minimum of three spaces between the type and the typedef name.
+  </dd>
+
+  <dt><b>span</b></dt>
+  <dd>
+    A 'span' is the maximum number of lines that an aligning feature will be considered.<br/>
+    This is done to limit the scope of the aligning.
+    So, if a span is set to 3 and more than 3 lines do not contain the item that is to be aligned, then the aligning set is closed.
+  </dd>
+
+  <dt><b>threshold</b></dt>
+  <dd>
+    A 'threshold' is the maximum number of columns that an aligning feature will be considered.<br/>
+    This is done to limit the scope of the aligning. This prevents really longs lines from being aligned with short lines.
+  </dd>
+
+</dl>
+</div>
+
+<h2>Confusions</h2>
+<div style="margin-left:2em">
+  1/ Do these two definitions help you to understand what xxxx and yyyyy are?
+  <ul>
+    <li>A 'xxxx' is the maximum number of lines that an aligning feature will be considered. This is done to limit the scope of the aligning.
+    <li>A 'yyyy' is the maximum number of columns that an aligning feature will be considered. This is done to limit the scope of the aligning.
+  </ul>
+  <p>
+  NO!<br/>
+  The only thing you can say is that xxxx is about lines and yyyy is about columns.<br/>
+  But you can't say which is a 'gap', a 'span' or a 'threshold'.
+  </p>
+  <p>
+  2/ The confusion is also due to the usage of <i>maximum</i> or <i>minimum</i> in all three definitions.<br/>
+  Is there is a upper or lower limit this is a threshold.
+  </p>
+  <p>
+  3/ More generally, the explanations for many options are very short and cryptic.
+  </p>
+</div>
+
+<h2>IMHO</h2>
+<div style="margin-left:2em">
+  It seems to me that, when it comes to alignment, uncrustify uses these 3 words in a suitable but restrictive context:
+  <ul>
+    <li>‘<b>gap</b>’ as a minimum number of space.
+    <li>‘<b>span</b>’ as maximum number of line.
+    <li>‘<b>threshold</b>’ as a maximum number of space.
+        See this interesting <a href="https://github.com/uncrustify/uncrustify/blob/master/documentation/align-thresholds.txt" target="_blank">document</a> about threshold.
+  </ul>
+  <p>
+  The technical restrictions (minimum/maximum) and (space/line) are more important than the English definition.
+  </p>
+</div>
+
+<hr>
+<a href="./" style="text-decoration: none;"><img src="./static/home-16.png"> home</a>
+</body>
+</html>

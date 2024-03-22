@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Ignore Add Remove Force - Uncrustify Documentation Project</title>
+  <link rel="stylesheet" href="static/uncrustify.css">
+  <style>
+    table, th, td {
+      margin: 10px;
+      padding: 0 1em;
+      border: 1px solid;
+      border-collapse: collapse;
+      vertical-align: top;
+    }
+    td {
+      font-family: monospace;
+      white-space: pre;
+    }
+  </style>
+</head>
+<body>
+<a href="./" style="text-decoration: none;"><img src="./static/home-16.png"> home</a>
+<hr>
+<p>
+Many options used by uncrustify take a Boolean value: false or true, and this is understood by any developer.<br/>
+But there are also many options that are like enums where the possible values are { <b>i</b>gnore, <b>a</b>dd, <b>r</b>emove, <b>f</b>orce }.<br/>
+These options are called '<b>iarf options</b>'.
+</p>
+<h2>Definition</h2>
+<p><i>The definition of each value varies slightly if the option concerns spaces or another type of character.</i></p>
+<dl>
+  <dt><b>ignore</b>:</dt>
+  <dd>The option has <u>no effect</u> on the code. Nothing is added or removed.</dd>
+  <dt><b>add</b>:</dt>
+  <dd>for spaces: make sure there is <u>at least one</u> space.</dd>
+  <dd>for others: add one element if it is missing.</dd>
+  <dt><b>remove</b>:</dt>
+  <dd>for spaces: removes <u>all</u> spaces.</dd>
+  <dd>for others: removes the element if it is present.</dd>
+  <dt><b>force</b>:</dt>
+  <dd>for spaces: makes sure there is <u>exactly one</u> space. This has the same effect as remove + add.</dd>
+  <dd>for others: behaves like 'add'.</dd>
+</dl>
+
+<h2>Examples</h2>
+<p>
+Here the effects of the option <b>sp_after_assign</b> on various assignment:
+</p>
+<table border="1">
+  <tr>
+    <th rowspan="2">Input code</th>
+    <th colspan="4">Output code</th>
+  </tr><tr>
+    <th>sp_after_assign=ignore</th>
+    <th>sp_after_assign=add</th>
+    <th>sp_after_assign=remove</th>
+    <th>sp_after_assign force</th>
+  </tr><tr>
+    <td>Pi=3.14;</td>     <td>Pi=3.14;</td>    <td>Pi= 3.14;</td>   <td>Pi=3.14;</td><td>Pi= 3.14;</td>
+  </tr><tr>
+    <td>Pi= 3.14;</td>    <td>Pi= 3.14;</td>   <td>Pi= 3.14;</td>   <td>Pi=3.14;</td><td>Pi= 3.14;</td>
+  </tr><tr>
+    <td>Pi=   3.14;</td>  <td>Pi=    3.14;</td><td>Pi=    3.14;</td><td>Pi=3.14;</td><td>Pi= 3.14;</td>
+  </tr>
+</table>
+
+<h2>Default value</h2>
+<p>
+Most of the Boolean options default to ‘false’, and most of the iarf options default to ‘ignore’, <u>but not all</u>.<br/>
+See this <a href="index_default.html">index</a> of options with a default value that allow uncrustify to modify the code, even if the option is not explicitly set in the config file.<br/>
+For example the default value for <a href="options/sp_before_comma.html">sp_before_comma</a> is 'remove'. This means that, by default, uncrustify removes all spaces before a comma.
+</p>
+<hr>
+<a href="./" style="text-decoration: none;"><img src="./static/home-16.png"> home</a>
+</body>

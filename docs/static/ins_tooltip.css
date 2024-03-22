@@ -1,0 +1,51 @@
+.optkey {
+  font-family: monospace;
+  white-space: pre;
+  vertical-align: top;
+  padding: 6px;
+  border: 1px solid grey;
+}
+
+.code {
+  font-family: monospace;
+  white-space: pre;
+  vertical-align: top;
+  padding: 6px;
+  border: 1px solid grey;
+}
+
+.hscroll {
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+ins {
+  color: red;
+  text-decoration: unset;
+  &.sp:empty:before    { content: "\26A1"; }
+  &.space:empty:before { content: "\26A1"; }  /* flash: 26A1; */
+  &.nl:empty:before    { content: "\21A9"; }
+  &.dot:empty:before   { content: "\25AA"; }  /* small dot=22C5; bullet=25E6; square=25AA/25AB */
+}
+
+[alt] {
+  position: relative;
+  &:after {
+    content: attr(alt);
+    background-color: #00FF00;
+    color: black;
+    font-size: 120%;
+    position: absolute;
+    padding: 1px 5px 2px 5px;
+    bottom: -1.6em;
+    left: 100%;
+    /* white-space: nowrap; */
+    opacity: 0;
+    z-index: 99999;
+    visibility: hidden;
+  }
+  &:hover:after {
+    opacity: 1;
+    visibility: visible;
+  }
+}

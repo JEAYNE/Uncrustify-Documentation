@@ -1,0 +1,114 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Ignore Add Remove Force - Uncrustify Documentation Project</title>
+  <link rel="stylesheet" href="static/uncrustify.css">
+  <style>
+    table, th, td {
+      margin: 10px;
+      padding: 0 1em;
+      border: 1px solid;
+      border-collapse: collapse;
+      vertical-align: top;
+    }
+    td {
+      font-family: monospace;
+      white-space: pre;
+    }
+  </style>
+</head>
+<body>
+<a href="./" style="text-decoration: none;"><img src="./static/home-16.png"> home</a>
+<hr>
+
+<h2>Theoretically Uncrustify distinguishes between 3 main types of parenthesis:</h2>
+<div style="margin-left:2em">
+  <dl>
+  <dt><b>fparen</b> (<u>F</u>unction parenthesis)</dt>
+  <dd>
+    <code>fparen</code> is used by 9 options related to funtions:
+    <ul>
+      <li>function prototypes:      <code>int f(int);</code>
+      <li>function implementations: <code>int f(int n){ return n+n; }</code>
+      <li>function calls:           <code>x = f(4);</code>
+    </ul>
+  </dd>
+
+  <dt><b>sparen</b> (<u>S</u>tatement parenthesis)</dt>
+  <dd>
+    <code>sparen</code> is used by 10 options related to statements:
+    <ul>
+      <li><code>asm (…)</code>      &lt;-- FIXME / MAKE TEST
+      <li><code>catch (…)</code>    &lt;-- FIXME / MAKE TEST
+      <li><code>for (…;…;…)</code>
+      <li><code>if (…)</code>
+      <li><code>switch (…)</code>
+      <li><code>while (…)</code>
+    <ul>
+  </dd>
+
+  <dt><b>paren</b> (parenthesis)</dt>
+  <dd>
+    <code>paren</code> is used by ~80 options for all other parenthesis. But see below...
+  </dd>
+
+  </dl>
+
+  FIXME / MAKE TEST for alignas() asm() catch()
+</div>
+
+<h2>In practice...</h2>
+<div style="margin-left:2em">
+<p>
+Unfortunately, in practice, this naming convention is not respected, mainly for '<code>fparen</code>'.<br/>
+Options below are about parenthesis used for functions but '<code>paren</code>' is used where '<code>fparen</code>' is expected.<br/>
+</p>
+<code>
+donot_indent_func_def_close_paren, indent_paren_after_func_call, indent_paren_after_func_decl,
+indent_paren_after_func_def, nl_func_call_paren, nl_func_call_paren_empty, nl_func_def_paren,
+nl_func_def_paren_empty, nl_func_paren, nl_func_paren_empty, sp_func_call_paren, sp_func_call_paren_empty,
+sp_func_call_user_paren, sp_func_call_user_paren_paren, sp_func_class_paren, sp_func_class_paren_empty,
+sp_func_def_paren, sp_func_def_paren_empty, sp_func_proto_paren, sp_func_proto_paren_empty, sp_func_type_paren<br>
+...
+</code>
+<p>
+The convention for <code>sparan</code> has very few exceptions:
+</p>
+<code>
+indent_semicolon_for_paren, mod_full_paren_if_bool, sp_oc_catch_paren, sp_while_paren_open
+</code>
+</div>
+
+<h2>And there is also:</h2>
+<div style="margin-left:2em">
+  <dl>
+
+  <dt><b>cparen</b> (<u>C</u>losing parenthesis)</dt>
+  <dd>
+    <code>cparen</code> is only used by the option <a href="options/sp_cparen_oparen.html">sp_cparen_oparen</a>
+  </dd>
+
+  <dt><b>oparen</b> (<u>O</u>pening parenthesis)</dt>
+  <dd>
+    <code>oparen</code> is only used by the option <a href="options/sp_cparen_oparen.html">sp_cparen_oparen</a>.
+  </dd>
+
+  <dt><b>rparen</b> (functo<u>R</u> parenthesis)</dt>
+  <dd>
+    <code>rparen</code> is used by two options related to functors <a href="options/sp_func_call_user_inside_rparen.html">sp_func_call_user_inside_rparen</a> and <a href="options/sp_inside_rparen.html">sp_inside_rparen</a>
+    for this type of code: <code>operator()(int x) {…}</code>
+  </dd>
+
+  <dt><b>tparen</b> (<u>T</u>ype parenthesis)</dt>
+  <dd>
+    <code>tparen</code> is used by two options <a href="options/sp_inside_tparen.html">sp_inside_tparen</a> and <a href="options/sp_after_tparen_close.html">sp_after_tparen_close</a>
+    for this type of code: <code>void (*x)(...)</code>
+  </dd>
+
+  </dl>
+</div>
+
+<hr>
+<a href="./" style="text-decoration: none;"><img src="./static/home-16.png"> home</a>
+</body>
