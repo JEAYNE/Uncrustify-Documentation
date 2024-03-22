@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <title>UDS Files - Uncrustify Documentation Project</title>
   <link rel="stylesheet" href="static/uncrustify.css">
+  <link rel="stylesheet" href="static/ins_tooltip.css">
   <style>
     table, th, td {
       margin: 10px;
@@ -53,7 +54,7 @@ void main(void){
 ==== SET align_func_params=true
     </pre>
   </td><td><pre>
-==== NAME: nl_after_if
+==== NAME nl_after_if
 ==== CODE
 void main(void){
     puts("Hello world!");
@@ -65,7 +66,7 @@ void main(void){
 ==== SET nl_after_if=not_defined
     </pre>
   </td><td><pre>
-==== NAME: cmt_reflow_mode
+==== NAME cmt_reflow_mode
 ==== CODE
 void main(void){
     puts("Hello world!");
@@ -78,80 +79,148 @@ void main(void){
 </tr>
 </table>
 <p>
-- The name of the file must be &lt;option_name>.uds Example: align_func_params.uds<br/>
-and the line "==== NAME &lt;option_name>" must be inline with the file it belongs to.
+You can explore the <a href="https://github.com/JEAYNE/Uncrustify-Documentation/tree/main/uds">existing uds</a> files.
 </p>
+
+<h1>Level 1</h1>
+The sections NAME, CODE, SET are mandatory.
+<div style="margin-left:2em">
+  <h4>NAME</h4>
+  <p>
+  The name of the file must be &lt;option_name>.uds Example: align_func_params.uds<br/>
+  and the line <code>==== NAME &lt;option_name></code> must be the first section and inline with the name of the file it belongs to.
+  </p>
+  <h4>CODE</h4>
+  <p>
+  By default the CODE section is selected by an algorithm based on the option name.<br/>
+  For example, the option 'indent_else_if' will trigger the use of a piece of code with if/else structures.<br/>
+  But there are many reasons why the code chosen is wrong or not optimal.<br/>
+  This is where YOU (the reader) have a role to play in this project, by providing an uds file with a better code section.
+  </p>
+  <h4>SET</h4>
+  <p>
+  The "<code>=== SET &lt;option_name>=&lt;value></code>" lines list all the possible values for this option.
+  </p>
+  <p>
+  When the html page for an option is generated, the CODE section of the uds file is submitted to uncrustify
+  with an empty configuration and with every SET line:</p>
+  <pre>
+  ==== SET cmt_reflow_mode=0
+  ==== SET cmt_reflow_mode=1
+  ==== SET cmt_reflow_mode=2
+
+  Results in the execution of:
+
+    uncrustify -c -  --set cmt_reflow_mode=0  ...
+    uncrustify -c -  --set cmt_reflow_mode=1  ...
+    uncrustify -c -  --set cmt_reflow_mode=2  ...
+  </pre>
 <p>
-- By default the CODE section is selected by an algorithm based on the option name.<br/>
-For example, the option 'indent_else_if' will trigger the use of a piece of code with if/else structures.<br/>
-But there are many reasons why the code chosen is wrong or not optimal.<br/>
-This is where YOU (reader) have a role to play in this project, by providing an uds file with a better code section.
+The output of each execution of uncrustify is shown as a column in the results table, along with the original CODE.
 </p>
-<p>
-- The "=== SET &lt;option_name>=&lt;value>" lines list all the possible values for this option.
-</p>
-<p>
-When the doc for an option is generated, the CODE section of the uds file is submitted to uncrustify
-with an empty configuration and with every SET line:</p>
-<pre>
-  uncrustify -c -  --set cmt_reflow_mode=0
-  uncrustify -c -  --set cmt_reflow_mode=1
-  uncrustify -c -  --set cmt_reflow_mode=2
-</pre>
-<p>
-The output of each execution, is included in the page dedicated to this option, along with the original CODE.
-</p>
+</div>
 
 <h1>Level 2</h1>
-<ul>
+<div style="margin-left:2em">
+  <h4>INFO</h4>
+  After the CODE and SET sections you can add an INFOrmation section to the .uds file
+  <pre>
+  ==== INFO
+    See also @nl_max and @nl_after_for
+    Updated by Riton based on issue #1234
+  </pre>
+  This section is displayed after the table showing the effects on CODE for each SET.<br/>
+  Note: <code>@option_name</code> is replaced by a link to this option.
 
-<li>You can add an INFOrmation section to the .uds file
-<p><pre>
-==== INFO
-  optimized by Trucmuche on 2024/02/29
-  See comment by Riton in issue 1234 github.com/...
-</pre>
-This section will be displayed after the "Examples" on the option page.
-<p>
+  <h4>SET</h4>
+  You can SET more than one option.
+  <pre>
+  ==== SET &lt;option_name>=&lt;value> &lt;option_name_A>=&lt;value1> &lt;option_name_B>=&lt;value2>
+  </pre>
+  This is required when the effect of the option depends on the value of other options.
 
-<li>You can SET more than one option.
-<p><pre>
-==== SET &lt;option_name>=&lt;value> &lt;option_name_A>=&lt;value1> &lt;option_name_B>=&lt;value2>
-</pre>
-This is required when the effect of the option depends on the value of other options.
-</p>
+  <h4>CODE</h4>
+  You can specify the language used in the CODE section.
+  <pre>
+  ==== CODE JAVA
+  import java.awt.*;
+  ...
+  </pre>
+  The default is CPP.<br/>
+  The valid values are: C CPP C++ D CS C# JAVA PAWN OC OC+ VALA.
+</div>
 
-<li>You can specify the language used in the CODE section.
-<p><pre>
-==== CODE JAVA
-import java.awt.*;
-...
-</pre>
-The default is CPP.<br/>
-The valid values are: C CPP C++ D CS C# JAVA PAWN OC OC+ VALA.
-</p>
+<h1>Level 3</h1>
+<div style="margin-left:2em">
+  <h4>TRACK</h4>
+  The TRACK section is based on a debug functionnality of uncrutify (--tracking ...)
+  <pre>
+  ==== TRACK [space|sp|newline|nl] &lt;option_name>
+  </pre>
+  <ul>
+  <li><i>space</i> and <i>sp</i> are synonyms, <ins class="sp" alt="space"></ins></li>
+  <li><i>newline</i> and <i>nl</i> are also synonyms. <ins class="nl" alt="newline"></ins></li>
+  </ul>
+  <p>
+  A TRACK, like a SET, causes the execution of uncrustify and the output generated is added to the table<br/>
+  Depending on the family the &lt;option_name> belongs to (space or newline) the icon <ins class="sp" alt="space"></ins> or
+  <ins class="nl" alt="newline"></ins> will show in the output where the &lt;option_name> has un effect in the CODE.<br/>
+  The icon <ins class="dot" alt="family"></ins> is used to show other places in the CODE where other options in the same family
+  have an effect.
+  </p>
 
-</ul>
+  <h4>CODE + SET + TRACK + INFO</h4>
+  This make up a group: { 1 * CODE + (1,n) * SET + (0,n) * TRACK + (0,1) * INFO }<br/>
+  You can insert several groups in an uds file.
+  <pre>
+  ==== NAME ...
+
+  # 1st group
+  ==== CODE
+   ...
+  ==== SET   ...
+  ==== SET   ...
+  ==== TRACK ...
+  ==== INFO
+    ...
+
+  # 2nd group
+  ==== CODE JAVA
+   ...
+  ==== SET  ...
+  ==== SET  ...
+  ==== SET  ...
+  ==== INFO
+    ...
+
+  # 3rd group
+  ...
+  </pre>
+  Each group produces its own table of results in the final html page.
+</div>
 
 <h1>Last but not least...</h1>
 <p>
-Provide your uds file in a comment and/or in a pull request > <a href="https://github.com/JEAYNE/Uncrustify-Documentation-Project" target="home">here</a> &lt;
+Provide your uds file in a comment and/or in a pull request > <a href="https://github.com/JEAYNE/Uncrustify-Documentation/issues" target="_blank">here</a> &lt;
 </p>
 <p>
 IMPORTANT:
 <ul>
-  <li>The goal of an .uds file is to show the effect of only one option. Don't expect a full formated result in the final examples.
+  <li>The goal of an .uds file is to show the effect of only one option. Don't expect a full formated result in the final examples.</li>
   <li>The output generated by an .uds file if based on:
     <ul>
-      <li> an empty configuration
-      <li> --set indent_with_tabs=0 --set indent_columns=4
-      <li> a SET provided by the uds file
+      <li> an empty configuration</li>
+      <li> --set indent_with_tabs=0 --set indent_columns=4</li>
+      <li> at least one SET provided by the uds file</li>
     </ul>
-  <li>Even with an empty configuration a few options have a value that is not the <i>usual</i> default value ('false', 'ignore', '0').
-    See <a href="index_default.html">list here</a>.
+  </li>
+  <li>Even with an empty configuration a few options have a value that is not the <i>usual</i> default value: 'false', 'ignore' or '0'.
+    See the <a href="index_default.html">list here</a>.
+  </li>
   <li>If you think the output generated by uncrustify is invalid you should first contact the
-    <a href="https://github.com/uncrustify/uncrustify">Uncrustify team</a>.<br/>
+    <a href="https://github.com/uncrustify/uncrustify" target="_blank">Uncrustify team</a>.<br/>
     Here, we document the output, whether it's good or bad ;-)
+  </li>
 </ul>
 <hr>
 <a href="./" style="text-decoration: none;"><img src="./static/home-16.png"> home</a>
