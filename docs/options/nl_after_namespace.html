@@ -1,0 +1,186 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>nl_after_namespace - uncrustify options</title>
+  <link rel="stylesheet" href="../static/uncrustify.css">
+  <link rel="stylesheet" href="../static/ins_tooltip.css">
+</head>
+<body>
+<p style="float:right;"><a href="../" style="text-decoration:none;" target="_top"><img src="../static/home-16.png"> home</a> &nbsp; </p>
+<h1><pre style="color:yellow">nl_after_namespace</pre></h1>
+
+<h1>Properties</h1>
+<pre>
+  Category: Blank line options
+      Type: numeric [0 .. 16]
+   Default: 0
+</pre>
+<h1>Description</h1>
+<pre>
+The number of newlines after '}' of a namespace.
+</pre>
+<h1>Examples</h1>
+
+<div class="hscroll">
+<table><tr>
+  <th class="optkey">raw CPP code</th>
+  <th class="optkey">nl_after_namespace=0</th>
+  <th class="optkey">nl_after_namespace=5</th>
+  <th class="optkey">nl_after_namespace=10</th>
+  <th class="optkey">nl_after_namespace=16</th>
+  <th class="optkey">nl<br/>nl_after_namespace</th>
+</tr><tr>
+<td class="code">using namespace std::string_literals;
+namespace A{int i;};
+namespace B{int i;int j;namespace C{namespace D{int k;}}}
+</td>
+<td class="code">using namespace std::string_literals;
+namespace A {int i;};
+namespace B {int i; int j; namespace C {namespace D {int k;}}}
+</td>
+<td class="code">using namespace std::string_literals;
+namespace A {int i;}
+
+
+
+
+;
+namespace B {int i; int j; namespace C {namespace D {int k;}
+
+
+
+
+}
+
+
+
+
+}
+
+
+
+</td>
+<td class="code">using namespace std::string_literals;
+namespace A {int i;}
+
+
+
+
+
+
+
+
+
+;
+namespace B {int i; int j; namespace C {namespace D {int k;}
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+</td>
+<td class="code">using namespace std::string_literals;
+namespace A {int i;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+;
+namespace B {int i; int j; namespace C {namespace D {int k;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</td>
+<td class="code">using namespace std::string_literals;<ins class="dot" alt="nl_after_semicolon"></ins>
+namespace A {int i;<ins class="dot" alt="nl_after_semicolon"></ins>};<ins class="dot" alt="nl_after_semicolon"></ins>
+namespace B {int i;<ins class="dot" alt="nl_after_semicolon"></ins>int j;<ins class="dot" alt="nl_after_semicolon"></ins>namespace C {namespace D {int k;<ins class="dot" alt="nl_after_semicolon"></ins>}}}</td>
+</tr></table>
+&nbsp;
+</div>
+
+<p><i>Not the best code for this option? See how to improve the <a href="../how_to_uds.html" target="_top">.uds file</a> used to generate these examples.</i></p><div class="footer">
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank"><img src="../static/Cc-by-nc-sa_icon.svg" align="left"></a>
+<ul style="padding-left:9em;">
+<li>Report problems related to this documentation <a href="https://github.com/JEAYNE/Uncrustify-Documentation/issues" target="_blank">here</a>.</li>
+<li>The Uncrustify Documentation Project is <b>not</b> managed by the <a href="https://github.com/uncrustify" target="_blank">uncrustify</a> team.</li>
+</ul>
+</div></body>
+</html>

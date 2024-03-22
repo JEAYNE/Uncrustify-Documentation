@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>sp_after_oc_return_type - uncrustify options</title>
+  <link rel="stylesheet" href="../static/uncrustify.css">
+  <link rel="stylesheet" href="../static/ins_tooltip.css">
+</head>
+<body>
+<p style="float:right;"><a href="../" style="text-decoration:none;" target="_top"><img src="../static/home-16.png"> home</a> &nbsp; </p>
+<h1><pre style="color:yellow">sp_after_oc_return_type</pre></h1>
+
+<h1>Properties</h1>
+<pre>
+  Category: Spacing options
+      Type: multiple (ignore add remove force)
+   Default: ignore
+</pre>
+<h1>Description</h1>
+<pre>
+(OC) Add or remove space after the first (type) in message specs,
+i.e. '-(int) f:(int)x;' vs. '-(int)f:(int)x;'.
+</pre>
+<h1>Examples</h1>
+
+<div class="hscroll">
+<table><tr>
+  <th class="optkey">raw CPP code</th>
+  <th class="optkey">sp_after_oc_return_type=ignore</th>
+  <th class="optkey">sp_after_oc_return_type=add</th>
+  <th class="optkey">sp_after_oc_return_type=remove</th>
+  <th class="optkey">sp_after_oc_return_type=force</th>
+  <th class="optkey">space<br/>sp_after_oc_return_type</th>
+</tr><tr>
+<td class="code">void f(){return;}
+int f(){return a+b;}
+int f(){return(a+b);}
+</td>
+<td class="code">void f(){
+    return;
+}
+int f(){
+    return a+b;
+}
+int f(){
+    return(a+b);
+}
+</td>
+<td class="code">void f(){
+    return;
+}
+int f(){
+    return a+b;
+}
+int f(){
+    return(a+b);
+}
+</td>
+<td class="code">void f(){
+    return;
+}
+int f(){
+    return a+b;
+}
+int f(){
+    return(a+b);
+}
+</td>
+<td class="code">void f(){
+    return;
+}
+int f(){
+    return a+b;
+}
+int f(){
+    return(a+b);
+}
+</td>
+<td class="code">void<ins class="dot" alt="sp_type_func | ADD"></ins>f<ins class="dot" alt="sp_func_def_paren"></ins>(<ins class="dot" alt="sp_inside_fparens"></ins>)<ins class="dot" alt="sp_fparen_brace"></ins>{<ins class="dot" alt="REMOVE"></ins>
+    return<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
+}<ins class="dot" alt="REMOVE"></ins>
+int<ins class="dot" alt="sp_type_func | ADD"></ins>f<ins class="dot" alt="sp_func_def_paren"></ins>(<ins class="dot" alt="sp_inside_fparens"></ins>)<ins class="dot" alt="sp_fparen_brace"></ins>{<ins class="dot" alt="REMOVE"></ins>
+    return<ins class="dot" alt="sp_return"></ins>a<ins class="dot" alt="sp_arith"></ins>+<ins class="dot" alt="sp_arith"></ins>b<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
+}<ins class="dot" alt="REMOVE"></ins>
+int<ins class="dot" alt="sp_type_func | ADD"></ins>f<ins class="dot" alt="sp_func_def_paren"></ins>(<ins class="dot" alt="sp_inside_fparens"></ins>)<ins class="dot" alt="sp_fparen_brace"></ins>{<ins class="dot" alt="REMOVE"></ins>
+    return<ins class="dot" alt="sp_return_paren"></ins>(<ins class="dot" alt="sp_inside_paren"></ins>a<ins class="dot" alt="sp_arith"></ins>+<ins class="dot" alt="sp_arith"></ins>b<ins class="dot" alt="sp_inside_paren"></ins>)<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
+}<ins class="dot" alt="REMOVE"></ins></td>
+</tr></table>
+&nbsp;
+</div>
+
+<p><i>Not the best code for this option? See how to improve the <a href="../how_to_uds.html" target="_top">.uds file</a> used to generate these examples.</i></p><div class="footer">
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank"><img src="../static/Cc-by-nc-sa_icon.svg" align="left"></a>
+<ul style="padding-left:9em;">
+<li>Report problems related to this documentation <a href="https://github.com/JEAYNE/Uncrustify-Documentation/issues" target="_blank">here</a>.</li>
+<li>The Uncrustify Documentation Project is <b>not</b> managed by the <a href="https://github.com/uncrustify" target="_blank">uncrustify</a> team.</li>
+</ul>
+</div></body>
+</html>

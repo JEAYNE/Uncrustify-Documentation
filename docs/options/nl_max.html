@@ -1,0 +1,220 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>nl_max - uncrustify options</title>
+  <link rel="stylesheet" href="../static/uncrustify.css">
+  <link rel="stylesheet" href="../static/ins_tooltip.css">
+</head>
+<body>
+<p style="float:right;"><a href="../" style="text-decoration:none;" target="_top"><img src="../static/home-16.png"> home</a> &nbsp; </p>
+<h1><pre style="color:yellow">nl_max</pre></h1>
+
+<h1>Properties</h1>
+<pre>
+  Category: Blank line options
+      Type: numeric [0 .. 16]
+   Default: 0
+</pre>
+<h1>Description</h1>
+<pre>
+The maximum number of consecutive newlines (3 = 2 blank lines).
+</pre>
+<h1>Examples</h1>
+
+<div class="hscroll">
+<table><tr>
+  <th class="optkey">raw CPP code</th>
+  <th class="optkey">nl_max=0</th>
+  <th class="optkey">nl_max=9</th>
+  <th class="optkey">nl_max=6</th>
+  <th class="optkey">nl_max=3</th>
+  <th class="optkey">nl<br/>nl_max</th>
+</tr><tr>
+<td class="code">void f5nl(){
+
+
+
+
+	return;
+}
+//-------------
+void f10nl(){
+
+
+
+
+
+
+
+
+
+	return;
+}
+//-------------
+int a0;
+
+
+
+
+
+
+
+
+
+int a9;
+</td>
+<td class="code">void f5nl(){
+
+
+
+
+    return;
+}
+//-------------
+void f10nl(){
+
+
+
+
+
+
+
+
+
+    return;
+}
+//-------------
+int a0;
+
+
+
+
+
+
+
+
+
+int a9;
+</td>
+<td class="code">void f5nl(){
+
+
+
+
+    return;
+}
+//-------------
+void f10nl(){
+
+
+
+
+
+
+
+
+    return;
+}
+//-------------
+int a0;
+
+
+
+
+
+
+
+
+int a9;
+</td>
+<td class="code">void f5nl(){
+
+
+
+
+    return;
+}
+//-------------
+void f10nl(){
+
+
+
+
+
+    return;
+}
+//-------------
+int a0;
+
+
+
+
+
+int a9;
+</td>
+<td class="code">void f5nl(){
+
+
+    return;
+}
+//-------------
+void f10nl(){
+
+
+    return;
+}
+//-------------
+int a0;
+
+
+int a9;
+</td>
+<td class="code">void f5nl(){
+
+
+
+
+    return;<ins class="dot" alt="nl_after_semicolon"></ins>
+}
+//-------------
+void f10nl(){
+
+
+
+
+
+
+
+
+
+    return;<ins class="dot" alt="nl_after_semicolon"></ins>
+}
+//-------------
+int a0;<ins class="dot" alt="nl_after_semicolon"></ins>
+
+
+
+
+
+
+
+
+
+int a9;<ins class="dot" alt="nl_after_semicolon"></ins></td>
+</tr></table>
+&nbsp;
+</div>
+<h3>Info</h3>
+<pre>  Notes:
+  - many options (nl_after_* nl_before_* ...) are limited by the value of nl_max.
+  Edited by JEAYNE
+</pre><hr>
+<p><i>Not the best code for this option? See how to improve the <a href="../how_to_uds.html" target="_top">.uds file</a> used to generate these examples.</i></p><div class="footer">
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank"><img src="../static/Cc-by-nc-sa_icon.svg" align="left"></a>
+<ul style="padding-left:9em;">
+<li>Report problems related to this documentation <a href="https://github.com/JEAYNE/Uncrustify-Documentation/issues" target="_blank">here</a>.</li>
+<li>The Uncrustify Documentation Project is <b>not</b> managed by the <a href="https://github.com/uncrustify" target="_blank">uncrustify</a> team.</li>
+</ul>
+</div></body>
+</html>

@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>sp_before_operator_ptr_star - uncrustify options</title>
+  <link rel="stylesheet" href="../static/uncrustify.css">
+  <link rel="stylesheet" href="../static/ins_tooltip.css">
+</head>
+<body>
+<p style="float:right;"><a href="../" style="text-decoration:none;" target="_top"><img src="../static/home-16.png"> home</a> &nbsp; </p>
+<h1><pre style="color:yellow">sp_before_operator_ptr_star</pre></h1>
+
+<h1>Properties</h1>
+<pre>
+  Category: Spacing options
+      Type: multiple (ignore add remove force)
+   Default: ignore
+</pre>
+<h1>Description</h1>
+<pre>
+Add or remove space before pointer star '*' that is followed by 'operator' keyword.
+If set to ignore, sp_before_unnamed_ptr_star is used instead.
+</pre>
+<h1>Examples</h1>
+
+<div class="hscroll">
+<table><tr>
+  <th class="optkey">raw CPP code</th>
+  <th class="optkey">sp_before_operator_ptr_star=ignore</th>
+  <th class="optkey">sp_before_operator_ptr_star=add</th>
+  <th class="optkey">sp_before_operator_ptr_star=remove</th>
+  <th class="optkey">sp_before_operator_ptr_star=force</th>
+  <th class="optkey">space<br/>sp_before_operator_ptr_star</th>
+</tr><tr>
+<td class="code">/*-- this is the default sample --*/
+int main(int argc, char** argv){
+  int n = 0;
+  if(arg>=1){
+  printf("Hello %s!\n", argv[1]);
+    n=strlen(argv[1]);
+  }else{
+    puts("Hello world!");
+  }
+  return n;
+}
+</td>
+<td class="code">/*-- this is the default sample --*/
+int main(int argc, char** argv){
+    int n = 0;
+    if(arg>=1){
+        printf("Hello %s!\n", argv[1]);
+        n=strlen(argv[1]);
+    }else{
+        puts("Hello world!");
+    }
+    return n;
+}
+</td>
+<td class="code">/*-- this is the default sample --*/
+int main(int argc, char** argv){
+    int n = 0;
+    if(arg>=1){
+        printf("Hello %s!\n", argv[1]);
+        n=strlen(argv[1]);
+    }else{
+        puts("Hello world!");
+    }
+    return n;
+}
+</td>
+<td class="code">/*-- this is the default sample --*/
+int main(int argc, char** argv){
+    int n = 0;
+    if(arg>=1){
+        printf("Hello %s!\n", argv[1]);
+        n=strlen(argv[1]);
+    }else{
+        puts("Hello world!");
+    }
+    return n;
+}
+</td>
+<td class="code">/*-- this is the default sample --*/
+int main(int argc, char** argv){
+    int n = 0;
+    if(arg>=1){
+        printf("Hello %s!\n", argv[1]);
+        n=strlen(argv[1]);
+    }else{
+        puts("Hello world!");
+    }
+    return n;
+}
+</td>
+<td class="code">/*-- this is the default sample --*/<ins class="dot" alt="REMOVE"></ins>
+int<ins class="dot" alt="sp_type_func | ADD"></ins>main<ins class="dot" alt="sp_func_def_paren"></ins>(<ins class="dot" alt="sp_inside_fparen"></ins>int<ins class="dot" alt="sp_after_type"></ins>argc<ins class="dot" alt="sp_before_comma"></ins>,<ins class="dot" alt="sp_after_comma"></ins>char<ins class="dot" alt="IGNORE"></ins>*<ins class="dot" alt="sp_between_ptr_star"></ins>*<ins class="dot" alt="sp_after_ptr_star"></ins>argv<ins class="dot" alt="sp_inside_fparen"></ins>)<ins class="dot" alt="sp_fparen_brace"></ins>{<ins class="dot" alt="REMOVE"></ins>
+    int<ins class="dot" alt="sp_after_type"></ins>n<ins class="dot" alt="sp_assign"></ins>=<ins class="dot" alt="sp_assign"></ins>0<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
+    if<ins class="dot" alt="sp_before_sparen"></ins>(<ins class="dot" alt="sp_inside_sparen"></ins>arg<ins class="dot" alt="sp_compare"></ins>>=<ins class="dot" alt="sp_compare"></ins>1<ins class="dot" alt="sp_inside_sparen"></ins>)<ins class="dot" alt="sp_after_sparen"></ins>{<ins class="dot" alt="REMOVE"></ins>
+        printf<ins class="dot" alt="sp_func_call_paren"></ins>(<ins class="dot" alt="sp_inside_fparen"></ins>"Hello %s!\n"<ins class="dot" alt="sp_before_comma"></ins>,<ins class="dot" alt="sp_after_comma"></ins>argv<ins class="dot" alt="sp_before_square"></ins>[<ins class="dot" alt="sp_inside_square"></ins>1<ins class="dot" alt="sp_inside_square"></ins>]<ins class="dot" alt="sp_inside_fparen"></ins>)<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
+        n<ins class="dot" alt="sp_assign"></ins>=<ins class="dot" alt="sp_assign"></ins>strlen<ins class="dot" alt="sp_func_call_paren"></ins>(<ins class="dot" alt="sp_inside_fparen"></ins>argv<ins class="dot" alt="sp_before_square"></ins>[<ins class="dot" alt="sp_inside_square"></ins>1<ins class="dot" alt="sp_inside_square"></ins>]<ins class="dot" alt="sp_inside_fparen"></ins>)<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
+    }<ins class="dot" alt="sp_brace_else"></ins>else<ins class="dot" alt="sp_else_brace"></ins>{<ins class="dot" alt="REMOVE"></ins>
+        puts<ins class="dot" alt="sp_func_call_paren"></ins>(<ins class="dot" alt="sp_inside_fparen"></ins>"Hello world!"<ins class="dot" alt="sp_inside_fparen"></ins>)<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
+    }<ins class="dot" alt="REMOVE"></ins>
+    return<ins class="dot" alt="sp_return"></ins>n<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
+}<ins class="dot" alt="REMOVE"></ins></td>
+</tr></table>
+&nbsp;
+</div>
+
+<p><i>Not the best code for this option? See how to improve the <a href="../how_to_uds.html" target="_top">.uds file</a> used to generate these examples.</i></p><div class="footer">
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank"><img src="../static/Cc-by-nc-sa_icon.svg" align="left"></a>
+<ul style="padding-left:9em;">
+<li>Report problems related to this documentation <a href="https://github.com/JEAYNE/Uncrustify-Documentation/issues" target="_blank">here</a>.</li>
+<li>The Uncrustify Documentation Project is <b>not</b> managed by the <a href="https://github.com/uncrustify" target="_blank">uncrustify</a> team.</li>
+</ul>
+</div></body>
+</html>

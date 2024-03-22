@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>align_asm_colon - uncrustify options</title>
+  <link rel="stylesheet" href="../static/uncrustify.css">
+  <link rel="stylesheet" href="../static/ins_tooltip.css">
+</head>
+<body>
+<p style="float:right;"><a href="../" style="text-decoration:none;" target="_top"><img src="../static/home-16.png"> home</a> &nbsp; </p>
+<h1><pre style="color:yellow">align_asm_colon</pre></h1>
+
+<h1>Properties</h1>
+<pre>
+  Category: Code alignment options (not left column spaces/tabs)
+      Type: boolean [false, true]
+   Default: false
+</pre>
+<h1>Description</h1>
+<pre>
+Whether to align text after 'asm volatile ()' colons.
+</pre>
+<h1>Examples</h1>
+
+<div class="hscroll">
+<table><tr>
+  <th class="optkey">raw CPP code</th>
+  <th class="optkey">align_asm_colon=false</th>
+  <th class="optkey">align_asm_colon=true</th>
+</tr><tr>
+<td class="code">void align_asm_colon(){
+
+    asm ("bsfl %1,%0"
+       : "=r" (dwRes)
+         : "r" (dwSomeValue)
+      : "cc");
+
+    asm volatile ( "rdtsc\n\t"    // Returns the time in EDX:EAX.
+        "shl $32, %%rdx\n\t"  // Shift the upper bits left.
+        "or %%rdx, %0"     // 'Or' in the lower bits.
+       : "=a" (msr)
+     :
+         : "rdx");
+
+ asm volatile ("mtfsf 255,%1" : "=X" (sum) : "f" (fpenv));
+
+}
+</td>
+<td class="code">void align_asm_colon(){
+
+    asm ("bsfl %1,%0"
+         : "=r" (dwRes)
+         : "r" (dwSomeValue)
+         : "cc");
+
+    asm volatile ( "rdtsc\n\t"    // Returns the time in EDX:EAX.
+                   "shl $32, %%rdx\n\t" // Shift the upper bits left.
+                   "or %%rdx, %0" // 'Or' in the lower bits.
+                   : "=a" (msr)
+                   :
+                   : "rdx");
+
+    asm volatile ("mtfsf 255,%1" : "=X" (sum) : "f" (fpenv));
+
+}
+</td>
+<td class="code">void align_asm_colon(){
+
+    asm ("bsfl %1,%0"
+         : "=r" (dwRes)
+         : "r" (dwSomeValue)
+         : "cc");
+
+    asm volatile ( "rdtsc\n\t"    // Returns the time in EDX:EAX.
+                   "shl $32, %%rdx\n\t" // Shift the upper bits left.
+                   "or %%rdx, %0" // 'Or' in the lower bits.
+                   : "=a" (msr)
+                   :
+                   : "rdx");
+
+    asm volatile ("mtfsf 255,%1" : "=X" (sum) : "f" (fpenv));
+
+}
+</td>
+</tr></table>
+&nbsp;
+</div>
+<h3>Info</h3>
+<pre>  code sample based on <a href="https://gcc.gnu.org/onlinedocs/gcc/Extended-Asm.html" target="_blank">https://gcc.gnu.org/onlinedocs/gcc/Extended-Asm.html</a>
+  BUG: same result for false and true: always aligned.
+  Edited by JEAYNE
+</pre><hr>
+<p><i>Not the best code for this option? See how to improve the <a href="../how_to_uds.html" target="_top">.uds file</a> used to generate these examples.</i></p><div class="footer">
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank"><img src="../static/Cc-by-nc-sa_icon.svg" align="left"></a>
+<ul style="padding-left:9em;">
+<li>Report problems related to this documentation <a href="https://github.com/JEAYNE/Uncrustify-Documentation/issues" target="_blank">here</a>.</li>
+<li>The Uncrustify Documentation Project is <b>not</b> managed by the <a href="https://github.com/uncrustify" target="_blank">uncrustify</a> team.</li>
+</ul>
+</div></body>
+</html>

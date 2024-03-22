@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>align_assign_decl_func - uncrustify options</title>
+  <link rel="stylesheet" href="../static/uncrustify.css">
+  <link rel="stylesheet" href="../static/ins_tooltip.css">
+</head>
+<body>
+<p style="float:right;"><a href="../" style="text-decoration:none;" target="_top"><img src="../static/home-16.png"> home</a> &nbsp; </p>
+<h1><pre style="color:yellow">align_assign_decl_func</pre></h1>
+
+<h1>Properties</h1>
+<pre>
+  Category: Code alignment options (not left column spaces/tabs)
+      Type: numeric [0 .. 2]
+   Default: 0
+</pre>
+<h1>Description</h1>
+<pre>
+How to apply align_assign_span to function declaration "assignments", i.e.
+'virtual void foo() = 0' or '~foo() = {default|delete}'.
+
+0: Align with other assignments (default)
+1: Align with each other, ignoring regular assignments
+2: Don't align
+</pre>
+<h1>Examples</h1>
+
+<div class="hscroll">
+<table><tr>
+  <th class="optkey">raw CPP code</th>
+  <th class="optkey">align_assign_decl_func=0<br/>align_assign_span=8</th>
+  <th class="optkey">align_assign_decl_func=1<br/>align_assign_span=8</th>
+  <th class="optkey">align_assign_decl_func=2<br/>align_assign_span=8</th>
+</tr><tr>
+<td class="code">class foo {
+  public:
+    virtual void foo() =0;
+    int var1= 1;
+  private:
+    int var2 =  2;
+    ~foo() =    default;
+    int var3=3;
+}
+</td>
+<td class="code">class foo {
+public:
+virtual void foo() = 0;
+int var1 = 1;
+private:
+int var2 =  2;
+~foo()             =    default;
+int var3 =3;
+}
+</td>
+<td class="code">class foo {
+public:
+virtual void foo() = 0;
+int var1 = 1;
+private:
+int var2 =  2;
+~foo()             =    default;
+int var3 =3;
+}
+</td>
+<td class="code">class foo {
+public:
+virtual void foo() = 0;
+int var1 = 1;
+private:
+int var2 =  2;
+~foo() =    default;
+int var3 =3;
+}
+</td>
+</tr></table>
+&nbsp;
+</div>
+<h3>Info</h3>
+<pre>Edited by JEAYNE
+</pre><hr>
+<p><i>Not the best code for this option? See how to improve the <a href="../how_to_uds.html" target="_top">.uds file</a> used to generate these examples.</i></p><div class="footer">
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank"><img src="../static/Cc-by-nc-sa_icon.svg" align="left"></a>
+<ul style="padding-left:9em;">
+<li>Report problems related to this documentation <a href="https://github.com/JEAYNE/Uncrustify-Documentation/issues" target="_blank">here</a>.</li>
+<li>The Uncrustify Documentation Project is <b>not</b> managed by the <a href="https://github.com/uncrustify" target="_blank">uncrustify</a> team.</li>
+</ul>
+</div></body>
+</html>

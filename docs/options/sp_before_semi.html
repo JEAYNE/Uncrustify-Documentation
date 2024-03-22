@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>sp_before_semi - uncrustify options</title>
+  <link rel="stylesheet" href="../static/uncrustify.css">
+  <link rel="stylesheet" href="../static/ins_tooltip.css">
+</head>
+<body>
+<p style="float:right;"><a href="../" style="text-decoration:none;" target="_top"><img src="../static/home-16.png"> home</a> &nbsp; </p>
+<h1><pre style="color:yellow">sp_before_semi</pre></h1>
+
+<h1>Properties</h1>
+<pre>
+  Category: Spacing options
+      Type: multiple (ignore add remove force)
+   Default: remove
+</pre>
+<h1>Description</h1>
+<pre>
+Add or remove space before ';'.
+
+Default: remove
+</pre>
+<h1>Examples</h1>
+<pre>int a<ins class="sp" alt="sp_before_semi"></ins>;int b<ins class="sp" alt="sp_before_semi"></ins>; /* comment */
+</pre>
+<div class="hscroll">
+<table><tr>
+  <th class="optkey">raw CPP code</th>
+  <th class="optkey">sp_before_semi=ignore<br/>sp_after_semi=ignore</th>
+  <th class="optkey">sp_before_semi=add<br/>sp_after_semi=ignore</th>
+  <th class="optkey">sp_before_semi=remove<br/>sp_after_semi=ignore</th>
+  <th class="optkey">sp_before_semi=force<br/>sp_after_semi=ignore</th>
+  <th class="optkey">space<br/>sp_before_semi</th>
+</tr><tr>
+<td class="code">int a;int b;int c;/*comment*/
+int a   ;   int b   ;   int c   ;   /*comment*/
+</td>
+<td class="code">int a;int b;int c;/*comment*/
+int a   ;   int b   ;   int c   ;   /*comment*/
+</td>
+<td class="code">int a ;int b ;int c ;/*comment*/
+int a   ;   int b   ;   int c   ;   /*comment*/
+</td>
+<td class="code">int a;int b;int c;/*comment*/
+int a;   int b;   int c;            /*comment*/
+</td>
+<td class="code">int a ;int b ;int c ;/*comment*/
+int a ;   int b ;   int c ;         /*comment*/
+</td>
+<td class="code">int<ins class="dot" alt="sp_after_type"></ins>a<ins class="space" alt="sp_before_semi"></ins>;<ins class="dot" alt="sp_after_semi"></ins>int<ins class="dot" alt="sp_after_type"></ins>b<ins class="space" alt="sp_before_semi"></ins>;<ins class="dot" alt="sp_after_semi"></ins>int<ins class="dot" alt="sp_after_type"></ins>c<ins class="space" alt="sp_before_semi"></ins>;<ins class="dot" alt="orig prev sp - REMOVE"></ins>/*comment*/<ins class="dot" alt="REMOVE"></ins>
+int<ins class="dot" alt="sp_after_type"></ins>a<ins class="space" alt="sp_before_semi"></ins>;<ins class="dot" alt="sp_after_semi"></ins>int<ins class="dot" alt="sp_after_type"></ins>b<ins class="space" alt="sp_before_semi"></ins>;<ins class="dot" alt="sp_after_semi"></ins>int<ins class="dot" alt="sp_after_type"></ins>c<ins class="space" alt="sp_before_semi"></ins>;<ins class="dot" alt="orig prev sp - ADD"></ins>/*comment*/<ins class="dot" alt="REMOVE"></ins></td>
+</tr></table>
+&nbsp;
+</div>
+<h3>Info</h3>
+<pre>  Take care: the default is 'remove' for <a href="sp_before_semi.html">sp_before_semi</a> and 'add' for <a href="sp_after_semi.html">sp_after_semi</a>.
+             In the examples above <a href="sp_after_semi.html">sp_after_semi</a> is forced to 'ignore'.
+  Edited by JEAYNE
+</pre><hr>
+<p><i>Not the best code for this option? See how to improve the <a href="../how_to_uds.html" target="_top">.uds file</a> used to generate these examples.</i></p><div class="footer">
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank"><img src="../static/Cc-by-nc-sa_icon.svg" align="left"></a>
+<ul style="padding-left:9em;">
+<li>Report problems related to this documentation <a href="https://github.com/JEAYNE/Uncrustify-Documentation/issues" target="_blank">here</a>.</li>
+<li>The Uncrustify Documentation Project is <b>not</b> managed by the <a href="https://github.com/uncrustify" target="_blank">uncrustify</a> team.</li>
+</ul>
+</div></body>
+</html>

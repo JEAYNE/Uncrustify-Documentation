@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>sp_cpp_before_struct_binding_after_byref - uncrustify options</title>
+  <link rel="stylesheet" href="../static/uncrustify.css">
+  <link rel="stylesheet" href="../static/ins_tooltip.css">
+</head>
+<body>
+<p style="float:right;"><a href="../" style="text-decoration:none;" target="_top"><img src="../static/home-16.png"> home</a> &nbsp; </p>
+<h1><pre style="color:yellow">sp_cpp_before_struct_binding_after_byref</pre></h1>
+
+<h1>Properties</h1>
+<pre>
+  Category: Spacing options
+      Type: multiple (ignore add remove force)
+   Default: ignore
+</pre>
+<h1>Description</h1>
+<pre>
+Add or remove space before C++17 structured bindings
+after byref.
+</pre>
+<h1>Examples</h1>
+
+<div class="hscroll">
+<table><tr>
+  <th class="optkey">raw CPP code</th>
+  <th class="optkey">sp_cpp_before_struct_binding_after_byref=ignore</th>
+  <th class="optkey">sp_cpp_before_struct_binding_after_byref=add</th>
+  <th class="optkey">sp_cpp_before_struct_binding_after_byref=remove</th>
+  <th class="optkey">sp_cpp_before_struct_binding_after_byref=force</th>
+  <th class="optkey">space<br/>sp_cpp_before_struct_binding_after_byref</th>
+</tr><tr>
+<td class="code">struct S{int a;long l;float f;char c[8]}S;
+
+union U{int a;long l;float f;char c[8]}U;
+</td>
+<td class="code">struct S {int a; long l; float f; char c[8]} S;
+
+union U {int a; long l; float f; char c[8]} U;
+</td>
+<td class="code">struct S {int a; long l; float f; char c[8]} S;
+
+union U {int a; long l; float f; char c[8]} U;
+</td>
+<td class="code">struct S {int a; long l; float f; char c[8]} S;
+
+union U {int a; long l; float f; char c[8]} U;
+</td>
+<td class="code">struct S {int a; long l; float f; char c[8]} S;
+
+union U {int a; long l; float f; char c[8]} U;
+</td>
+<td class="code">struct<ins class="dot" alt="ADD from add_space_table @ 235."></ins>S<ins class="dot" alt="sp_after_type"></ins>{<ins class="dot" alt="sp_inside_braces_struct"></ins>int<ins class="dot" alt="sp_after_type"></ins>a<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="sp_after_semi"></ins>long<ins class="dot" alt="sp_after_type"></ins>l<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="sp_after_semi"></ins>float<ins class="dot" alt="sp_after_type"></ins>f<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="sp_after_semi"></ins>char<ins class="dot" alt="sp_after_type"></ins>c<ins class="dot" alt="sp_before_vardef_square"></ins>[<ins class="dot" alt="sp_inside_square"></ins>8<ins class="dot" alt="sp_inside_square"></ins>]<ins class="dot" alt="sp_inside_braces_struct"></ins>}<ins class="dot" alt="ADD from add_space_table @ 34."></ins>S<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
+
+union<ins class="dot" alt="ADD from add_space_table @ 255."></ins>U<ins class="dot" alt="sp_after_type"></ins>{<ins class="dot" alt="sp_inside_braces_struct"></ins>int<ins class="dot" alt="sp_after_type"></ins>a<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="sp_after_semi"></ins>long<ins class="dot" alt="sp_after_type"></ins>l<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="sp_after_semi"></ins>float<ins class="dot" alt="sp_after_type"></ins>f<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="sp_after_semi"></ins>char<ins class="dot" alt="sp_after_type"></ins>c<ins class="dot" alt="sp_before_vardef_square"></ins>[<ins class="dot" alt="sp_inside_square"></ins>8<ins class="dot" alt="sp_inside_square"></ins>]<ins class="dot" alt="sp_inside_braces_struct"></ins>}<ins class="dot" alt="ADD from add_space_table @ 34."></ins>U<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins></td>
+</tr></table>
+&nbsp;
+</div>
+
+<p><i>Not the best code for this option? See how to improve the <a href="../how_to_uds.html" target="_top">.uds file</a> used to generate these examples.</i></p><div class="footer">
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank"><img src="../static/Cc-by-nc-sa_icon.svg" align="left"></a>
+<ul style="padding-left:9em;">
+<li>Report problems related to this documentation <a href="https://github.com/JEAYNE/Uncrustify-Documentation/issues" target="_blank">here</a>.</li>
+<li>The Uncrustify Documentation Project is <b>not</b> managed by the <a href="https://github.com/uncrustify" target="_blank">uncrustify</a> team.</li>
+</ul>
+</div></body>
+</html>

@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>nl_cpp_lambda_leave_one_liners - uncrustify options</title>
+  <link rel="stylesheet" href="../static/uncrustify.css">
+  <link rel="stylesheet" href="../static/ins_tooltip.css">
+</head>
+<body>
+<p style="float:right;"><a href="../" style="text-decoration:none;" target="_top"><img src="../static/home-16.png"> home</a> &nbsp; </p>
+<h1><pre style="color:yellow">nl_cpp_lambda_leave_one_liners</pre></h1>
+
+<h1>Properties</h1>
+<pre>
+  Category: Newline adding and removing options
+      Type: boolean [false, true]
+   Default: false
+</pre>
+<h1>Description</h1>
+<pre>
+Don't split one-line C++11 lambdas, as in '[]() { return 0; }'.
+</pre>
+<h1>Examples</h1>
+
+<div class="hscroll">
+<table><tr>
+  <th class="optkey">raw CPP code</th>
+  <th class="optkey">nl_cpp_lambda_leave_one_liners=false</th>
+  <th class="optkey">nl_cpp_lambda_leave_one_liners=true</th>
+  <th class="optkey">nl<br/>nl_cpp_lambda_leave_one_liners</th>
+</tr><tr>
+<td class="code">/*-- this is the default sample --*/
+int main(int argc, char** argv){
+  int n = 0;
+  if(arg>=1){
+  printf("Hello %s!\n", argv[1]);
+    n=strlen(argv[1]);
+  }else{
+    puts("Hello world!");
+  }
+  return n;
+}
+</td>
+<td class="code">/*-- this is the default sample --*/
+int main(int argc, char** argv){
+    int n = 0;
+    if(arg>=1){
+        printf("Hello %s!\n", argv[1]);
+        n=strlen(argv[1]);
+    }else{
+        puts("Hello world!");
+    }
+    return n;
+}
+</td>
+<td class="code">/*-- this is the default sample --*/
+int main(int argc, char** argv){
+    int n = 0;
+    if(arg>=1){
+        printf("Hello %s!\n", argv[1]);
+        n=strlen(argv[1]);
+    }else{
+        puts("Hello world!");
+    }
+    return n;
+}
+</td>
+<td class="code">/*-- this is the default sample --*/
+int main(int argc, char** argv){
+    int n = 0;<ins class="dot" alt="nl_after_semicolon"></ins>
+    if(arg>=1){
+        printf("Hello %s!\n", argv[1]);<ins class="dot" alt="nl_after_semicolon"></ins>
+        n=strlen(argv[1]);<ins class="dot" alt="nl_after_semicolon"></ins>
+    }else<ins class="dot" alt="nl_define_macro"></ins>{
+        puts("Hello world!");<ins class="dot" alt="nl_after_semicolon"></ins>
+    }
+    return n;<ins class="dot" alt="nl_after_semicolon"></ins>
+}</td>
+</tr></table>
+&nbsp;
+</div>
+
+<p><i>Not the best code for this option? See how to improve the <a href="../how_to_uds.html" target="_top">.uds file</a> used to generate these examples.</i></p><div class="footer">
+<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank"><img src="../static/Cc-by-nc-sa_icon.svg" align="left"></a>
+<ul style="padding-left:9em;">
+<li>Report problems related to this documentation <a href="https://github.com/JEAYNE/Uncrustify-Documentation/issues" target="_blank">here</a>.</li>
+<li>The Uncrustify Documentation Project is <b>not</b> managed by the <a href="https://github.com/uncrustify" target="_blank">uncrustify</a> team.</li>
+</ul>
+</div></body>
+</html>
