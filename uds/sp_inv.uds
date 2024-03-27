@@ -1,0 +1,21 @@
+==== NAME sp_inv
+~`sp`x
+~`sp`(...)
+==== CODE
+~x
+~ x
+~   x
+~(x)
+~ (x)
+~   (x)
+
+==== SET sp_inv=ignore
+==== SET sp_inv=add
+==== SET sp_inv=remove
+==== SET sp_inv=force
+
+==== TRACK sp sp_inv
+
+==== INFO
+  Take care, default is 'remove'
+  Edited by JEAYNE

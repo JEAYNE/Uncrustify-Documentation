@@ -1,0 +1,17 @@
+==== NAME sp_word_brace_ns
+namespace name`sp`{  }
+==== CODE
+namespace test{  }
+namespace test {  }
+namespace test   {  }
+
+==== SET sp_word_brace_ns=ignore
+==== SET sp_word_brace_ns=add
+==== SET sp_word_brace_ns=remove
+==== SET sp_word_brace_ns=force
+
+==== TRACK sp sp_word_brace_ns
+
+==== INFO
+  Take care default is 'add'
+  Edited by JEAYNE

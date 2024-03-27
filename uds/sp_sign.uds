@@ -1,0 +1,64 @@
+==== NAME sp_sign
+==== CODE
+a=+b/-c;
+a=+ b/- c;
+a=+   b/-   c;
+
+a=+b*+c;
+a=+ b*+ c;
+a=+   b*+   c;
+
+a=+*b;
+a=+ *b;
+a=+   *b;
+
+==== SET sp_sign=ignore
+==== SET sp_sign=add
+==== SET sp_sign=remove
+==== SET sp_sign=force
+
+==== TRACK sp sp_sign
+
+==== INFO
+  Take care, default is 'remove'
+  See also: @sp_arith overrided by @sp_arith_additive (for both the default is 'ignore')
+  Edited by JEAYNE
+
+==== CODE
+//no space added
+a=b+c;
+a=b-c;
+a=b*c;
+a=b/c;
+a=b%c;
+a=b|c;
+a=b&c;
+a=b^c;
+a=b<<c;
+a=b>>c;
+
+//Why a space is added?
+a=b+-c;
+a=b-+c;
+a=b*+c;
+a=b/+c;
+a=b%+c;
+a=b|+c;
+a=b&+c;
+a=b^+c;
+a=b<<+c;
+a=b>>+c;
+
+==== SET sp_sign=ignore
+==== SET sp_sign=remove
+
+==== TRACK sp sp_sign
+
+==== INFO
+  BUG: A space is added between operators{+ - * / % | & << >>} and signs{+|-}
+         x=a/b;  ==> x=a/b;     OK
+         x=a/+b; ==> x=a/ +b;   BUG?
+       The exception is the operator ^
+         x=a^+b; ==> x=a^+b;    OK
+
+==== TAGS bug

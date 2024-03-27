@@ -1,0 +1,17 @@
+==== NAME sp_enum_brace
+enum`sp`{...};
+==== CODE
+enum{A,B,C};
+enum {A,B,C};
+enum   {A,B,C};
+
+==== SET sp_enum_brace=ignore
+==== SET sp_enum_brace=add
+==== SET sp_enum_brace=remove
+==== SET sp_enum_brace=force
+
+==== TRACK sp sp_enum_brace
+
+==== INFO
+  Take care, default is 'add'
+  Edited by JEAYNE

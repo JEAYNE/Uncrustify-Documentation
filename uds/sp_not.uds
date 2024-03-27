@@ -1,0 +1,21 @@
+==== NAME sp_not
+!`sp`x
+!`sp`(...)
+==== CODE
+!x
+! x
+!   x
+!(x)
+! (x)
+!   (x)
+
+==== SET sp_not=ignore
+==== SET sp_not=add
+==== SET sp_not=remove
+==== SET sp_not=force
+
+==== TRACK sp sp_not
+
+==== INFO
+  Take care, default is 'remove'
+  Edited by JEAYNE

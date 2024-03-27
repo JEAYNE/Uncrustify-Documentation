@@ -1,0 +1,19 @@
+==== NAME nl_after_brace_open
+==== CODE
+int f(int a){ a++;
+    while (a) { g(a); }
+    { if(a) { a--; } }
+}
+
+int g(a) { f(a)+1; }
+
+
+==== SET nl_after_brace_open=false
+==== SET nl_after_brace_open=true
+
+==== TRACK nl nl_after_brace_open
+
+==== INFO
+  This option doesn't apply to the '{' function body.
+  Looks like the tracking is not working
+  Edited by JEAYNE

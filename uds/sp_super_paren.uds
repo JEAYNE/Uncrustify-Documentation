@@ -1,0 +1,26 @@
+==== NAME sp_super_paren
+super`sp`();
+==== CODE JAVA
+super(arg);
+super (arg);
+super   (arg);
+
+// no effect on that
+super.f(arg);
+super.f (arg);
+super.f   (arg);
+
+==== SET sp_super_paren=ignore
+==== SET sp_super_paren=add
+==== SET sp_super_paren=remove
+==== SET sp_super_paren=force
+
+==== TRACK sp sp_super_paren
+
+==== INFO
+  'super' is a JAVA keyword
+  This options has no effect on super.f()
+  Take care, default is 'remove'
+  Edited by JEAYNE
+
+==== TAGS java

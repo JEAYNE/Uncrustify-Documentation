@@ -1,0 +1,21 @@
+==== NAME sp_this_paren
+this`sp`()
+==== CODE JAVA
+this();
+this  ();
+this   ();
+
+==== SET sp_this_paren=ignore
+==== SET sp_this_paren=add
+==== SET sp_this_paren=remove
+==== SET sp_this_paren=force
+
+==== TRACK sp sp_this_paren
+
+==== INFO
+  Take care default is 'remove'
+  this() is used in JAVA and C# to call a constructor
+  BUG? this option also works for C++
+  Edited by JEAYNE
+
+==== TAGS c# java

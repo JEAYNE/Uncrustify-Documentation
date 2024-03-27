@@ -1,0 +1,27 @@
+==== NAME nl_fdef_brace
+int f(char* str) `nl` { ...
+==== CODE
+int f(int a){
+    return a;
+}
+
+int g(int a)
+{ 
+    return a;
+}
+
+int h(int a){ return a; }
+
+==== SET nl_fdef_brace=false
+==== SET nl_fdef_brace=true
+
+==== TRACK nl nl_fdef_brace
+
+==== INFO
+  Should have been named 'nl_func_def_brace'
+  Warning: @nl_fdef_brace_cond overrides this function.
+  See also: @nl_func_leave_one_liners
+  Looks like the tracking is not working
+  Edited by JEAYNE
+
+==== TAGS important

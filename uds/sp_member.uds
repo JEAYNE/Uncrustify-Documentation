@@ -1,0 +1,20 @@
+==== NAME sp_member
+s`sp`.`sp`m
+s`sp`->`sp`m
+==== CODE
+void f(){
+  s.m=s->m;
+  s . m=s -> m;
+  s   .   m=s   ->   m;
+}
+
+==== SET sp_member=ignore
+==== SET sp_member=add
+==== SET sp_member=remove
+==== SET sp_member=force
+
+==== TRACK sp sp_member
+
+==== INFO
+  Take care, default is 'remove'
+  Edited by JEAYNE

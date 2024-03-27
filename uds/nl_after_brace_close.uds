@@ -1,0 +1,20 @@
+==== NAME nl_after_brace_close
+==== CODE
+void f(int a){
+    if ( a ) {
+        g();
+    } else {
+        while ( a ) {
+            a = h();
+        }
+    }
+}
+
+==== SET nl_after_brace_close=false
+==== SET nl_after_brace_close=true
+
+==== TRACK nl nl_after_brace_close
+
+==== INFO
+  Looks like the tracking is not working
+  Edited by JEAYNE

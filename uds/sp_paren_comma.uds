@@ -1,0 +1,24 @@
+==== NAME sp_paren_comma
+Macro(`sp`,x)
+
+==== CODE
+// #define Macro(a,b) a ## b
+Macro(,x)
+Macro( ,x)
+Macro(    ,x)
+Macro(, )
+Macro( ,  )
+Macro(   ,   )
+
+==== SET sp_paren_comma=ignore
+==== SET sp_paren_comma=add
+==== SET sp_paren_comma=remove
+==== SET sp_paren_comma=force
+
+==== TRACK sp sp_paren_comma
+
+==== INFO
+  This syntax (, is only possible when invoking a function-like macro taking more than 1 argument,
+  so,'sp_macro_paren_comma' would have been a better name.
+  Take care, default is 'force'
+  Edited by JEAYNE

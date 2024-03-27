@@ -1,0 +1,25 @@
+==== NAME nl_after_do
+==== CODE
+void f(int a){
+    do{
+        g(a);
+    }while(a);
+    g(a);
+    do
+        g(i);
+    while(a);
+    do{
+        g(a);
+    }while(a);
+}
+
+==== SET nl_after_do=false
+==== SET nl_after_do=true
+
+==== TRACK nl nl_after_do
+
+==== INFO
+  The blank line is added if the 'do...while();' statement is followed by another statement, not by a '}'.
+  This option doesn't apply to 'while()...'.
+  Looks like the tracking is not working
+  Edited by JEAYNE

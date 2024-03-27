@@ -1,0 +1,20 @@
+==== NAME sp_incdec
+ ++`sp`x; x`sp`++;
+ --`sp`x; x`sp`--;
+==== CODE
+++x; ++x;
+++ x; ++ x;
+++   x; ++   x;
+--y; --y;
+-- y; -- y;
+--   y; --   y;
+==== SET sp_incdec=ignore
+==== SET sp_incdec=add
+==== SET sp_incdec=remove
+==== SET sp_incdec=force
+
+==== TRACK sp sp_incdec
+
+==== INFO
+  Take care, default is 'remove'
+  Edited by JEAYNE

@@ -1,0 +1,20 @@
+==== NAME sp_before_vardef_square
+type var`sp`[...
+
+==== CODE
+char str[10];
+char str [10];
+char str    [10];
+// not affected
+char str[] = "Hello";
+str[i]=0;
+==== SET sp_before_vardef_square=ignore
+==== SET sp_before_vardef_square=add
+==== SET sp_before_vardef_square=remove
+==== SET sp_before_vardef_square=force
+
+==== TRACK sp sp_before_vardef_square
+
+==== INFO
+  Take care, the default is 'remove'
+  Edited by JEAYNE

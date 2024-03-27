@@ -1,0 +1,29 @@
+==== NAME nl_after_return
+==== CODE
+int f(int a){
+    if(a)
+        return 1;
+    else
+        return 2;
+    switch(a){
+      case 1:
+        return 3;
+      case 2: {
+        return 4;
+      }
+      default:
+        return 5;
+    }
+    return 6;
+    a++;
+}
+
+==== SET nl_after_return=false
+==== SET nl_after_return=true
+
+==== TRACK nl nl_after_return
+
+==== INFO
+  No blank line added after 'return 1;'. Bug ?
+  Looks like the tracking is not working
+  Edited by JEAYNE

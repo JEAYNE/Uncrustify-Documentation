@@ -1,0 +1,20 @@
+==== NAME sp_deref
+*`sp`p = 0;
+i = *`sp`p;
+==== CODE
+*p=*n;
+* p=* n;
+*   p=*   n;
+// not affected
+char*p;
+int(f*)(char*p);
+==== SET sp_deref=ignore
+==== SET sp_deref=add
+==== SET sp_deref=remove
+==== SET sp_deref=force
+
+==== TRACK sp sp_deref
+
+==== INFO
+  Take care, default is 'remove'
+  Edited by JEAYNE

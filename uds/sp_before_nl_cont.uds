@@ -1,0 +1,20 @@
+==== NAME sp_before_nl_cont
+line`sp`\
+continuation
+
+==== CODE
+#define TEST if(a) b=a;\
+        else if(b) c=a+b; \
+        else if(c) d=0;    \
+        else a++;
+
+==== SET sp_before_nl_cont=ignore
+==== SET sp_before_nl_cont=add
+==== SET sp_before_nl_cont=remove
+==== SET sp_before_nl_cont=force
+
+==== TRACK sp sp_before_nl_cont
+
+==== INFO
+  Take care, the default is 'add'
+  Edited by JEAYNE
