@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Manage options - Uncrustify Documentation Project</title>
+  <link rel="stylesheet" href="static/uncrustify.css">
+</head>
+<body>
+<a href="./" style="text-decoration: none;"><img src="./static/home-16.png"> home</a>
+<hr>
+<p>
+Not all developers classify the options provided by Uncrustify in the same way: <br/>
+- Some think in term of keyword: if, while, switch, struct, etc.<br/>
+- Others think in term by type of action: where to add a space, where to add a line break, etc. <br/>
+- Some don't want to use options that modify the code, such as adding/removing brackets or curly braces.<br/>
+</p>
+<p>
+But, as a developer, you know that to rule you have to divide!<br/>
+Currently you have two tools for that:
+<h2>The first tool</h2>
+Uncrustify offers a little-known tool (because it is not used in the configurations examples) to divide:
+<h3>&nbsp &nbsp <code>include file</code></h3>
+which works the same way as <b><code>#include "file"</code></b><br/>
+</p>
+<p>
+<pre>
+Example:
+  $ cat uncrustify.cfg
+  include path/to/general.cfg
+  include path/to/kr_statements.cfg
+  include path/to/expression.cfg
+
+  $ cat kr_statements.cfg
+  include kr/for_do_while.cfg
+  include kr/class_struct_enum_union.cfg
+  include kr/if_else_switch.cfg
+  include kr/throw_try_catch.cfg
+</pre>
+
+With this method it is easy to change the 'look' of your code.
+</p>
+<h2>The second tool</h2>
+</p>
+... is this documentaion ;-)
+</p>
+<hr>
+<a href="./" style="text-decoration: none;"><img src="./static/home-16.png"> home</a>
+</body>
+</html>

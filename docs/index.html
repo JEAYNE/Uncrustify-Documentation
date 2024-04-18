@@ -22,11 +22,13 @@
 The core of this project is:
 <ul>
   <li>The indexes of all <a href="index_name.html">Uncrustify options</a> sorted by<br/>
-  - name,<br/>
-  - category,<br/>
-  - type,<br/>
-  - keyword,<br/>
-  - exceptions to the default values.<br/><br/></li>
+  - name, (align_asm_colon ... indent_brace ... nl_after_semicolon ... utf8_force)<br/>
+  - category, (Blank line options, Indenting options, Preprocessor options, Spacing options ...)<br/>
+  - type, (boolean, multiple value, numeric, string)<br/>
+  - keyword, (assign, brace, class, comma ... do, else, for, ... struct, tab, template, ... while)<br/>
+  - exceptions to the default values. (false, 0, ignore)<br/>
+  - linked options (option modifying or being modified by another option)<br/><br/></li>
+
   <li>The <a href="index_cfg.html">Comparison table</a> of various configurations.<br/>
      K&R vs Linux kernel vs FreeBsd vs GNU vs ...</li>
 </ul>
@@ -38,8 +40,9 @@ The core of this project is:
 </p>
 
 <p>
-  If it seems to you that Uncrustify is doing unexpected things,<br/>
-  this may be due to one of the options with a <a href="index_default.html">non standard default</a>.
+  If it seems to you that Uncrustify is doing unexpected things, this may be due to<br/>
+  an option with a <a href="index_default.html">non standard default</a>
+  or to an option <a href="index_linked.html">linked</a> to another option.
 </p>
 
 If you start with uncrustify I suggest that you
@@ -51,9 +54,10 @@ If you start with uncrustify I suggest that you
       <a href="gap_span_threshold.html">gap-span-threshold</a> and
       <a href="ignore_add_remove_force.html">iarf</a> options.</li>
   <li>If you don't know which format to use, look at this list of <a href="source_code_formating.html">recommendations</a> ;-)</li>
+  <li>How to <a href="manage_options.html">manage</a> 850 options?</li>
 </ul>
 <p>
-If you want to contibute look at <a href="how_to_uds.html">How to write an .uds file</a>.
+If you want to contribute look at <a href="how_to_uds.html">How to write an .uds file</a>.
 </p>
 For curious there are these tools:
 <ul>
@@ -67,7 +71,8 @@ For curious there are these tools:
 <li><a href="https://github.com/ryanmaxwell/UncrustifyX" target="_blank">UncrustifyX</a> a GUI for Mac OS X. (last update 2013)</li>
 <li>The source code of the uncrustify <a href="https://code.qt.io/cgit/qt-creator/qt-creator.git/tree/src/plugins/beautifier/uncrustify/uncrustify.cpp" target="_blank">plugin for Qt</a></li>
 <li>The source code of the uncrustify <a href="https://github.com/benoitsan/BBUncrustifyPlugin-Xcode/" target="_blank">plugin for X-Code</a></li>
-<li>The microsoft project <a href="https://microsoft.github.io/mu/" target="_blank">mu</a> uses a <a href="https://dev.azure.com/projectmu/Uncrustify" target="_blank">fork of Uncrustify</a></li>
+<li>The microsoft project <a href="https://microsoft.github.io/mu/" target="_blank">mu</a> (an open source version of the UEFI kernel used my Microsoft)
+    uses a <a href="https://dev.azure.com/projectmu/Uncrustify" target="_blank">fork of Uncrustify</a></li>
 </ul>
 
 <p>
