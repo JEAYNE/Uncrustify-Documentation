@@ -1,0 +1,48 @@
+==== NAME sp_after_assign
+a =`sp`b
+==== CODE
+a=b;
+a=   b;
+a   =b;
+a   =   b;
+
+a+=b;
+a+=   b;
+a   +=b;
+a   +=   b;
+
+a%=b;
+a%=   b;
+a   %=b;
+a   %=   b;
+
+a&=b;
+a&=   b;
+a   &=b;
+a   &=   b;
+
+a>>=b;
+a>>=   b;
+a   >>=b;
+a   >>=   b;
+
+a<<=b;
+a<<=   b;
+a   <<=b;
+a   <<=   b;
+
+// etc...
+
+==== SET sp_after_assign=ignore
+==== SET sp_after_assign=add
+==== SET sp_after_assign=remove
+==== SET sp_after_assign=force
+==== TRACK sp sp_after_assign
+
+==== INFO
+  fixme: maybe --tracking not invoked with the right --set
+  minor bug: the output of '--tracking space:file.html' for 'a<<=b;' is buggy.
+  See also @sp_assign
+  Edited by JEAYNE
+
+==== TAGS bug fixme

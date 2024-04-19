@@ -1,0 +1,47 @@
+==== NAME sp_assign
+a`sp`=`sp`b
+==== CODE
+a=b;
+a=   b;
+a   =b;
+a   =   b;
+
+a+=b;
+a+=   b;
+a   +=b;
+a   +=   b;
+
+a%=b;
+a%=   b;
+a   %=b;
+a   %=   b;
+
+a&=b;
+a&=   b;
+a   &=b;
+a   &=   b;
+
+a>>=b;
+a>>=   b;
+a   >>=b;
+a   >>=   b;
+
+a<<=b;
+a<<=   b;
+a   <<=b;
+a   <<=   b;
+
+// etc...
+
+==== SET sp_assign=ignore
+==== SET sp_assign=add
+==== SET sp_assign=remove
+==== SET sp_assign=force
+==== TRACK sp sp_assign
+
+==== INFO
+  minor bug: the output of '--tracking space:file.html' for 'a<<=b;' is buggy.
+  See also: @sp_after_assign @sp_before_assign @sp_assign_default @sp_cpp_lambda_assign
+  Edited by JEAYNE
+
+==== TAGS bug

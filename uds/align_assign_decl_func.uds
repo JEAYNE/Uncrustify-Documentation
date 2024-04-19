@@ -2,15 +2,19 @@
 ==== CODE
 class foo {
   public:
-    virtual void foo() =0;
-    int var1= 1;
+    int id = 0;
+    virtual 
+    void foo() =0;
   private:
-    int var2 =  2;
+    int debugLevel =  2;
     ~foo() =    default;
-    int var3=3;
+    int done =3;
 }
 ==== SET align_assign_decl_func=0 align_assign_span=8
 ==== SET align_assign_decl_func=1 align_assign_span=8
 ==== SET align_assign_decl_func=2 align_assign_span=8
+==== TAGS bug important
 ==== INFO
-Edited by JEAYNE
+  IMPORTANT: the default value is 0 but this default value modifie the code
+  BUG: the values 0 and 1 do the same thing; 0 is not working.
+  Edited by JEAYNE
