@@ -22,8 +22,9 @@ Add or remove space in 'enum {'.
 
 Default: add
 </pre>
+<pre>enum<ins class="sp" alt="sp_enum_brace"></ins>{...};
+</pre>
 <h1>Examples</h1>
-
 <div class="hscroll">
 <table><tr>
   <th class="optkey">raw CPP code</th>
@@ -33,20 +34,36 @@ Default: add
   <th class="optkey">sp_enum_brace=force</th>
   <th class="optkey">space<br/>sp_enum_brace</th>
 </tr><tr>
-<td class="code">enum{A,B,C=-2,D,E};
+<td class="code">enum{A,B,C};
+enum {A,B,C};
+enum   {A,B,C};
 </td>
-<td class="code">enum{A,B,C=-2,D,E};
+<td class="code">enum{A,B,C};
+enum {A,B,C};
+enum   {A,B,C};
 </td>
-<td class="code">enum {A,B,C=-2,D,E};
+<td class="code">enum {A,B,C};
+enum {A,B,C};
+enum   {A,B,C};
 </td>
-<td class="code">enum{A,B,C=-2,D,E};
+<td class="code">enum{A,B,C};
+enum{A,B,C};
+enum{A,B,C};
 </td>
-<td class="code">enum {A,B,C=-2,D,E};
+<td class="code">enum {A,B,C};
+enum {A,B,C};
+enum {A,B,C};
 </td>
-<td class="code">enum<ins class="space" alt="sp_enum_brace"></ins>{<ins class="dot" alt="sp_inside_braces_enum"></ins>A<ins class="dot" alt="sp_before_comma"></ins>,<ins class="dot" alt="sp_after_comma"></ins>B<ins class="dot" alt="sp_before_comma"></ins>,<ins class="dot" alt="sp_after_comma"></ins>C<ins class="dot" alt="sp_enum_assign"></ins>=<ins class="dot" alt="sp_enum_assign"></ins>-<ins class="dot" alt="sp_sign"></ins>2<ins class="dot" alt="sp_before_comma"></ins>,<ins class="dot" alt="sp_after_comma"></ins>D<ins class="dot" alt="sp_before_comma"></ins>,<ins class="dot" alt="sp_after_comma"></ins>E<ins class="dot" alt="sp_inside_braces_enum"></ins>}<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins></td>
+<td class="code">enum<ins class="space" alt="sp_enum_brace"></ins>{<ins class="dot" alt="sp_inside_braces_enum"></ins>A<ins class="dot" alt="sp_before_comma"></ins>,<ins class="dot" alt="sp_after_comma"></ins>B<ins class="dot" alt="sp_before_comma"></ins>,<ins class="dot" alt="sp_after_comma"></ins>C<ins class="dot" alt="sp_inside_braces_enum"></ins>}<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
+enum<ins class="space" alt="sp_enum_brace"></ins>{<ins class="dot" alt="sp_inside_braces_enum"></ins>A<ins class="dot" alt="sp_before_comma"></ins>,<ins class="dot" alt="sp_after_comma"></ins>B<ins class="dot" alt="sp_before_comma"></ins>,<ins class="dot" alt="sp_after_comma"></ins>C<ins class="dot" alt="sp_inside_braces_enum"></ins>}<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
+enum<ins class="space" alt="sp_enum_brace"></ins>{<ins class="dot" alt="sp_inside_braces_enum"></ins>A<ins class="dot" alt="sp_before_comma"></ins>,<ins class="dot" alt="sp_after_comma"></ins>B<ins class="dot" alt="sp_before_comma"></ins>,<ins class="dot" alt="sp_after_comma"></ins>C<ins class="dot" alt="sp_inside_braces_enum"></ins>}<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins></td>
 </tr></table>
 &nbsp;
 </div>
+<h3 style="margin:0 auto;">Info</h3>
+<pre>  Take care, default is 'add'
+  Edited by JEAYNE
+</pre><hr>
 
 <p><i>Not the best code for this option? See how to improve the <a href="../how_to_uds.html" target="_top">.uds file</a> used to generate these examples.</i></p><div class="footer">
 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank"><img src="../static/Cc-by-nc-sa_icon.svg" align="left"></a>

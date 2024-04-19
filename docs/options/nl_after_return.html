@@ -21,8 +21,8 @@
 Whether to put a blank line after 'return' statements, unless followed by a
 close brace.
 </pre>
-<h1>Examples</h1>
 
+<h1>Examples</h1>
 <div class="hscroll">
 <table><tr>
   <th class="optkey">raw CPP code</th>
@@ -30,42 +30,87 @@ close brace.
   <th class="optkey">nl_after_return=true</th>
   <th class="optkey">nl<br/>nl_after_return</th>
 </tr><tr>
-<td class="code">void f(){return;}
-int f(){return a+b;}
-int f(){return(a+b);}
-</td>
-<td class="code">void f(){
-    return;
-}
-int f(){
-    return a+b;
-}
-int f(){
-    return(a+b);
-}
-</td>
-<td class="code">void f(){
-    return;
-}
-int f(){
-    return a+b;
-}
-int f(){
-    return(a+b);
+<td class="code">int f(int a){
+    if(a)
+        return 1;
+    else
+        return 2;
+    switch(a){
+      case 1:
+        return 3;
+      case 2: {
+        return 4;
+      }
+      default:
+        return 5;
+    }
+    return 6;
+    a++;
 }
 </td>
-<td class="code">void f(){
-    return;<ins class="dot" alt="nl_after_semicolon"></ins>
+<td class="code">int f(int a){
+    if(a)
+        return 1;
+    else
+        return 2;
+    switch(a){
+    case 1:
+        return 3;
+    case 2: {
+        return 4;
+    }
+    default:
+        return 5;
+    }
+    return 6;
+    a++;
 }
-int f(){
-    return a+b;<ins class="dot" alt="nl_after_semicolon"></ins>
+</td>
+<td class="code">int f(int a){
+    if(a)
+        return 1;
+    else
+        return 2;
+
+    switch(a){
+    case 1:
+        return 3;
+
+    case 2: {
+        return 4;
+    }
+    default:
+        return 5;
+    }
+    return 6;
+
+    a++;
 }
-int f(){
-    return(a+b);<ins class="dot" alt="nl_after_semicolon"></ins>
+</td>
+<td class="code">int f(int a){
+    if(a)
+        return 1;<ins class="dot" alt="nl_after_semicolon"></ins>
+    else<ins class="dot" alt="nl_define_macro"></ins>
+        return 2;<ins class="dot" alt="nl_after_semicolon"></ins>
+    switch(a){
+    case 1:
+        return 3;<ins class="dot" alt="nl_after_semicolon"></ins>
+    case 2: {
+        return 4;<ins class="dot" alt="nl_after_semicolon"></ins>
+    }
+    default:
+        return 5;<ins class="dot" alt="nl_after_semicolon"></ins>
+    }
+    return 6;<ins class="dot" alt="nl_after_semicolon"></ins>
+    a++;<ins class="dot" alt="nl_after_semicolon"></ins>
 }</td>
 </tr></table>
 &nbsp;
 </div>
+<h3 style="margin:0 auto;">Info</h3>
+<pre>  No blank line added after 'return 1;'. Bug ?
+  Looks like the tracking is not working
+  Edited by JEAYNE</pre><hr>
 
 <p><i>Not the best code for this option? See how to improve the <a href="../how_to_uds.html" target="_top">.uds file</a> used to generate these examples.</i></p><div class="footer">
 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank"><img src="../static/Cc-by-nc-sa_icon.svg" align="left"></a>

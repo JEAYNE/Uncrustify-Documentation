@@ -20,8 +20,8 @@
 <pre>
 Whether to add a newline after '{'.
 </pre>
-<h1>Examples</h1>
 
+<h1>Examples</h1>
 <div class="hscroll">
 <table><tr>
   <th class="optkey">raw CPP code</th>
@@ -29,56 +29,55 @@ Whether to add a newline after '{'.
   <th class="optkey">nl_after_brace_open=true</th>
   <th class="optkey">nl<br/>nl_after_brace_open</th>
 </tr><tr>
-<td class="code">/*-- this is the default sample --*/
-int main(int argc, char** argv){
-  int n = 0;
-  if(arg>=1){
-  printf("Hello %s!\n", argv[1]);
-    n=strlen(argv[1]);
-  }else{
-    puts("Hello world!");
-  }
-  return n;
+<td class="code">int f(int a){ a++;
+    while (a) { g(a); }
+    { if(a) { a--; } }
+}
+
+int g(a) { f(a)+1; }
+</td>
+<td class="code">int f(int a){
+    a++;
+    while (a) { g(a); }
+    { if(a) { a--; } }
+}
+
+int g(a) {
+    f(a)+1;
 }
 </td>
-<td class="code">/*-- this is the default sample --*/
-int main(int argc, char** argv){
-    int n = 0;
-    if(arg>=1){
-        printf("Hello %s!\n", argv[1]);
-        n=strlen(argv[1]);
-    }else{
-        puts("Hello world!");
+<td class="code">int f(int a){
+    a++;
+    while (a) {
+        g(a);
     }
-    return n;
+    {
+        if(a) {
+            a--;
+        }
+    }
+}
+
+int g(a) {
+    f(a)+1;
 }
 </td>
-<td class="code">/*-- this is the default sample --*/
-int main(int argc, char** argv){
-    int n = 0;
-    if(arg>=1){
-        printf("Hello %s!\n", argv[1]);
-        n=strlen(argv[1]);
-    }else{
-        puts("Hello world!");
-    }
-    return n;
+<td class="code">int f(int a){
+    a++;<ins class="dot" alt="nl_after_semicolon"></ins>
+    while (a) { g(a);<ins class="dot" alt="nl_after_semicolon"></ins>}
+    { if(a) { a--;<ins class="dot" alt="nl_after_semicolon"></ins>} }
 }
-</td>
-<td class="code">/*-- this is the default sample --*/
-int main(int argc, char** argv){
-    int n = 0;<ins class="dot" alt="nl_after_semicolon"></ins>
-    if(arg>=1){
-        printf("Hello %s!\n", argv[1]);<ins class="dot" alt="nl_after_semicolon"></ins>
-        n=strlen(argv[1]);<ins class="dot" alt="nl_after_semicolon"></ins>
-    }else<ins class="dot" alt="nl_define_macro"></ins>{
-        puts("Hello world!");<ins class="dot" alt="nl_after_semicolon"></ins>
-    }
-    return n;<ins class="dot" alt="nl_after_semicolon"></ins>
+
+int g(a) {
+    f(a)+1;<ins class="dot" alt="nl_after_semicolon"></ins>
 }</td>
 </tr></table>
 &nbsp;
 </div>
+<h3 style="margin:0 auto;">Info</h3>
+<pre>  This option doesn't apply to the '{' function body.
+  Looks like the tracking is not working
+  Edited by JEAYNE</pre><hr>
 
 <p><i>Not the best code for this option? See how to improve the <a href="../how_to_uds.html" target="_top">.uds file</a> used to generate these examples.</i></p><div class="footer">
 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank"><img src="../static/Cc-by-nc-sa_icon.svg" align="left"></a>

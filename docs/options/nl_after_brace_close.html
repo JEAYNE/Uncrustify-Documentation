@@ -21,8 +21,8 @@
 Whether to add a newline after '}'. Does not apply if followed by a
 necessary ';'.
 </pre>
-<h1>Examples</h1>
 
+<h1>Examples</h1>
 <div class="hscroll">
 <table><tr>
   <th class="optkey">raw CPP code</th>
@@ -30,57 +30,52 @@ necessary ';'.
   <th class="optkey">nl_after_brace_close=true</th>
   <th class="optkey">nl<br/>nl_after_brace_close</th>
 </tr><tr>
-<td class="code">/*-- this is the default sample --*/
-int main(int argc, char** argv){
-  int n = 0;
-  if(arg>=1){
-  printf("Hello %s!\n", argv[1]);
-    n=strlen(argv[1]);
-  }else{
-    puts("Hello world!");
-  }
-  return n;
+<td class="code">void f(int a){
+    if ( a ) {
+        g();
+    } else {
+        while ( a ) {
+            a = h();
+        }
+    }
 }
 </td>
-<td class="code">/*-- this is the default sample --*/
-int main(int argc, char** argv){
-    int n = 0;
-    if(arg>=1){
-        printf("Hello %s!\n", argv[1]);
-        n=strlen(argv[1]);
-    }else{
-        puts("Hello world!");
+<td class="code">void f(int a){
+    if ( a ) {
+        g();
+    } else {
+        while ( a ) {
+            a = h();
+        }
     }
-    return n;
 }
 </td>
-<td class="code">/*-- this is the default sample --*/
-int main(int argc, char** argv){
-    int n = 0;
-    if(arg>=1){
-        printf("Hello %s!\n", argv[1]);
-        n=strlen(argv[1]);
+<td class="code">void f(int a){
+    if ( a ) {
+        g();
     }
-    else{
-        puts("Hello world!");
+    else {
+        while ( a ) {
+            a = h();
+        }
     }
-    return n;
 }
 </td>
-<td class="code">/*-- this is the default sample --*/
-int main(int argc, char** argv){
-    int n = 0;<ins class="dot" alt="nl_after_semicolon"></ins>
-    if(arg>=1){
-        printf("Hello %s!\n", argv[1]);<ins class="dot" alt="nl_after_semicolon"></ins>
-        n=strlen(argv[1]);<ins class="dot" alt="nl_after_semicolon"></ins>
-    }else<ins class="dot" alt="nl_define_macro"></ins>{
-        puts("Hello world!");<ins class="dot" alt="nl_after_semicolon"></ins>
+<td class="code">void f(int a){
+    if ( a ) {
+        g();<ins class="dot" alt="nl_after_semicolon"></ins>
+    } else<ins class="dot" alt="nl_define_macro"></ins>{
+        while ( a ) {
+            a = h();<ins class="dot" alt="nl_after_semicolon"></ins>
+        }
     }
-    return n;<ins class="dot" alt="nl_after_semicolon"></ins>
 }</td>
 </tr></table>
 &nbsp;
 </div>
+<h3 style="margin:0 auto;">Info</h3>
+<pre>  Looks like the tracking is not working
+  Edited by JEAYNE</pre><hr>
 
 <p><i>Not the best code for this option? See how to improve the <a href="../how_to_uds.html" target="_top">.uds file</a> used to generate these examples.</i></p><div class="footer">
 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank"><img src="../static/Cc-by-nc-sa_icon.svg" align="left"></a>

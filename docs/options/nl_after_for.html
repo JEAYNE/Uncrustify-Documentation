@@ -20,57 +20,75 @@
 <pre>
 Add or remove blank line after 'for' statement.
 </pre>
-<h1>Examples</h1>
 
+<h1>Examples</h1>
 <div class="hscroll">
 <table><tr>
   <th class="optkey">raw CPP code</th>
-  <th class="optkey">nl_after_for=ignore</th>
-  <th class="optkey">nl_after_for=add</th>
-  <th class="optkey">nl_after_for=remove</th>
-  <th class="optkey">nl_after_for=force</th>
+  <th class="optkey">nl_after_for=false</th>
+  <th class="optkey">nl_after_for=true</th>
   <th class="optkey">nl<br/>nl_after_for</th>
 </tr><tr>
-<td class="code">void fnl1(){for(i=0;i&lt;10;i++)a++;}
-void fnl2(){for(i=0;i&lt;10;i++){a++;}}
-</td>
-<td class="code">void fnl1(){
-    for(i=0; i&lt;10; i++) a++;
-}
-void fnl2(){
-    for(i=0; i&lt;10; i++){a++;}
-}
-</td>
-<td class="code">void fnl1(){
-    for(i=0; i&lt;10; i++) a++;
-}
-void fnl2(){
-    for(i=0; i&lt;10; i++){a++;}
+<td class="code">void f(int a){
+    for (int i=0; i&lt;a; i++){
+        g(i);
+    }
+    g(a);
+    for(int i=0; i&lt;a; i++)
+        g(i);
+    g(a);
+    for(int i=0; i&lt;a; i++){
+        g(i);
+    }
 }
 </td>
-<td class="code">void fnl1(){
-    for(i=0; i&lt;10; i++) a++;
-}
-void fnl2(){
-    for(i=0; i&lt;10; i++){a++;}
+<td class="code">void f(int a){
+    for (int i=0; i&lt;a; i++){
+        g(i);
+    }
+    g(a);
+    for(int i=0; i&lt;a; i++)
+        g(i);
+    g(a);
+    for(int i=0; i&lt;a; i++){
+        g(i);
+    }
 }
 </td>
-<td class="code">void fnl1(){
-    for(i=0; i&lt;10; i++) a++;
-}
-void fnl2(){
-    for(i=0; i&lt;10; i++){a++;}
+<td class="code">void f(int a){
+    for (int i=0; i&lt;a; i++){
+        g(i);
+    }
+
+    g(a);
+    for(int i=0; i&lt;a; i++)
+        g(i);
+
+    g(a);
+    for(int i=0; i&lt;a; i++){
+        g(i);
+    }
 }
 </td>
-<td class="code">void fnl1(){
-    for(i=0;<ins class="dot" alt="nl_after_semicolon"></ins>i<10;<ins class="dot" alt="nl_after_semicolon"></ins>i++) a++;<ins class="dot" alt="nl_after_semicolon"></ins>
-}
-void fnl2(){
-    for(i=0;<ins class="dot" alt="nl_after_semicolon"></ins>i<10;<ins class="dot" alt="nl_after_semicolon"></ins>i++){a++;<ins class="dot" alt="nl_after_semicolon"></ins>}
+<td class="code">void f(int a){
+    for (int i=0;<ins class="dot" alt="nl_after_semicolon"></ins>i<a;<ins class="dot" alt="nl_after_semicolon"></ins>i++){
+        g(i);<ins class="dot" alt="nl_after_semicolon"></ins>
+    }
+    g(a);<ins class="dot" alt="nl_after_semicolon"></ins>
+    for(int i=0;<ins class="dot" alt="nl_after_semicolon"></ins>i<a;<ins class="dot" alt="nl_after_semicolon"></ins>i++)
+        g(i);<ins class="dot" alt="nl_after_semicolon"></ins>
+    g(a);<ins class="dot" alt="nl_after_semicolon"></ins>
+    for(int i=0;<ins class="dot" alt="nl_after_semicolon"></ins>i<a;<ins class="dot" alt="nl_after_semicolon"></ins>i++){
+        g(i);<ins class="dot" alt="nl_after_semicolon"></ins>
+    }
 }</td>
 </tr></table>
 &nbsp;
 </div>
+<h3 style="margin:0 auto;">Info</h3>
+<pre>  The blank line is added if the 'for' statement is followed by another statement, not by a '}'.
+  Looks like the tracking is not working
+  Edited by JEAYNE</pre><hr>
 
 <p><i>Not the best code for this option? See how to improve the <a href="../how_to_uds.html" target="_top">.uds file</a> used to generate these examples.</i></p><div class="footer">
 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank"><img src="../static/Cc-by-nc-sa_icon.svg" align="left"></a>

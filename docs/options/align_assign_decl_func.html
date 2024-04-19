@@ -18,15 +18,15 @@
 </pre>
 <h1>Description</h1>
 <pre>
-How to apply align_assign_span to function declaration "assignments", i.e.
+How to apply <a href="align_assign_span.html">align_assign_span</a> to function declaration "assignments", i.e.
 'virtual void foo() = 0' or '~foo() = {default|delete}'.
 
 0: Align with other assignments (default)
 1: Align with each other, ignoring regular assignments
 2: Don't align
 </pre>
-<h1>Examples</h1>
 
+<h1>Examples</h1>
 <div class="hscroll">
 <table><tr>
   <th class="optkey">raw CPP code</th>
@@ -36,50 +36,58 @@ How to apply align_assign_span to function declaration "assignments", i.e.
 </tr><tr>
 <td class="code">class foo {
   public:
-    virtual void foo() =0;
-    int var1= 1;
+    int id = 0;
+    virtual 
+    void foo() =0;
   private:
-    int var2 =  2;
+    int debugLevel =  2;
     ~foo() =    default;
-    int var3=3;
+    int done =3;
 }
 </td>
 <td class="code">class foo {
 public:
-virtual void foo() = 0;
-int var1 = 1;
+int id         = 0;
+virtual
+void foo() = 0;
 private:
-int var2 =  2;
-~foo()             =    default;
-int var3 =3;
+int debugLevel =  2;
+~foo()     =    default;
+int done       =3;
 }
 </td>
 <td class="code">class foo {
 public:
-virtual void foo() = 0;
-int var1 = 1;
+int id         = 0;
+virtual
+void foo() = 0;
 private:
-int var2 =  2;
-~foo()             =    default;
-int var3 =3;
+int debugLevel =  2;
+~foo()     =    default;
+int done       =3;
 }
 </td>
 <td class="code">class foo {
 public:
-virtual void foo() = 0;
-int var1 = 1;
+int id         = 0;
+virtual
+void foo() = 0;
 private:
-int var2 =  2;
+int debugLevel =  2;
 ~foo() =    default;
-int var3 =3;
+int done       =3;
 }
 </td>
 </tr></table>
 &nbsp;
 </div>
-<h3>Info</h3>
-<pre>Edited by JEAYNE
+<h3 style="margin:0 auto;">Info</h3>
+<pre>  IMPORTANT: the default value is 0 but this default value modifie the code
+  BUG: the values 0 and 1 do the same thing; 0 is not working.
+  Edited by JEAYNE
 </pre><hr>
+<p><b>TAGS: </b>bug important</p>
+
 <p><i>Not the best code for this option? See how to improve the <a href="../how_to_uds.html" target="_top">.uds file</a> used to generate these examples.</i></p><div class="footer">
 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank"><img src="../static/Cc-by-nc-sa_icon.svg" align="left"></a>
 <ul style="padding-left:9em;">

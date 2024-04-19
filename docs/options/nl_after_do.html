@@ -20,57 +20,76 @@
 <pre>
 Add or remove blank line after 'do/while' statement.
 </pre>
-<h1>Examples</h1>
 
+<h1>Examples</h1>
 <div class="hscroll">
 <table><tr>
   <th class="optkey">raw CPP code</th>
-  <th class="optkey">nl_after_do=ignore</th>
-  <th class="optkey">nl_after_do=add</th>
-  <th class="optkey">nl_after_do=remove</th>
-  <th class="optkey">nl_after_do=force</th>
+  <th class="optkey">nl_after_do=false</th>
+  <th class="optkey">nl_after_do=true</th>
   <th class="optkey">nl<br/>nl_after_do</th>
 </tr><tr>
-<td class="code">void fnl(){do a++;while(a>0);}
-void fnl(){do{a++;}while(a>0);}
-</td>
-<td class="code">void fnl(){
-    do a++; while(a>0);
-}
-void fnl(){
-    do{a++;}while(a>0);
-}
-</td>
-<td class="code">void fnl(){
-    do a++; while(a>0);
-}
-void fnl(){
-    do{a++;}while(a>0);
+<td class="code">void f(int a){
+    do{
+        g(a);
+    }while(a);
+    g(a);
+    do
+        g(i);
+    while(a);
+    do{
+        g(a);
+    }while(a);
 }
 </td>
-<td class="code">void fnl(){
-    do a++; while(a>0);
-}
-void fnl(){
-    do{a++;}while(a>0);
+<td class="code">void f(int a){
+    do{
+        g(a);
+    }while(a);
+    g(a);
+    do
+        g(i);
+    while(a);
+    do{
+        g(a);
+    }while(a);
 }
 </td>
-<td class="code">void fnl(){
-    do a++; while(a>0);
-}
-void fnl(){
-    do{a++;}while(a>0);
+<td class="code">void f(int a){
+    do{
+        g(a);
+    }while(a);
+
+    g(a);
+    do
+        g(i);
+    while(a);
+
+    do{
+        g(a);
+    }while(a);
 }
 </td>
-<td class="code">void fnl(){
-    do<ins class="dot" alt="nl_define_macro"></ins>a++;<ins class="dot" alt="nl_after_semicolon"></ins>while(a>0);<ins class="dot" alt="nl_after_semicolon"></ins>
-}
-void fnl(){
-    do<ins class="dot" alt="nl_define_macro"></ins>{a++;<ins class="dot" alt="nl_after_semicolon"></ins>}while(a>0);<ins class="dot" alt="nl_after_semicolon"></ins>
+<td class="code">void f(int a){
+    do<ins class="dot" alt="nl_define_macro"></ins>{
+        g(a);<ins class="dot" alt="nl_after_semicolon"></ins>
+    }while(a);<ins class="dot" alt="nl_after_semicolon"></ins>
+    g(a);<ins class="dot" alt="nl_after_semicolon"></ins>
+    do<ins class="dot" alt="nl_define_macro"></ins>
+        g(i);<ins class="dot" alt="nl_after_semicolon"></ins>
+    while(a);<ins class="dot" alt="nl_after_semicolon"></ins>
+    do<ins class="dot" alt="nl_define_macro"></ins>{
+        g(a);<ins class="dot" alt="nl_after_semicolon"></ins>
+    }while(a);<ins class="dot" alt="nl_after_semicolon"></ins>
 }</td>
 </tr></table>
 &nbsp;
 </div>
+<h3 style="margin:0 auto;">Info</h3>
+<pre>  The blank line is added if the 'do...while();' statement is followed by another statement, not by a '}'.
+  This option doesn't apply to 'while()...'.
+  Looks like the tracking is not working
+  Edited by JEAYNE</pre><hr>
 
 <p><i>Not the best code for this option? See how to improve the <a href="../how_to_uds.html" target="_top">.uds file</a> used to generate these examples.</i></p><div class="footer">
 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank"><img src="../static/Cc-by-nc-sa_icon.svg" align="left"></a>

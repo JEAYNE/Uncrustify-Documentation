@@ -20,10 +20,11 @@
 <pre>
 Add or remove space around '=' in C++11 lambda capture specifications.
 
-Overrides sp_assign.
+Overrides <a href="sp_assign.html">sp_assign</a>.
+</pre>
+<pre>[<ins class="sp" alt="sp_cpp_lambda_assign"></ins>=<ins class="sp" alt="sp_cpp_lambda_assign"></ins>](function_parameters) -> return_type { body }
 </pre>
 <h1>Examples</h1>
-
 <div class="hscroll">
 <table><tr>
   <th class="optkey">raw CPP code</th>
@@ -33,80 +34,64 @@ Overrides sp_assign.
   <th class="optkey">sp_cpp_lambda_assign=force</th>
   <th class="optkey">space<br/>sp_cpp_lambda_assign</th>
 </tr><tr>
-<td class="code">/*-- this is the default sample --*/
-int main(int argc, char** argv){
-  int n = 0;
-  if(arg>=1){
-  printf("Hello %s!\n", argv[1]);
-    n=strlen(argv[1]);
-  }else{
-    puts("Hello world!");
-  }
-  return n;
-}
+<td class="code">auto x = [=]() -> int { }();
+auto x = [=   ]() -> int { }();
+auto x = [   =]() -> int { }();
+auto x = [   =   ]() -> int { }();
 </td>
-<td class="code">/*-- this is the default sample --*/
-int main(int argc, char** argv){
-    int n = 0;
-    if(arg>=1){
-        printf("Hello %s!\n", argv[1]);
-        n=strlen(argv[1]);
-    }else{
-        puts("Hello world!");
-    }
-    return n;
-}
+<td class="code">auto x = [=]() -> int {
+         }();
+auto x = [=   ]() -> int {
+         }();
+auto x = [   =]() -> int {
+         }();
+auto x = [   =   ]() -> int {
+         }();
 </td>
-<td class="code">/*-- this is the default sample --*/
-int main(int argc, char** argv){
-    int n = 0;
-    if(arg>=1){
-        printf("Hello %s!\n", argv[1]);
-        n=strlen(argv[1]);
-    }else{
-        puts("Hello world!");
-    }
-    return n;
-}
+<td class="code">auto x = [ = ]() -> int {
+         }();
+auto x = [ =   ]() -> int {
+         }();
+auto x = [   = ]() -> int {
+         }();
+auto x = [   =   ]() -> int {
+         }();
 </td>
-<td class="code">/*-- this is the default sample --*/
-int main(int argc, char** argv){
-    int n = 0;
-    if(arg>=1){
-        printf("Hello %s!\n", argv[1]);
-        n=strlen(argv[1]);
-    }else{
-        puts("Hello world!");
-    }
-    return n;
-}
+<td class="code">auto x = [=]() -> int {
+         }();
+auto x = [=]() -> int {
+         }();
+auto x = [=]() -> int {
+         }();
+auto x = [=]() -> int {
+         }();
 </td>
-<td class="code">/*-- this is the default sample --*/
-int main(int argc, char** argv){
-    int n = 0;
-    if(arg>=1){
-        printf("Hello %s!\n", argv[1]);
-        n=strlen(argv[1]);
-    }else{
-        puts("Hello world!");
-    }
-    return n;
-}
+<td class="code">auto x = [ = ]() -> int {
+         }();
+auto x = [ = ]() -> int {
+         }();
+auto x = [ = ]() -> int {
+         }();
+auto x = [ = ]() -> int {
+         }();
 </td>
-<td class="code">/*-- this is the default sample --*/<ins class="dot" alt="REMOVE"></ins>
-int<ins class="dot" alt="sp_type_func | ADD"></ins>main<ins class="dot" alt="sp_func_def_paren"></ins>(<ins class="dot" alt="sp_inside_fparen"></ins>int<ins class="dot" alt="sp_after_type"></ins>argc<ins class="dot" alt="sp_before_comma"></ins>,<ins class="dot" alt="sp_after_comma"></ins>char<ins class="dot" alt="IGNORE"></ins>*<ins class="dot" alt="sp_between_ptr_star"></ins>*<ins class="dot" alt="sp_after_ptr_star"></ins>argv<ins class="dot" alt="sp_inside_fparen"></ins>)<ins class="dot" alt="sp_fparen_brace"></ins>{<ins class="dot" alt="REMOVE"></ins>
-    int<ins class="dot" alt="sp_after_type"></ins>n<ins class="dot" alt="sp_assign"></ins>=<ins class="dot" alt="sp_assign"></ins>0<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
-    if<ins class="dot" alt="sp_before_sparen"></ins>(<ins class="dot" alt="sp_inside_sparen"></ins>arg<ins class="dot" alt="sp_compare"></ins>>=<ins class="dot" alt="sp_compare"></ins>1<ins class="dot" alt="sp_inside_sparen"></ins>)<ins class="dot" alt="sp_after_sparen"></ins>{<ins class="dot" alt="REMOVE"></ins>
-        printf<ins class="dot" alt="sp_func_call_paren"></ins>(<ins class="dot" alt="sp_inside_fparen"></ins>"Hello %s!\n"<ins class="dot" alt="sp_before_comma"></ins>,<ins class="dot" alt="sp_after_comma"></ins>argv<ins class="dot" alt="sp_before_square"></ins>[<ins class="dot" alt="sp_inside_square"></ins>1<ins class="dot" alt="sp_inside_square"></ins>]<ins class="dot" alt="sp_inside_fparen"></ins>)<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
-        n<ins class="dot" alt="sp_assign"></ins>=<ins class="dot" alt="sp_assign"></ins>strlen<ins class="dot" alt="sp_func_call_paren"></ins>(<ins class="dot" alt="sp_inside_fparen"></ins>argv<ins class="dot" alt="sp_before_square"></ins>[<ins class="dot" alt="sp_inside_square"></ins>1<ins class="dot" alt="sp_inside_square"></ins>]<ins class="dot" alt="sp_inside_fparen"></ins>)<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
-    }<ins class="dot" alt="sp_brace_else"></ins>else<ins class="dot" alt="sp_else_brace"></ins>{<ins class="dot" alt="REMOVE"></ins>
-        puts<ins class="dot" alt="sp_func_call_paren"></ins>(<ins class="dot" alt="sp_inside_fparen"></ins>"Hello world!"<ins class="dot" alt="sp_inside_fparen"></ins>)<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
-    }<ins class="dot" alt="REMOVE"></ins>
-    return<ins class="dot" alt="sp_return"></ins>n<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
-}<ins class="dot" alt="REMOVE"></ins></td>
+<td class="code">auto<ins class="dot" alt="sp_after_type"></ins>x<ins class="dot" alt="sp_assign"></ins>=<ins class="dot" alt="sp_assign"></ins>[<ins class="dot" alt="sp_assign"></ins>=<ins class="dot" alt="sp_assign"></ins>]<ins class="dot" alt="sp_cpp_lambda_square_paren"></ins>(<ins class="dot" alt="sp_cpp_lambda_argument_list_empty"></ins>)<ins class="dot" alt="sp_trailing_return"></ins>-><ins class="dot" alt="sp_trailing_return"></ins>int<ins class="dot" alt="sp_after_type"></ins>{<ins class="dot" alt="REMOVE"></ins>
+         }<ins class="dot" alt="sp_cpp_lambda_fparen"></ins>(<ins class="dot" alt="sp_inside_fparens"></ins>)<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
+auto<ins class="dot" alt="sp_after_type"></ins>x<ins class="dot" alt="sp_assign"></ins>=<ins class="dot" alt="sp_assign"></ins>[<ins class="dot" alt="sp_assign"></ins>=<ins class="dot" alt="sp_assign"></ins>]<ins class="dot" alt="sp_cpp_lambda_square_paren"></ins>(<ins class="dot" alt="sp_cpp_lambda_argument_list_empty"></ins>)<ins class="dot" alt="sp_trailing_return"></ins>-><ins class="dot" alt="sp_trailing_return"></ins>int<ins class="dot" alt="sp_after_type"></ins>{<ins class="dot" alt="REMOVE"></ins>
+         }<ins class="dot" alt="sp_cpp_lambda_fparen"></ins>(<ins class="dot" alt="sp_inside_fparens"></ins>)<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
+auto<ins class="dot" alt="sp_after_type"></ins>x<ins class="dot" alt="sp_assign"></ins>=<ins class="dot" alt="sp_assign"></ins>[<ins class="dot" alt="sp_assign"></ins>=<ins class="dot" alt="sp_assign"></ins>]<ins class="dot" alt="sp_cpp_lambda_square_paren"></ins>(<ins class="dot" alt="sp_cpp_lambda_argument_list_empty"></ins>)<ins class="dot" alt="sp_trailing_return"></ins>-><ins class="dot" alt="sp_trailing_return"></ins>int<ins class="dot" alt="sp_after_type"></ins>{<ins class="dot" alt="REMOVE"></ins>
+         }<ins class="dot" alt="sp_cpp_lambda_fparen"></ins>(<ins class="dot" alt="sp_inside_fparens"></ins>)<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
+auto<ins class="dot" alt="sp_after_type"></ins>x<ins class="dot" alt="sp_assign"></ins>=<ins class="dot" alt="sp_assign"></ins>[<ins class="dot" alt="sp_assign"></ins>=<ins class="dot" alt="sp_assign"></ins>]<ins class="dot" alt="sp_cpp_lambda_square_paren"></ins>(<ins class="dot" alt="sp_cpp_lambda_argument_list_empty"></ins>)<ins class="dot" alt="sp_trailing_return"></ins>-><ins class="dot" alt="sp_trailing_return"></ins>int<ins class="dot" alt="sp_after_type"></ins>{<ins class="dot" alt="REMOVE"></ins>
+         }<ins class="dot" alt="sp_cpp_lambda_fparen"></ins>(<ins class="dot" alt="sp_inside_fparens"></ins>)<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins></td>
 </tr></table>
 &nbsp;
 </div>
+<h3 style="margin:0 auto;">Info</h3>
+<pre>  fixme: maybe --tracking not invoked with the right --set
+  See also <a href="sp_assign.html">sp_assign</a>
+  Edited by JEAYNE
+</pre><hr>
+<p><b>TAGS: </b>c++ fixme</p>
 
 <p><i>Not the best code for this option? See how to improve the <a href="../how_to_uds.html" target="_top">.uds file</a> used to generate these examples.</i></p><div class="footer">
 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank"><img src="../static/Cc-by-nc-sa_icon.svg" align="left"></a>
