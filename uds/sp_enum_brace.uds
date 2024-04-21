@@ -10,7 +10,7 @@ enum   {A,B,C};
 ==== SET sp_enum_brace=remove
 ==== SET sp_enum_brace=force
 
-==== TRACK sp sp_enum_brace
+==== TRACK sp sp_enum_brace=force
 
 ==== INFO
   Take care, default is 'add'

@@ -16,7 +16,7 @@ printf("fmt"   ,   a   ,   b);
 ==== SET sp_before_comma=remove
 ==== SET sp_before_comma=force
 
-==== TRACK sp sp_before_comma
+==== TRACK sp sp_before_comma=force
 
 ==== INFO
   Take care: the default is 'remove'.

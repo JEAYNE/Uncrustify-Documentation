@@ -13,7 +13,7 @@ void f(){
 ==== SET sp_member=remove
 ==== SET sp_member=force
 
-==== TRACK sp sp_member
+==== TRACK sp sp_member=force
 
 ==== INFO
   Take care, default is 'remove'

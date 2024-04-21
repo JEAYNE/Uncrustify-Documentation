@@ -15,7 +15,7 @@ Macro(   ,   )
 ==== SET sp_paren_comma=remove
 ==== SET sp_paren_comma=force
 
-==== TRACK sp sp_paren_comma
+==== TRACK sp sp_paren_comma=force
 
 ==== INFO
   This syntax (, is only possible when invoking a function-like macro taking more than 1 argument,

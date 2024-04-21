@@ -21,7 +21,7 @@ int f(){
 ==== SET sp_return_paren=remove
 ==== SET sp_return_paren=force
 
-==== TRACK sp sp_return_paren
+==== TRACK sp sp_return_paren=force
 
 ==== INFO
   See also: @sp_return

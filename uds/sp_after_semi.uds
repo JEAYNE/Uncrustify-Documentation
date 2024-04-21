@@ -9,7 +9,7 @@ int a   ;   int b   ;   int c   ;   /*comment*/
 ==== SET sp_after_semi=remove sp_before_semi=ignore
 ==== SET sp_after_semi=force  sp_before_semi=ignore
 
-==== TRACK sp sp_after_semi
+==== TRACK sp sp_after_semi=force  sp_before_semi=ignore
 
 ==== INFO
   Take care: the default is 'remove' for @sp_before_semi and 'add' for @sp_after_semi.

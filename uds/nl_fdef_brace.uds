@@ -15,7 +15,7 @@ int h(int a){ return a; }
 ==== SET nl_fdef_brace=false
 ==== SET nl_fdef_brace=true
 
-==== TRACK nl nl_fdef_brace
+==== TRACK nl nl_fdef_brace=true
 
 ==== INFO
   Should have been named 'nl_func_def_brace'

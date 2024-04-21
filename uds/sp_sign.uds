@@ -17,7 +17,7 @@ a=+   *b;
 ==== SET sp_sign=remove
 ==== SET sp_sign=force
 
-==== TRACK sp sp_sign
+==== TRACK sp sp_sign=force
 
 ==== INFO
   Take care, default is 'remove'
@@ -52,7 +52,7 @@ a=b>>+c;
 ==== SET sp_sign=ignore
 ==== SET sp_sign=remove
 
-==== TRACK sp sp_sign
+==== TRACK sp sp_sign=remove
 
 ==== INFO
   BUG: A space is added between operators{+ - * / % | & << >>} and signs{+|-}

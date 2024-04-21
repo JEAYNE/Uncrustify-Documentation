@@ -19,6 +19,7 @@ void align_asm_colon(){
 }
 ==== SET align_asm_colon=false
 ==== SET align_asm_colon=true
+==== TRACK space align_asm_colon=true
 
 ==== INFO
   code sample based on https://gcc.gnu.org/onlinedocs/gcc/Extended-Asm.html

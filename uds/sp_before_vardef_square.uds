@@ -13,7 +13,7 @@ str[i]=0;
 ==== SET sp_before_vardef_square=remove
 ==== SET sp_before_vardef_square=force
 
-==== TRACK sp sp_before_vardef_square
+==== TRACK sp sp_before_vardef_square=force
 
 ==== INFO
   Take care, the default is 'remove'

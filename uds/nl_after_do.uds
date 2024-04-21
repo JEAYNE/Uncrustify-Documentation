@@ -16,7 +16,7 @@ void f(int a){
 ==== SET nl_after_do=false
 ==== SET nl_after_do=true
 
-==== TRACK nl nl_after_do
+==== TRACK nl nl_after_do=true
 
 ==== INFO
   The blank line is added if the 'do...while();' statement is followed by another statement, not by a '}'.

@@ -14,7 +14,7 @@
 ==== SET sp_not=remove
 ==== SET sp_not=force
 
-==== TRACK sp sp_not
+==== TRACK sp sp_not=force
 
 ==== INFO
   Take care, default is 'remove'

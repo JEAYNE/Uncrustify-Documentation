@@ -13,7 +13,7 @@ continuation
 ==== SET sp_before_nl_cont=remove
 ==== SET sp_before_nl_cont=force
 
-==== TRACK sp sp_before_nl_cont
+==== TRACK sp sp_before_nl_cont=force
 
 ==== INFO
   Take care, the default is 'add'

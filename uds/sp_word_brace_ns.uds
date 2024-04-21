@@ -10,7 +10,7 @@ namespace test   {  }
 ==== SET sp_word_brace_ns=remove
 ==== SET sp_word_brace_ns=force
 
-==== TRACK sp sp_word_brace_ns
+==== TRACK sp sp_word_brace_ns=force
 
 ==== INFO
   Take care default is 'add'

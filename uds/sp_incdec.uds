@@ -13,7 +13,7 @@
 ==== SET sp_incdec=remove
 ==== SET sp_incdec=force
 
-==== TRACK sp sp_incdec
+==== TRACK sp sp_incdec=force
 
 ==== INFO
   Take care, default is 'remove'

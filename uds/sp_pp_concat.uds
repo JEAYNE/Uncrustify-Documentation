@@ -11,7 +11,7 @@ a`sp`##`sp`b
 ==== SET sp_pp_concat=remove
 ==== SET sp_pp_concat=force
 
-==== TRACK sp sp_pp_concat
+==== TRACK sp sp_pp_concat=force
 
 ==== INFO
   Take care, default is 'add'

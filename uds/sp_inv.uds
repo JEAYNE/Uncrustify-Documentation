@@ -14,7 +14,7 @@
 ==== SET sp_inv=remove
 ==== SET sp_inv=force
 
-==== TRACK sp sp_inv
+==== TRACK sp sp_inv=force
 
 ==== INFO
   Take care, default is 'remove'

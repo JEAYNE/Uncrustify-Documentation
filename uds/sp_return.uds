@@ -32,7 +32,7 @@ int f(){
 ==== SET sp_return=remove
 ==== SET sp_return=force
 
-==== TRACK sp sp_return
+==== TRACK sp sp_return=force
 
 ==== INFO
   Take care: the default is force.

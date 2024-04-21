@@ -48,7 +48,7 @@ enum    {red,green,blue};
 ==== SET sp_after_type=remove
 ==== SET sp_after_type=force
 
-==== TRACK sp sp_after_type
+==== TRACK sp sp_after_type=force
 
 ==== INFO
   Take care: the default is 'force'

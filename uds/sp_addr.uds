@@ -21,7 +21,7 @@ f(c&   ,int&    );
 ==== SET sp_addr=remove
 ==== SET sp_addr=force
 
-==== TRACK sp sp_addr
+==== TRACK sp sp_addr=force
 
 ==== INFO
   Take care: the default is 'remove'

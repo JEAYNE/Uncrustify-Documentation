@@ -38,7 +38,7 @@ int a9;
 ==== SET nl_max=6
 ==== SET nl_max=3
 
-==== TRACK nl nl_max
+==== TRACK nl nl_max=3
 
 ==== INFO
   Notes:

@@ -23,7 +23,7 @@ int main(int argc, char** argv){
 ==== SET nl_after_if=remove
 ==== SET nl_after_if=force
 
-==== TRACK nl nl_after_if
+==== TRACK nl nl_after_if=force
 
 ==== INFO
   BUG the position where nl_after_if takes effect is not visible.

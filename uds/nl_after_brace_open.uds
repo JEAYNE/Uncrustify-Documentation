@@ -11,7 +11,7 @@ int g(a) { f(a)+1; }
 ==== SET nl_after_brace_open=false
 ==== SET nl_after_brace_open=true
 
-==== TRACK nl nl_after_brace_open
+==== TRACK nl nl_after_brace_open=true
 
 ==== INFO
   This option doesn't apply to the '{' function body.

@@ -13,7 +13,7 @@ void f(int a){
 ==== SET nl_after_brace_close=false
 ==== SET nl_after_brace_close=true
 
-==== TRACK nl nl_after_brace_close
+==== TRACK nl nl_after_brace_close=true
 
 ==== INFO
   Looks like the tracking is not working

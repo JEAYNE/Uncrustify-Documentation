@@ -21,7 +21,7 @@ int f(int a){
 ==== SET nl_after_return=false
 ==== SET nl_after_return=true
 
-==== TRACK nl nl_after_return
+==== TRACK nl nl_after_return=true
 
 ==== INFO
   No blank line added after 'return 1;'. Bug ?

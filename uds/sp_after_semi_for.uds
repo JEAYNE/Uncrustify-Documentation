@@ -12,7 +12,7 @@ void f(){
 ==== SET sp_after_semi_for=remove
 ==== SET sp_after_semi_for=force
 
-==== TRACK sp sp_after_semi_for
+==== TRACK sp sp_after_semi_for=force
 
 ==== INFO
   Take care: the default is 'force'.

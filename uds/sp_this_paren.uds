@@ -10,7 +10,7 @@ this   ();
 ==== SET sp_this_paren=remove
 ==== SET sp_this_paren=force
 
-==== TRACK sp sp_this_paren
+==== TRACK sp sp_this_paren=force
 
 ==== INFO
   Take care default is 'remove'

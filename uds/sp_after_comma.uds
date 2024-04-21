@@ -16,7 +16,7 @@ printf("fmt"   ,   a   ,   b);
 ==== SET sp_after_comma=remove sp_before_comma=ignore
 ==== SET sp_after_comma=force  sp_before_comma=ignore
 
-==== TRACK sp sp_after_comma
+==== TRACK sp sp_after_comma=force sp_before_comma=ignore
 
 ==== INFO
   See also: @sp_before_comma
