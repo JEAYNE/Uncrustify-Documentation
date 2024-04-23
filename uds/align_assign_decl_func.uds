@@ -1,20 +1,17 @@
 ==== NAME align_assign_decl_func
 ==== CODE
-class foo {
-  public:
-    int id = 0;
-    virtual 
-    void foo() =0;
-  private:
-    int debugLevel =  2;
-    ~foo() =    default;
-    int done =3;
-}
-==== SET align_assign_decl_func=0 align_assign_span=8
-==== SET align_assign_decl_func=1 align_assign_span=8
-==== SET align_assign_decl_func=2 align_assign_span=8
+struct foo {
+    int id = 1;
+    virtual void f() = 0;
+    int debugLevel = 2;
+    ~foo() = default;
+    int done = 3;
+};
+==== SET align_assign_decl_func=0 align_assign_span=3
+==== SET align_assign_decl_func=1 align_assign_span=3
+==== SET align_assign_decl_func=2 align_assign_span=3
 ==== TAGS bug important
 ==== INFO
-  IMPORTANT: the default value is 0 but this default value modifie the code
+  IMPORTANT: the default value is 0 but this default value modifies the code
   BUG: the values 0 and 1 do the same thing; 0 is not working.
   Edited by JEAYNE

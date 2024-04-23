@@ -11,20 +11,22 @@
 <p>
 Not all developers classify the options provided by Uncrustify in the same way: <br/>
 - Some think in term of keyword: if, while, switch, struct, etc.<br/>
-- Others think in term by type of action: where to add a space, where to add a line break, etc. <br/>
+- Others think in term of action: where to add a space, where to add a line break, etc. <br/>
 - Some don't want to use options that modify the code, such as adding/removing brackets or curly braces.<br/>
 </p>
 <p>
 But, as a developer, you know that to rule you have to divide!<br/>
-Currently you have two tools for that:
-<h2>The first tool</h2>
-Uncrustify offers a little-known tool (because it is not used in the configurations examples) to divide:
-<h3>&nbsp &nbsp <code>include file</code></h3>
-which works the same way as <b><code>#include "file"</code></b><br/>
+Currently you have 3 tools for that:
 </p>
+
+<h2>First tool: include</h2>
+Uncrustify offers a little-known tool (because it is not used in the configurations examples) to divide:
+<h3>&nbsp; &nbsp; <code>include file</code></h3>
 <p>
-<pre>
+which works the same way as <b><code>#include "file"</code></b><br/>
 Example:
+</p>
+<pre>
   $ cat uncrustify.cfg
   include path/to/general.cfg
   include path/to/kr_statements.cfg
@@ -37,11 +39,48 @@ Example:
   include kr/throw_try_catch.cfg
 </pre>
 
-With this method it is easy to change the 'look' of your code.
+<h2>Second tool: reuse</h2>
+<p>
+You know the syntax used by uncrustify configuration:<br/>
+  &nbsp; <code>&lt;option-name> = &lt;value></code><br/>
+Example: <code>nl_after_annotation = force</code>
 </p>
-<h2>The second tool</h2>
+<p>
+In fact the syntax is:<br/>
+  &nbsp; <code>&lt;option-name> = &lt;value> | &lt;option-name></code><br/>
+Obviously, the option on the left side and the one on the right side must have the same type.<br/>
+Examples:
 </p>
-... is this documentaion ;-)
+<pre>
+  input_tab_size = 4
+  output_tab_size= input_tab_size
+  indent_columns = output_tab_size
+
+  # --> Change the value of 'nl_do_brace' between 'remove' or 'force'
+
+                                  #-- remove --------- force ---------
+  nl_do_brace     = remove        # "do {"         vs  "do \n {"
+  nl_brace_while  = nl_do_brace   # "} while"      vs  "} \n while"
+
+  nl_for_brace    = nl_do_brace   # "for () {"     vs  "for () \n {"
+
+  nl_if_brace     = nl_do_brace   # "if () {"      vs  "if () \n {"
+  nl_elseif_brace = nl_do_brace   # "else if {"    vs  "else if \n {"
+  nl_brace_else   = nl_do_brace   # "} else"       vs  "} \n else"
+  nl_else_brace   = nl_do_brace   # "else {"       vs  "else \n {"
+
+  nl_switch_brace = nl_do_brace   # "switch () {"  vs  "switch () \n {"
+
+  nl_try_brace    = nl_do_brace   # "try {"        vs  "try \n {"
+  nl_catch_brace  = nl_do_brace   # "catch () {"   vs  "catch () \n {"
+  nl_brace_catch  = nl_do_brace   # "} catch       vs  "} \n catch"
+
+  nl_while_brace  = nl_do_brace   # "while () {"   vs  "while () \n {"
+</pre>
+
+<h2>Third tool...</h2>
+<p>
+... this documentation ;-)
 </p>
 <hr>
 <a href="./" style="text-decoration: none;"><img src="./static/home-16.png"> home</a>
