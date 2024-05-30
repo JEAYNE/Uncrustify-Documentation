@@ -29,7 +29,7 @@ Add or remove newline after each ',' in a function call.
   <th class="optkey">nl_func_call_args=add</th>
   <th class="optkey">nl_func_call_args=remove</th>
   <th class="optkey">nl_func_call_args=force</th>
-  <th class="optkey">nl<br/>nl_func_call_args</th>
+  <th class="optkey">nl<br/>nl_func_call_args=force</th>
 </tr><tr>
 <td class="code">/*-- this is the default sample --*/
 int main(int argc, char** argv){
@@ -97,7 +97,8 @@ int main(int argc, char** argv){
 int main(int argc, char** argv){
     int n = 0;<ins class="dot" alt="nl_after_semicolon"></ins>
     if(arg>=1){
-        printf("Hello %s!\n", argv[1]);<ins class="dot" alt="nl_after_semicolon"></ins>
+        printf("Hello %s!\n",
+               argv[1]);<ins class="dot" alt="nl_after_semicolon"></ins>
         n=strlen(argv[1]);<ins class="dot" alt="nl_after_semicolon"></ins>
     }else<ins class="dot" alt="nl_define_macro"></ins>{
         puts("Hello world!");<ins class="dot" alt="nl_after_semicolon"></ins>

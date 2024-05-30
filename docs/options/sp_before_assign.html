@@ -32,7 +32,7 @@ Overrides <a href="sp_assign.html">sp_assign</a>.
   <th class="optkey">sp_before_assign=add</th>
   <th class="optkey">sp_before_assign=remove</th>
   <th class="optkey">sp_before_assign=force</th>
-  <th class="optkey">space<br/>sp_before_assign</th>
+  <th class="optkey">space<br/>sp_before_assign=force</th>
 </tr><tr>
 <td class="code">a=b;
 a=   b;
@@ -194,35 +194,35 @@ a &lt;&lt;=   b;
 
 // etc...
 </td>
-<td class="code">a<ins class="dot" alt="sp_assign"></ins>=<ins class="dot" alt="sp_assign"></ins>b<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
-a<ins class="dot" alt="sp_assign"></ins>=<ins class="dot" alt="sp_assign"></ins>b<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
-a<ins class="dot" alt="sp_assign"></ins>=<ins class="dot" alt="sp_assign"></ins>b<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
-a<ins class="dot" alt="sp_assign"></ins>=<ins class="dot" alt="sp_assign"></ins>b<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
+<td class="code">a<ins class="space" alt="sp_before_assign"></ins>=<ins class="dot" alt="sp_assign"></ins>b<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
+a<ins class="space" alt="sp_before_assign"></ins>=<ins class="dot" alt="sp_assign"></ins>b<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
+a<ins class="space" alt="sp_before_assign"></ins>=<ins class="dot" alt="sp_assign"></ins>b<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
+a<ins class="space" alt="sp_before_assign"></ins>=<ins class="dot" alt="sp_assign"></ins>b<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
 
-a<ins class="dot" alt="sp_assign"></ins>+=<ins class="dot" alt="sp_assign"></ins>b<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
-a<ins class="dot" alt="sp_assign"></ins>+=<ins class="dot" alt="sp_assign"></ins>b<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
-a<ins class="dot" alt="sp_assign"></ins>+=<ins class="dot" alt="sp_assign"></ins>b<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
-a<ins class="dot" alt="sp_assign"></ins>+=<ins class="dot" alt="sp_assign"></ins>b<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
+a<ins class="space" alt="sp_before_assign"></ins>+=<ins class="dot" alt="sp_assign"></ins>b<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
+a<ins class="space" alt="sp_before_assign"></ins>+=<ins class="dot" alt="sp_assign"></ins>b<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
+a<ins class="space" alt="sp_before_assign"></ins>+=<ins class="dot" alt="sp_assign"></ins>b<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
+a<ins class="space" alt="sp_before_assign"></ins>+=<ins class="dot" alt="sp_assign"></ins>b<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
 
-a<ins class="dot" alt="sp_assign"></ins>%=<ins class="dot" alt="sp_assign"></ins>b<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
-a<ins class="dot" alt="sp_assign"></ins>%=<ins class="dot" alt="sp_assign"></ins>b<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
-a<ins class="dot" alt="sp_assign"></ins>%=<ins class="dot" alt="sp_assign"></ins>b<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
-a<ins class="dot" alt="sp_assign"></ins>%=<ins class="dot" alt="sp_assign"></ins>b<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
+a<ins class="space" alt="sp_before_assign"></ins>%=<ins class="dot" alt="sp_assign"></ins>b<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
+a<ins class="space" alt="sp_before_assign"></ins>%=<ins class="dot" alt="sp_assign"></ins>b<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
+a<ins class="space" alt="sp_before_assign"></ins>%=<ins class="dot" alt="sp_assign"></ins>b<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
+a<ins class="space" alt="sp_before_assign"></ins>%=<ins class="dot" alt="sp_assign"></ins>b<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
 
-a<ins class="dot" alt="sp_assign"></ins>&=<ins class="dot" alt="sp_assign"></ins>b<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
-a<ins class="dot" alt="sp_assign"></ins>&=<ins class="dot" alt="sp_assign"></ins>b<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
-a<ins class="dot" alt="sp_assign"></ins>&=<ins class="dot" alt="sp_assign"></ins>b<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
-a<ins class="dot" alt="sp_assign"></ins>&=<ins class="dot" alt="sp_assign"></ins>b<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
+a<ins class="space" alt="sp_before_assign"></ins>&=<ins class="dot" alt="sp_assign"></ins>b<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
+a<ins class="space" alt="sp_before_assign"></ins>&=<ins class="dot" alt="sp_assign"></ins>b<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
+a<ins class="space" alt="sp_before_assign"></ins>&=<ins class="dot" alt="sp_assign"></ins>b<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
+a<ins class="space" alt="sp_before_assign"></ins>&=<ins class="dot" alt="sp_assign"></ins>b<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
 
-a<ins class="dot" alt="sp_assign"></ins>>>=<ins class="dot" alt="sp_assign"></ins>b<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
-a<ins class="dot" alt="sp_assign"></ins>>>=<ins class="dot" alt="sp_assign"></ins>b<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
-a<ins class="dot" alt="sp_assign"></ins>>>=<ins class="dot" alt="sp_assign"></ins>b<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
-a<ins class="dot" alt="sp_assign"></ins>>>=<ins class="dot" alt="sp_assign"></ins>b<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
+a<ins class="space" alt="sp_before_assign"></ins>>>=<ins class="dot" alt="sp_assign"></ins>b<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
+a<ins class="space" alt="sp_before_assign"></ins>>>=<ins class="dot" alt="sp_assign"></ins>b<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
+a<ins class="space" alt="sp_before_assign"></ins>>>=<ins class="dot" alt="sp_assign"></ins>b<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
+a<ins class="space" alt="sp_before_assign"></ins>>>=<ins class="dot" alt="sp_assign"></ins>b<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
 
-a<ins class="dot" alt="sp_assign"></ins>&lt;<&gt;<<=<ins class="dot" alt="sp_assign"></ins>b<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
-a<ins class="dot" alt="sp_assign"></ins>&lt;<&gt;<<=<ins class="dot" alt="sp_assign"></ins>b<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
-a<ins class="dot" alt="sp_assign"></ins>&lt;<&gt;<<=<ins class="dot" alt="sp_assign"></ins>b<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
-a<ins class="dot" alt="sp_assign"></ins>&lt;<&gt;<<=<ins class="dot" alt="sp_assign"></ins>b<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
+a<ins class="space" alt="sp_before_assign"></ins>&lt;<&gt;<<=<ins class="dot" alt="sp_assign"></ins>b<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
+a<ins class="space" alt="sp_before_assign"></ins>&lt;<&gt;<<=<ins class="dot" alt="sp_assign"></ins>b<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
+a<ins class="space" alt="sp_before_assign"></ins>&lt;<&gt;<<=<ins class="dot" alt="sp_assign"></ins>b<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
+a<ins class="space" alt="sp_before_assign"></ins>&lt;<&gt;<<=<ins class="dot" alt="sp_assign"></ins>b<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
 
 // etc...<ins class="dot" alt="REMOVE"></ins></td>
 </tr></table>

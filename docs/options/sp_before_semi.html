@@ -32,7 +32,7 @@ Default: remove
   <th class="optkey">sp_before_semi=add<br/>sp_after_semi=ignore</th>
   <th class="optkey">sp_before_semi=remove<br/>sp_after_semi=ignore</th>
   <th class="optkey">sp_before_semi=force<br/>sp_after_semi=ignore</th>
-  <th class="optkey">space<br/>sp_before_semi</th>
+  <th class="optkey">space<br/>sp_before_semi=force<br/>sp_after_semi=ignore</th>
 </tr><tr>
 <td class="code">int a;int b;int c;/*comment*/
 int a   ;   int b   ;   int c   ;   /*comment*/
@@ -49,8 +49,8 @@ int a;   int b;   int c;            /*comment*/
 <td class="code">int a ;int b ;int c ;/*comment*/
 int a ;   int b ;   int c ;         /*comment*/
 </td>
-<td class="code">int<ins class="dot" alt="sp_after_type"></ins>a<ins class="space" alt="sp_before_semi"></ins>;<ins class="dot" alt="sp_after_semi"></ins>int<ins class="dot" alt="sp_after_type"></ins>b<ins class="space" alt="sp_before_semi"></ins>;<ins class="dot" alt="sp_after_semi"></ins>int<ins class="dot" alt="sp_after_type"></ins>c<ins class="space" alt="sp_before_semi"></ins>;<ins class="dot" alt="orig prev sp - REMOVE"></ins>/*comment*/<ins class="dot" alt="REMOVE"></ins>
-int<ins class="dot" alt="sp_after_type"></ins>a<ins class="space" alt="sp_before_semi"></ins>;<ins class="dot" alt="sp_after_semi"></ins>int<ins class="dot" alt="sp_after_type"></ins>b<ins class="space" alt="sp_before_semi"></ins>;<ins class="dot" alt="sp_after_semi"></ins>int<ins class="dot" alt="sp_after_type"></ins>c<ins class="space" alt="sp_before_semi"></ins>;<ins class="dot" alt="orig prev sp - ADD"></ins>/*comment*/<ins class="dot" alt="REMOVE"></ins></td>
+<td class="code">int<ins class="dot" alt="sp_after_type"></ins>a<ins class="space" alt="sp_before_semi"></ins>;<ins class="space" alt="sp_after_semi"></ins>int<ins class="dot" alt="sp_after_type"></ins>b<ins class="space" alt="sp_before_semi"></ins>;<ins class="space" alt="sp_after_semi"></ins>int<ins class="dot" alt="sp_after_type"></ins>c<ins class="space" alt="sp_before_semi"></ins>;<ins class="dot" alt="orig prev sp - REMOVE"></ins>/*comment*/<ins class="dot" alt="REMOVE"></ins>
+int<ins class="dot" alt="sp_after_type"></ins>a<ins class="space" alt="sp_before_semi"></ins>;<ins class="space" alt="sp_after_semi"></ins>int<ins class="dot" alt="sp_after_type"></ins>b<ins class="space" alt="sp_before_semi"></ins>;<ins class="space" alt="sp_after_semi"></ins>int<ins class="dot" alt="sp_after_type"></ins>c<ins class="space" alt="sp_before_semi"></ins>;<ins class="dot" alt="orig prev sp - ADD"></ins>/*comment*/<ins class="dot" alt="REMOVE"></ins></td>
 </tr></table>
 &nbsp;
 </div>

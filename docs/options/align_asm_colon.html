@@ -27,6 +27,7 @@ Whether to align text after 'asm volatile ()' colons.
   <th class="optkey">raw CPP code</th>
   <th class="optkey">align_asm_colon=false</th>
   <th class="optkey">align_asm_colon=true</th>
+  <th class="optkey">space<br/>align_asm_colon=true</th>
 </tr><tr>
 <td class="code">void align_asm_colon(){
 
@@ -82,6 +83,23 @@ Whether to align text after 'asm volatile ()' colons.
 
 }
 </td>
+<td class="code">void<ins class="dot" alt="sp_type_func | ADD"></ins>align_asm_colon<ins class="dot" alt="sp_func_def_paren"></ins>(<ins class="dot" alt="sp_inside_fparens"></ins>)<ins class="dot" alt="sp_fparen_brace"></ins>{<ins class="dot" alt="REMOVE"></ins>
+
+    asm<ins class="dot" alt="ADD from add_space_table @ 10."></ins>(<ins class="dot" alt="sp_inside_paren"></ins>"bsfl %1,%0"<ins class="dot" alt="REMOVE"></ins>
+         :<ins class="dot" alt="ADD from add_space_table @ 53."></ins>"=r"<ins class="dot" alt="ADD from add_space_table @ 228."></ins>(<ins class="dot" alt="sp_inside_paren"></ins>dwRes<ins class="dot" alt="sp_inside_paren"></ins>)<ins class="dot" alt="REMOVE"></ins>
+         :<ins class="dot" alt="ADD from add_space_table @ 53."></ins>"r"<ins class="dot" alt="ADD from add_space_table @ 228."></ins>(<ins class="dot" alt="sp_inside_paren"></ins>dwSomeValue<ins class="dot" alt="sp_inside_paren"></ins>)<ins class="dot" alt="REMOVE"></ins>
+         :<ins class="dot" alt="ADD from add_space_table @ 53."></ins>"cc"<ins class="dot" alt="sp_inside_paren"></ins>)<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
+
+    asm<ins class="dot" alt="ADD from add_space_table @ 11."></ins>volatile<ins class="dot" alt="sp_after_type"></ins>(<ins class="dot" alt="sp_inside_paren"></ins>"rdtsc\n\t"<ins class="dot" alt="orig prev sp - ADD"></ins>// Returns the time in EDX:EAX.<ins class="dot" alt="REMOVE"></ins>
+                   "shl $32, %%rdx\n\t"<ins class="dot" alt="orig prev sp - ADD"></ins>// Shift the upper bits left.<ins class="dot" alt="REMOVE"></ins>
+                   "or %%rdx, %0"<ins class="dot" alt="orig prev sp - ADD"></ins>// 'Or' in the lower bits.<ins class="dot" alt="REMOVE"></ins>
+                   :<ins class="dot" alt="ADD from add_space_table @ 8."></ins>"=a"<ins class="dot" alt="ADD from add_space_table @ 228."></ins>(<ins class="dot" alt="sp_inside_paren"></ins>msr<ins class="dot" alt="sp_inside_paren"></ins>)<ins class="dot" alt="REMOVE"></ins>
+                   :<ins class="dot" alt="REMOVE"></ins>
+                   :<ins class="dot" alt="ADD from add_space_table @ 8."></ins>"rdx"<ins class="dot" alt="sp_inside_paren"></ins>)<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
+
+    asm<ins class="dot" alt="ADD from add_space_table @ 11."></ins>volatile<ins class="dot" alt="sp_after_type"></ins>(<ins class="dot" alt="sp_inside_paren"></ins>"mtfsf 255,%1"<ins class="dot" alt="ADD as default value"></ins>:<ins class="dot" alt="ADD from add_space_table @ 8."></ins>"=X"<ins class="dot" alt="ADD from add_space_table @ 228."></ins>(<ins class="dot" alt="sp_inside_paren"></ins>sum<ins class="dot" alt="sp_inside_paren"></ins>)<ins class="dot" alt="ADD from add_space_table @ 145."></ins>:<ins class="dot" alt="ADD from add_space_table @ 8."></ins>"f"<ins class="dot" alt="ADD from add_space_table @ 228."></ins>(<ins class="dot" alt="sp_inside_paren"></ins>fpenv<ins class="dot" alt="sp_inside_paren"></ins>)<ins class="dot" alt="sp_paren_paren"></ins>)<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
+
+}<ins class="dot" alt="REMOVE"></ins></td>
 </tr></table>
 &nbsp;
 </div>

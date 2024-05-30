@@ -30,7 +30,7 @@ element, in 'enum'.
   <th class="optkey">nl_enum_own_lines=add</th>
   <th class="optkey">nl_enum_own_lines=remove</th>
   <th class="optkey">nl_enum_own_lines=force</th>
-  <th class="optkey">nl<br/>nl_enum_own_lines</th>
+  <th class="optkey">nl<br/>nl_enum_own_lines=force</th>
 </tr><tr>
 <td class="code">enum{A,B,C=-2,D,E};
 </td>
@@ -54,7 +54,13 @@ element, in 'enum'.
     E
 };
 </td>
-<td class="code">enum {A,B,C=-2,D,E};<ins class="dot" alt="nl_after_semicolon"></ins></td>
+<td class="code">enum {
+    A,
+    B,
+    C=-2,
+    D,
+    E
+};<ins class="dot" alt="nl_after_semicolon"></ins></td>
 </tr></table>
 &nbsp;
 </div>

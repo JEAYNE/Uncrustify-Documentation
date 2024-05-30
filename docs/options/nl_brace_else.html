@@ -29,7 +29,7 @@ Add or remove newline between '}' and 'else'.
   <th class="optkey">nl_brace_else=add</th>
   <th class="optkey">nl_brace_else=remove</th>
   <th class="optkey">nl_brace_else=force</th>
-  <th class="optkey">nl<br/>nl_brace_else</th>
+  <th class="optkey">nl<br/>nl_brace_else=force</th>
 </tr><tr>
 <td class="code">void fnl1(){if(a)b();else c();}
 void fnl2(){if(a){b();}else{c();}}
@@ -68,7 +68,8 @@ void fnl2(){
     if(a) b();<ins class="dot" alt="nl_after_semicolon"></ins>else<ins class="dot" alt="nl_define_macro"></ins>c();<ins class="dot" alt="nl_after_semicolon"></ins>
 }
 void fnl2(){
-    if(a){b();<ins class="dot" alt="nl_after_semicolon"></ins>}else<ins class="dot" alt="nl_define_macro"></ins>{c();<ins class="dot" alt="nl_after_semicolon"></ins>}
+    if(a){b();<ins class="dot" alt="nl_after_semicolon"></ins>}
+    else<ins class="dot" alt="nl_define_macro"></ins>{c();<ins class="dot" alt="nl_after_semicolon"></ins>}
 }</td>
 </tr></table>
 &nbsp;

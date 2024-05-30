@@ -29,7 +29,7 @@ Add or remove newline before 'if'/'else if' closing parenthesis.
   <th class="optkey">nl_before_if_closing_paren=add</th>
   <th class="optkey">nl_before_if_closing_paren=remove</th>
   <th class="optkey">nl_before_if_closing_paren=force</th>
-  <th class="optkey">nl<br/>nl_before_if_closing_paren</th>
+  <th class="optkey">nl<br/>nl_before_if_closing_paren=force</th>
 </tr><tr>
 <td class="code">void fnl1(){if(a)b();else c();}
 void fnl2(){if(a){b();}else{c();}}
@@ -67,10 +67,12 @@ void fnl2(){
 }
 </td>
 <td class="code">void fnl1(){
-    if(a) b();<ins class="dot" alt="nl_after_semicolon"></ins>else<ins class="dot" alt="nl_define_macro"></ins>c();<ins class="dot" alt="nl_after_semicolon"></ins>
+    if(a
+       ) b();<ins class="dot" alt="nl_after_semicolon"></ins>else<ins class="dot" alt="nl_define_macro"></ins>c();<ins class="dot" alt="nl_after_semicolon"></ins>
 }
 void fnl2(){
-    if(a){b();<ins class="dot" alt="nl_after_semicolon"></ins>}else<ins class="dot" alt="nl_define_macro"></ins>{c();<ins class="dot" alt="nl_after_semicolon"></ins>}
+    if(a
+       ){b();<ins class="dot" alt="nl_after_semicolon"></ins>}else<ins class="dot" alt="nl_define_macro"></ins>{c();<ins class="dot" alt="nl_after_semicolon"></ins>}
 }</td>
 </tr></table>
 &nbsp;

@@ -30,7 +30,7 @@ if signature ends with ')'. Overrides <a href="nl_fdef_brace.html">nl_fdef_brace
   <th class="optkey">nl_fdef_brace_cond=add</th>
   <th class="optkey">nl_fdef_brace_cond=remove</th>
   <th class="optkey">nl_fdef_brace_cond=force</th>
-  <th class="optkey">nl<br/>nl_fdef_brace_cond</th>
+  <th class="optkey">nl<br/>nl_fdef_brace_cond=force</th>
 </tr><tr>
 <td class="code">/*-- this is the default sample --*/
 int main(int argc, char** argv){
@@ -95,7 +95,8 @@ int main(int argc, char** argv)
 }
 </td>
 <td class="code">/*-- this is the default sample --*/
-int main(int argc, char** argv){
+int main(int argc, char** argv)
+{
     int n = 0;<ins class="dot" alt="nl_after_semicolon"></ins>
     if(arg>=1){
         printf("Hello %s!\n", argv[1]);<ins class="dot" alt="nl_after_semicolon"></ins>

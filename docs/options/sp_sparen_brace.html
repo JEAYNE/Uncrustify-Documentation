@@ -29,7 +29,7 @@ Add or remove space between ')' and '{' of control statements.
   <th class="optkey">sp_sparen_brace=add</th>
   <th class="optkey">sp_sparen_brace=remove</th>
   <th class="optkey">sp_sparen_brace=force</th>
-  <th class="optkey">space<br/>sp_sparen_brace</th>
+  <th class="optkey">space<br/>sp_sparen_brace=force</th>
 </tr><tr>
 <td class="code">/*-- this is the default sample --*/
 int main(int argc, char** argv){
@@ -94,7 +94,7 @@ int main(int argc, char** argv){
 <td class="code">/*-- this is the default sample --*/<ins class="dot" alt="REMOVE"></ins>
 int<ins class="dot" alt="sp_type_func | ADD"></ins>main<ins class="dot" alt="sp_func_def_paren"></ins>(<ins class="dot" alt="sp_inside_fparen"></ins>int<ins class="dot" alt="sp_after_type"></ins>argc<ins class="dot" alt="sp_before_comma"></ins>,<ins class="dot" alt="sp_after_comma"></ins>char<ins class="dot" alt="IGNORE"></ins>*<ins class="dot" alt="sp_between_ptr_star"></ins>*<ins class="dot" alt="sp_after_ptr_star"></ins>argv<ins class="dot" alt="sp_inside_fparen"></ins>)<ins class="dot" alt="sp_fparen_brace"></ins>{<ins class="dot" alt="REMOVE"></ins>
     int<ins class="dot" alt="sp_after_type"></ins>n<ins class="dot" alt="sp_assign"></ins>=<ins class="dot" alt="sp_assign"></ins>0<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
-    if<ins class="dot" alt="sp_before_sparen"></ins>(<ins class="dot" alt="sp_inside_sparen"></ins>arg<ins class="dot" alt="sp_compare"></ins>>=<ins class="dot" alt="sp_compare"></ins>1<ins class="dot" alt="sp_inside_sparen"></ins>)<ins class="dot" alt="sp_after_sparen"></ins>{<ins class="dot" alt="REMOVE"></ins>
+    if<ins class="dot" alt="sp_before_sparen"></ins>(<ins class="dot" alt="sp_inside_sparen"></ins>arg<ins class="dot" alt="sp_compare"></ins>>=<ins class="dot" alt="sp_compare"></ins>1<ins class="dot" alt="sp_inside_sparen"></ins>)<ins class="space" alt="sp_sparen_brace"></ins>{<ins class="dot" alt="REMOVE"></ins>
         printf<ins class="dot" alt="sp_func_call_paren"></ins>(<ins class="dot" alt="sp_inside_fparen"></ins>"Hello %s!\n"<ins class="dot" alt="sp_before_comma"></ins>,<ins class="dot" alt="sp_after_comma"></ins>argv<ins class="dot" alt="sp_before_square"></ins>[<ins class="dot" alt="sp_inside_square"></ins>1<ins class="dot" alt="sp_inside_square"></ins>]<ins class="dot" alt="sp_inside_fparen"></ins>)<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
         n<ins class="dot" alt="sp_assign"></ins>=<ins class="dot" alt="sp_assign"></ins>strlen<ins class="dot" alt="sp_func_call_paren"></ins>(<ins class="dot" alt="sp_inside_fparen"></ins>argv<ins class="dot" alt="sp_before_square"></ins>[<ins class="dot" alt="sp_inside_square"></ins>1<ins class="dot" alt="sp_inside_square"></ins>]<ins class="dot" alt="sp_inside_fparen"></ins>)<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
     }<ins class="dot" alt="sp_brace_else"></ins>else<ins class="dot" alt="sp_else_brace"></ins>{<ins class="dot" alt="REMOVE"></ins>

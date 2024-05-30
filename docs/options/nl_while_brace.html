@@ -29,7 +29,7 @@ Add or remove newline between 'while' and '{'.
   <th class="optkey">nl_while_brace=add</th>
   <th class="optkey">nl_while_brace=remove</th>
   <th class="optkey">nl_while_brace=force</th>
-  <th class="optkey">nl<br/>nl_while_brace</th>
+  <th class="optkey">nl<br/>nl_while_brace=force</th>
 </tr><tr>
 <td class="code">void f1(){while(a>0)a++;}
 void f1(){while(a>0){a++;}}
@@ -73,10 +73,14 @@ void f1(){
 }
 </td>
 <td class="code">void f1(){
-    while(a>0) a++;<ins class="dot" alt="nl_after_semicolon"></ins>
+    while(a>0)
+        a++;<ins class="dot" alt="nl_after_semicolon"></ins>
 }
 void f1(){
-    while(a>0){a++;<ins class="dot" alt="nl_after_semicolon"></ins>}
+    while(a>0)
+    {
+        a++;<ins class="dot" alt="nl_after_semicolon"></ins>
+    }
 }</td>
 </tr></table>
 &nbsp;

@@ -29,7 +29,7 @@ Add or remove newline between 'return' and the return expression.
   <th class="optkey">nl_return_expr=add</th>
   <th class="optkey">nl_return_expr=remove</th>
   <th class="optkey">nl_return_expr=force</th>
-  <th class="optkey">nl<br/>nl_return_expr</th>
+  <th class="optkey">nl<br/>nl_return_expr=force</th>
 </tr><tr>
 <td class="code">void f(){return;}
 int f(){return a+b;}
@@ -83,10 +83,12 @@ int f(){
     return;<ins class="dot" alt="nl_after_semicolon"></ins>
 }
 int f(){
-    return a+b;<ins class="dot" alt="nl_after_semicolon"></ins>
+    return
+        a+b;<ins class="dot" alt="nl_after_semicolon"></ins>
 }
 int f(){
-    return(a+b);<ins class="dot" alt="nl_after_semicolon"></ins>
+    return
+        (a+b);<ins class="dot" alt="nl_after_semicolon"></ins>
 }</td>
 </tr></table>
 &nbsp;

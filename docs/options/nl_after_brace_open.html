@@ -27,7 +27,7 @@ Whether to add a newline after '{'.
   <th class="optkey">raw CPP code</th>
   <th class="optkey">nl_after_brace_open=false</th>
   <th class="optkey">nl_after_brace_open=true</th>
-  <th class="optkey">nl<br/>nl_after_brace_open</th>
+  <th class="optkey">nl<br/>nl_after_brace_open=true</th>
 </tr><tr>
 <td class="code">int f(int a){ a++;
     while (a) { g(a); }
@@ -64,8 +64,14 @@ int g(a) {
 </td>
 <td class="code">int f(int a){
     a++;<ins class="dot" alt="nl_after_semicolon"></ins>
-    while (a) { g(a);<ins class="dot" alt="nl_after_semicolon"></ins>}
-    { if(a) { a--;<ins class="dot" alt="nl_after_semicolon"></ins>} }
+    while (a) {
+        g(a);<ins class="dot" alt="nl_after_semicolon"></ins>
+    }
+    {
+        if(a) {
+            a--;<ins class="dot" alt="nl_after_semicolon"></ins>
+        }
+    }
 }
 
 int g(a) {

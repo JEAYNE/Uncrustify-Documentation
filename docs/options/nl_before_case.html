@@ -28,7 +28,7 @@ statement that follows a ';' or '}'.
   <th class="optkey">raw CPP code</th>
   <th class="optkey">nl_before_case=false</th>
   <th class="optkey">nl_before_case=true</th>
-  <th class="optkey">nl<br/>nl_before_case</th>
+  <th class="optkey">nl<br/>nl_before_case=true</th>
 </tr><tr>
 <td class="code">void f(){switch(a){case 1:a++;break;case -1:a--;case 123:a--;break;default:a=0;}}
 </td>
@@ -49,7 +49,15 @@ statement that follows a ';' or '}'.
 }
 </td>
 <td class="code">void f(){
-    switch(a){case 1: a++;<ins class="dot" alt="nl_after_semicolon"></ins>break;<ins class="dot" alt="nl_after_semicolon"></ins>case -1: a--;<ins class="dot" alt="nl_after_semicolon"></ins>case 123: a--;<ins class="dot" alt="nl_after_semicolon"></ins>break;<ins class="dot" alt="nl_after_semicolon"></ins>default: a=0;<ins class="dot" alt="nl_after_semicolon"></ins>}
+    switch(a){
+    case 1: a++;<ins class="dot" alt="nl_after_semicolon"></ins>break;<ins class="dot" alt="nl_after_semicolon"></ins>
+
+    case -1: a--;<ins class="dot" alt="nl_after_semicolon"></ins>
+
+    case 123: a--;<ins class="dot" alt="nl_after_semicolon"></ins>break;<ins class="dot" alt="nl_after_semicolon"></ins>
+
+    default: a=0;<ins class="dot" alt="nl_after_semicolon"></ins>
+    }
 }</td>
 </tr></table>
 &nbsp;

@@ -31,7 +31,7 @@ If set to ignore, use <a href="sp_assign.html">sp_assign</a>.
   <th class="optkey">sp_assign_default=add</th>
   <th class="optkey">sp_assign_default=remove</th>
   <th class="optkey">sp_assign_default=force</th>
-  <th class="optkey">space<br/>sp_assign_default</th>
+  <th class="optkey">space<br/>sp_assign_default=force</th>
 </tr><tr>
 <td class="code">void f(int a=3);
 void f(int a=   3);
@@ -53,10 +53,10 @@ void f(int a = 3);
 void f(int a = 3);
 void f(int a = 3);
 </td>
-<td class="code">void<ins class="dot" alt="sp_type_func | ADD"></ins>f<ins class="dot" alt="sp_func_proto_paren"></ins>(<ins class="dot" alt="sp_inside_fparen"></ins>int<ins class="dot" alt="sp_after_type"></ins>a<ins class="dot" alt="sp_assign"></ins>=<ins class="dot" alt="sp_assign"></ins>3<ins class="dot" alt="sp_inside_fparen"></ins>)<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
-void<ins class="dot" alt="sp_type_func | ADD"></ins>f<ins class="dot" alt="sp_func_proto_paren"></ins>(<ins class="dot" alt="sp_inside_fparen"></ins>int<ins class="dot" alt="sp_after_type"></ins>a<ins class="dot" alt="sp_assign"></ins>=<ins class="dot" alt="sp_assign"></ins>3<ins class="dot" alt="sp_inside_fparen"></ins>)<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
-void<ins class="dot" alt="sp_type_func | ADD"></ins>f<ins class="dot" alt="sp_func_proto_paren"></ins>(<ins class="dot" alt="sp_inside_fparen"></ins>int<ins class="dot" alt="sp_after_type"></ins>a<ins class="dot" alt="sp_assign"></ins>=<ins class="dot" alt="sp_assign"></ins>3<ins class="dot" alt="sp_inside_fparen"></ins>)<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
-void<ins class="dot" alt="sp_type_func | ADD"></ins>f<ins class="dot" alt="sp_func_proto_paren"></ins>(<ins class="dot" alt="sp_inside_fparen"></ins>int<ins class="dot" alt="sp_after_type"></ins>a<ins class="dot" alt="sp_assign"></ins>=<ins class="dot" alt="sp_assign"></ins>3<ins class="dot" alt="sp_inside_fparen"></ins>)<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins></td>
+<td class="code">void<ins class="dot" alt="sp_type_func | ADD"></ins>f<ins class="dot" alt="sp_func_proto_paren"></ins>(<ins class="dot" alt="sp_inside_fparen"></ins>int<ins class="dot" alt="sp_after_type"></ins>a<ins class="space" alt="sp_assign_default"></ins>=<ins class="space" alt="sp_assign_default"></ins>3<ins class="dot" alt="sp_inside_fparen"></ins>)<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
+void<ins class="dot" alt="sp_type_func | ADD"></ins>f<ins class="dot" alt="sp_func_proto_paren"></ins>(<ins class="dot" alt="sp_inside_fparen"></ins>int<ins class="dot" alt="sp_after_type"></ins>a<ins class="space" alt="sp_assign_default"></ins>=<ins class="space" alt="sp_assign_default"></ins>3<ins class="dot" alt="sp_inside_fparen"></ins>)<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
+void<ins class="dot" alt="sp_type_func | ADD"></ins>f<ins class="dot" alt="sp_func_proto_paren"></ins>(<ins class="dot" alt="sp_inside_fparen"></ins>int<ins class="dot" alt="sp_after_type"></ins>a<ins class="space" alt="sp_assign_default"></ins>=<ins class="space" alt="sp_assign_default"></ins>3<ins class="dot" alt="sp_inside_fparen"></ins>)<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
+void<ins class="dot" alt="sp_type_func | ADD"></ins>f<ins class="dot" alt="sp_func_proto_paren"></ins>(<ins class="dot" alt="sp_inside_fparen"></ins>int<ins class="dot" alt="sp_after_type"></ins>a<ins class="space" alt="sp_assign_default"></ins>=<ins class="space" alt="sp_assign_default"></ins>3<ins class="dot" alt="sp_inside_fparen"></ins>)<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins></td>
 </tr></table>
 &nbsp;
 </div>
@@ -70,7 +70,7 @@ void<ins class="dot" alt="sp_type_func | ADD"></ins>f<ins class="dot" alt="sp_fu
   <th class="optkey">sp_assign_default=ignore<br/>sp_assign=add</th>
   <th class="optkey">sp_assign_default=ignore<br/>sp_assign=remove</th>
   <th class="optkey">sp_assign_default=ignore<br/>sp_assign=force</th>
-  <th class="optkey">space<br/>sp_assign</th>
+  <th class="optkey">space<br/>sp_assign_default=ignore<br/>sp_assign=force</th>
 </tr><tr>
 <td class="code">void f(int a=3);
 void f(int a=   3);

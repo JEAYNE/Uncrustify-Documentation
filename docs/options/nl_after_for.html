@@ -27,7 +27,7 @@ Add or remove blank line after 'for' statement.
   <th class="optkey">raw CPP code</th>
   <th class="optkey">nl_after_for=false</th>
   <th class="optkey">nl_after_for=true</th>
-  <th class="optkey">nl<br/>nl_after_for</th>
+  <th class="optkey">nl<br/>nl_after_for=true</th>
 </tr><tr>
 <td class="code">void f(int a){
     for (int i=0; i&lt;a; i++){
@@ -74,9 +74,11 @@ Add or remove blank line after 'for' statement.
     for (int i=0;<ins class="dot" alt="nl_after_semicolon"></ins>i<a;<ins class="dot" alt="nl_after_semicolon"></ins>i++){
         g(i);<ins class="dot" alt="nl_after_semicolon"></ins>
     }
+
     g(a);<ins class="dot" alt="nl_after_semicolon"></ins>
     for(int i=0;<ins class="dot" alt="nl_after_semicolon"></ins>i<a;<ins class="dot" alt="nl_after_semicolon"></ins>i++)
         g(i);<ins class="dot" alt="nl_after_semicolon"></ins>
+
     g(a);<ins class="dot" alt="nl_after_semicolon"></ins>
     for(int i=0;<ins class="dot" alt="nl_after_semicolon"></ins>i<a;<ins class="dot" alt="nl_after_semicolon"></ins>i++){
         g(i);<ins class="dot" alt="nl_after_semicolon"></ins>

@@ -31,7 +31,7 @@ might be modified by <a href="nl_func_leave_one_liners.html">nl_func_leave_one_l
   <th class="optkey">nl_func_type_name=add</th>
   <th class="optkey">nl_func_type_name=remove</th>
   <th class="optkey">nl_func_type_name=force</th>
-  <th class="optkey">nl<br/>nl_func_type_name</th>
+  <th class="optkey">nl<br/>nl_func_type_name=force</th>
 </tr><tr>
 <td class="code">/*-- this is the default sample --*/
 int main(int argc, char** argv){
@@ -96,7 +96,8 @@ main(int argc, char** argv){
 }
 </td>
 <td class="code">/*-- this is the default sample --*/
-int main(int argc, char** argv){
+int
+main(int argc, char** argv){
     int n = 0;<ins class="dot" alt="nl_after_semicolon"></ins>
     if(arg>=1){
         printf("Hello %s!\n", argv[1]);<ins class="dot" alt="nl_after_semicolon"></ins>

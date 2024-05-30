@@ -17,7 +17,7 @@
   | <a href="index_default.html">Default</a>
   | <a href="index_linked.html">Linked</a>
   | <a href="index_tag.html">Tag</a>
-  <p>Uncrustify version d5b8f8d3 &nbsp; by <font color="red">keyword</font></p>
+  <p>Uncrustify version 0.79.0_f &nbsp; by <font color="red">keyword</font></p>
   <p><i>Each option appears several times in this index.</i></p>
   <dl>
     <dt id="access"><b><a href="#access">access:</a></b></dt>
@@ -260,6 +260,7 @@
       <dd><a href="options/nl_func_def_args.html" target="option" style="text-decoration: none;">nl_func_def_args</a></dd>
       <dd><a href="options/nl_func_def_args_multi_line.html" target="option" style="text-decoration: none;">nl_func_def_args_multi_line</a></dd>
       <dd><a href="options/nl_oc_msg_args.html" target="option" style="text-decoration: none;">nl_oc_msg_args</a></dd>
+      <dd><a href="options/nl_oc_msg_args_finish_multi_line.html" target="option" style="text-decoration: none;">nl_oc_msg_args_finish_multi_line</a></dd>
       <dd><a href="options/nl_oc_msg_args_max_code_width.html" target="option" style="text-decoration: none;">nl_oc_msg_args_max_code_width</a></dd>
       <dd><a href="options/nl_oc_msg_args_min_params.html" target="option" style="text-decoration: none;">nl_oc_msg_args_min_params</a></dd>
       <dd><a href="options/nl_template_args.html" target="option" style="text-decoration: none;">nl_template_args</a></dd>
@@ -306,8 +307,6 @@
     <dt id="attribute"><b><a href="#attribute">attribute:</a></b></dt>
       <dd><a href="options/align_var_def_attribute.html" target="option" style="text-decoration: none;">align_var_def_attribute</a></dd>
       <dd><a href="options/sp_attribute_paren.html" target="option" style="text-decoration: none;">sp_attribute_paren</a></dd>
-    <dt id="balance"><b><a href="#balance">balance:</a></b></dt>
-      <dd><a href="options/sp_balance_nested_parens.html" target="option" style="text-decoration: none;">sp_balance_nested_parens</a></dd>
     <dt id="before"><b><a href="#before">before:</a></b></dt>
       <dd><a href="options/cmt_insert_before_ctor_dtor.html" target="option" style="text-decoration: none;">cmt_insert_before_ctor_dtor</a></dd>
       <dd><a href="options/cmt_insert_before_inlines.html" target="option" style="text-decoration: none;">cmt_insert_before_inlines</a> !</dd>
@@ -1032,6 +1031,7 @@
       <dd><a href="options/debug_decode_the_flags.html" target="option" style="text-decoration: none;">debug_decode_the_flags</a></dd>
       <dd><a href="options/debug_line_number_to_protocol.html" target="option" style="text-decoration: none;">debug_line_number_to_protocol</a></dd>
       <dd><a href="options/debug_max_number_of_loops.html" target="option" style="text-decoration: none;">debug_max_number_of_loops</a></dd>
+      <dd><a href="options/debug_print_version.html" target="option" style="text-decoration: none;">debug_print_version</a></dd>
       <dd><a href="options/debug_sort_the_tracks.html" target="option" style="text-decoration: none;">debug_sort_the_tracks</a> !</dd>
       <dd><a href="options/debug_timeout.html" target="option" style="text-decoration: none;">debug_timeout</a></dd>
       <dd><a href="options/debug_truncate.html" target="option" style="text-decoration: none;">debug_truncate</a></dd>
@@ -1313,6 +1313,8 @@
       <dd><a href="options/nl_finally_brace.html" target="option" style="text-decoration: none;">nl_finally_brace</a></dd>
       <dd><a href="options/sp_brace_finally.html" target="option" style="text-decoration: none;">sp_brace_finally</a></dd>
       <dd><a href="options/sp_finally_brace.html" target="option" style="text-decoration: none;">sp_finally_brace</a></dd>
+    <dt id="finish"><b><a href="#finish">finish:</a></b></dt>
+      <dd><a href="options/nl_oc_msg_args_finish_multi_line.html" target="option" style="text-decoration: none;">nl_oc_msg_args_finish_multi_line</a></dd>
     <dt id="first"><b><a href="#first">first:</a></b></dt>
       <dd><a href="options/align_oc_msg_colon_first.html" target="option" style="text-decoration: none;">align_oc_msg_colon_first</a></dd>
       <dd><a href="options/cmt_multi_first_len_minimum.html" target="option" style="text-decoration: none;">cmt_multi_first_len_minimum</a> !</dd>
@@ -1954,6 +1956,7 @@
       <dd><a href="options/nl_multi_line_define.html" target="option" style="text-decoration: none;">nl_multi_line_define</a></dd>
       <dd><a href="options/nl_multi_line_sparen_close.html" target="option" style="text-decoration: none;">nl_multi_line_sparen_close</a></dd>
       <dd><a href="options/nl_multi_line_sparen_open.html" target="option" style="text-decoration: none;">nl_multi_line_sparen_open</a></dd>
+      <dd><a href="options/nl_oc_msg_args_finish_multi_line.html" target="option" style="text-decoration: none;">nl_oc_msg_args_finish_multi_line</a></dd>
     <dt id="liner"><b><a href="#liner">liner:</a></b></dt>
       <dd><a href="options/nl_after_func_body_one_liner.html" target="option" style="text-decoration: none;">nl_after_func_body_one_liner</a></dd>
       <dd><a href="options/nl_class_leave_one_liner_groups.html" target="option" style="text-decoration: none;">nl_class_leave_one_liner_groups</a></dd>
@@ -2141,6 +2144,7 @@
       <dd><a href="options/indent_oc_msg_colon.html" target="option" style="text-decoration: none;">indent_oc_msg_colon</a></dd>
       <dd><a href="options/indent_oc_msg_prioritize_first_colon.html" target="option" style="text-decoration: none;">indent_oc_msg_prioritize_first_colon</a> !</dd>
       <dd><a href="options/nl_oc_msg_args.html" target="option" style="text-decoration: none;">nl_oc_msg_args</a></dd>
+      <dd><a href="options/nl_oc_msg_args_finish_multi_line.html" target="option" style="text-decoration: none;">nl_oc_msg_args_finish_multi_line</a></dd>
       <dd><a href="options/nl_oc_msg_args_max_code_width.html" target="option" style="text-decoration: none;">nl_oc_msg_args_max_code_width</a></dd>
       <dd><a href="options/nl_oc_msg_args_min_params.html" target="option" style="text-decoration: none;">nl_oc_msg_args_min_params</a></dd>
       <dd><a href="options/nl_oc_msg_leave_one_liner.html" target="option" style="text-decoration: none;">nl_oc_msg_leave_one_liner</a></dd>
@@ -2165,6 +2169,7 @@
       <dd><a href="options/nl_multi_line_define.html" target="option" style="text-decoration: none;">nl_multi_line_define</a></dd>
       <dd><a href="options/nl_multi_line_sparen_close.html" target="option" style="text-decoration: none;">nl_multi_line_sparen_close</a></dd>
       <dd><a href="options/nl_multi_line_sparen_open.html" target="option" style="text-decoration: none;">nl_multi_line_sparen_open</a></dd>
+      <dd><a href="options/nl_oc_msg_args_finish_multi_line.html" target="option" style="text-decoration: none;">nl_oc_msg_args_finish_multi_line</a></dd>
     <dt id="multiline"><b><a href="#multiline">multiline:</a></b></dt>
       <dd><a href="options/nl_after_multiline_comment.html" target="option" style="text-decoration: none;">nl_after_multiline_comment</a></dd>
       <dd><a href="options/pp_multiline_define_body_indent.html" target="option" style="text-decoration: none;">pp_multiline_define_body_indent</a> !</dd>
@@ -2185,8 +2190,6 @@
       <dd><a href="options/nl_inside_namespace.html" target="option" style="text-decoration: none;">nl_inside_namespace</a></dd>
       <dd><a href="options/nl_namespace_brace.html" target="option" style="text-decoration: none;">nl_namespace_brace</a></dd>
       <dd><a href="options/nl_namespace_two_to_one_liner.html" target="option" style="text-decoration: none;">nl_namespace_two_to_one_liner</a></dd>
-    <dt id="nested"><b><a href="#nested">nested:</a></b></dt>
-      <dd><a href="options/sp_balance_nested_parens.html" target="option" style="text-decoration: none;">sp_balance_nested_parens</a></dd>
     <dt id="new"><b><a href="#new">new:</a></b></dt>
       <dd><a href="options/indent_off_after_return_new.html" target="option" style="text-decoration: none;">indent_off_after_return_new</a></dd>
       <dd><a href="options/sp_after_new.html" target="option" style="text-decoration: none;">sp_after_new</a></dd>
@@ -2395,6 +2398,7 @@
       <dd><a href="options/nl_oc_interface_brace.html" target="option" style="text-decoration: none;">nl_oc_interface_brace</a></dd>
       <dd><a href="options/nl_oc_mdef_brace.html" target="option" style="text-decoration: none;">nl_oc_mdef_brace</a></dd>
       <dd><a href="options/nl_oc_msg_args.html" target="option" style="text-decoration: none;">nl_oc_msg_args</a></dd>
+      <dd><a href="options/nl_oc_msg_args_finish_multi_line.html" target="option" style="text-decoration: none;">nl_oc_msg_args_finish_multi_line</a></dd>
       <dd><a href="options/nl_oc_msg_args_max_code_width.html" target="option" style="text-decoration: none;">nl_oc_msg_args_max_code_width</a></dd>
       <dd><a href="options/nl_oc_msg_args_min_params.html" target="option" style="text-decoration: none;">nl_oc_msg_args_min_params</a></dd>
       <dd><a href="options/nl_oc_msg_leave_one_liner.html" target="option" style="text-decoration: none;">nl_oc_msg_leave_one_liner</a></dd>
@@ -2509,6 +2513,7 @@
       <dd><a href="options/nl_oc_interface_brace.html" target="option" style="text-decoration: none;">nl_oc_interface_brace</a></dd>
       <dd><a href="options/nl_oc_mdef_brace.html" target="option" style="text-decoration: none;">nl_oc_mdef_brace</a></dd>
       <dd><a href="options/nl_oc_msg_args.html" target="option" style="text-decoration: none;">nl_oc_msg_args</a></dd>
+      <dd><a href="options/nl_oc_msg_args_finish_multi_line.html" target="option" style="text-decoration: none;">nl_oc_msg_args_finish_multi_line</a></dd>
       <dd><a href="options/nl_oc_msg_args_max_code_width.html" target="option" style="text-decoration: none;">nl_oc_msg_args_max_code_width</a></dd>
       <dd><a href="options/nl_oc_msg_args_min_params.html" target="option" style="text-decoration: none;">nl_oc_msg_args_min_params</a></dd>
       <dd><a href="options/nl_oc_msg_leave_one_liner.html" target="option" style="text-decoration: none;">nl_oc_msg_leave_one_liner</a></dd>
@@ -2728,7 +2733,6 @@
       <dd><a href="options/sp_while_paren_open.html" target="option" style="text-decoration: none;">sp_while_paren_open</a></dd>
     <dt id="parens"><b><a href="#parens">parens:</a></b></dt>
       <dd><a href="options/sp_after_oc_at_sel_parens.html" target="option" style="text-decoration: none;">sp_after_oc_at_sel_parens</a></dd>
-      <dd><a href="options/sp_balance_nested_parens.html" target="option" style="text-decoration: none;">sp_balance_nested_parens</a></dd>
       <dd><a href="options/sp_inside_oc_at_sel_parens.html" target="option" style="text-decoration: none;">sp_inside_oc_at_sel_parens</a></dd>
     <dt id="parent"><b><a href="#parent">parent:</a></b></dt>
       <dd><a href="options/indent_brace_parent.html" target="option" style="text-decoration: none;">indent_brace_parent</a></dd>
@@ -2787,6 +2791,8 @@
       <dd><a href="options/cmt_insert_before_preproc.html" target="option" style="text-decoration: none;">cmt_insert_before_preproc</a></dd>
     <dt id="preserve"><b><a href="#preserve">preserve:</a></b></dt>
       <dd><a href="options/indent_preserve_sql.html" target="option" style="text-decoration: none;">indent_preserve_sql</a></dd>
+    <dt id="print"><b><a href="#print">print:</a></b></dt>
+      <dd><a href="options/debug_print_version.html" target="option" style="text-decoration: none;">debug_print_version</a></dd>
     <dt id="prioritize"><b><a href="#prioritize">prioritize:</a></b></dt>
       <dd><a href="options/indent_oc_msg_prioritize_first_colon.html" target="option" style="text-decoration: none;">indent_oc_msg_prioritize_first_colon</a> !</dd>
       <dd><a href="options/mod_sort_incl_import_prioritize_angle_over_quotes.html" target="option" style="text-decoration: none;">mod_sort_incl_import_prioritize_angle_over_quotes</a></dd>
@@ -3105,7 +3111,6 @@
       <dd><a href="options/sp_assign.html" target="option" style="text-decoration: none;">sp_assign</a> + ?</dd>
       <dd><a href="options/sp_assign_default.html" target="option" style="text-decoration: none;">sp_assign_default</a> +</dd>
       <dd><a href="options/sp_attribute_paren.html" target="option" style="text-decoration: none;">sp_attribute_paren</a></dd>
-      <dd><a href="options/sp_balance_nested_parens.html" target="option" style="text-decoration: none;">sp_balance_nested_parens</a></dd>
       <dd><a href="options/sp_before_angle.html" target="option" style="text-decoration: none;">sp_before_angle</a></dd>
       <dd><a href="options/sp_before_assign.html" target="option" style="text-decoration: none;">sp_before_assign</a> + ?</dd>
       <dd><a href="options/sp_before_bit_colon.html" target="option" style="text-decoration: none;">sp_before_bit_colon</a></dd>
@@ -3709,6 +3714,7 @@
     <dt id="verbatim"><b><a href="#verbatim">verbatim:</a></b></dt>
       <dd><a href="options/warn_level_tabs_found_in_verbatim_string_literals.html" target="option" style="text-decoration: none;">warn_level_tabs_found_in_verbatim_string_literals</a> !</dd>
     <dt id="version"><b><a href="#version">version:</a></b></dt>
+      <dd><a href="options/debug_print_version.html" target="option" style="text-decoration: none;">debug_print_version</a></dd>
       <dd><a href="options/nl_version_brace.html" target="option" style="text-decoration: none;">nl_version_brace</a></dd>
       <dd><a href="options/sp_version_paren.html" target="option" style="text-decoration: none;">sp_version_paren</a></dd>
     <dt id="warn"><b><a href="#warn">warn:</a></b></dt>

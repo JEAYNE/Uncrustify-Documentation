@@ -29,7 +29,7 @@ Add or remove newline between 'do' and '{'.
   <th class="optkey">nl_do_brace=add</th>
   <th class="optkey">nl_do_brace=remove</th>
   <th class="optkey">nl_do_brace=force</th>
-  <th class="optkey">nl<br/>nl_do_brace</th>
+  <th class="optkey">nl<br/>nl_do_brace=force</th>
 </tr><tr>
 <td class="code">void f(){do a++;while(a>0);}
 void f(){do{a++;}while(a>0);}
@@ -75,10 +75,15 @@ void f(){
 }
 </td>
 <td class="code">void f(){
-    do<ins class="dot" alt="nl_define_macro"></ins>a++;<ins class="dot" alt="nl_after_semicolon"></ins>while(a>0);<ins class="dot" alt="nl_after_semicolon"></ins>
+    do<ins class="dot" alt="nl_define_macro"></ins>
+        a++;<ins class="dot" alt="nl_after_semicolon"></ins>
+    while(a>0);<ins class="dot" alt="nl_after_semicolon"></ins>
 }
 void f(){
-    do<ins class="dot" alt="nl_define_macro"></ins>{a++;<ins class="dot" alt="nl_after_semicolon"></ins>}while(a>0);<ins class="dot" alt="nl_after_semicolon"></ins>
+    do<ins class="dot" alt="nl_define_macro"></ins>
+    {
+        a++;<ins class="dot" alt="nl_after_semicolon"></ins>
+    }while(a>0);<ins class="dot" alt="nl_after_semicolon"></ins>
 }</td>
 </tr></table>
 &nbsp;

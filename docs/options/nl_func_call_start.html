@@ -30,7 +30,7 @@ has preference over <a href="nl_func_call_start_multi_line.html">nl_func_call_st
   <th class="optkey">nl_func_call_start=add</th>
   <th class="optkey">nl_func_call_start=remove</th>
   <th class="optkey">nl_func_call_start=force</th>
-  <th class="optkey">nl<br/>nl_func_call_start</th>
+  <th class="optkey">nl<br/>nl_func_call_start=force</th>
 </tr><tr>
 <td class="code">/*-- this is the default sample --*/
 int main(int argc, char** argv){
@@ -102,10 +102,13 @@ int main(int argc, char** argv){
 int main(int argc, char** argv){
     int n = 0;<ins class="dot" alt="nl_after_semicolon"></ins>
     if(arg>=1){
-        printf("Hello %s!\n", argv[1]);<ins class="dot" alt="nl_after_semicolon"></ins>
-        n=strlen(argv[1]);<ins class="dot" alt="nl_after_semicolon"></ins>
+        printf(
+            "Hello %s!\n", argv[1]);<ins class="dot" alt="nl_after_semicolon"></ins>
+        n=strlen(
+            argv[1]);<ins class="dot" alt="nl_after_semicolon"></ins>
     }else<ins class="dot" alt="nl_define_macro"></ins>{
-        puts("Hello world!");<ins class="dot" alt="nl_after_semicolon"></ins>
+        puts(
+            "Hello world!");<ins class="dot" alt="nl_after_semicolon"></ins>
     }
     return n;<ins class="dot" alt="nl_after_semicolon"></ins>
 }</td>

@@ -31,7 +31,7 @@ f(a,<ins class="sp" alt="sp_after_comma"></ins>b);
   <th class="optkey">sp_after_comma=add<br/>sp_before_comma=ignore</th>
   <th class="optkey">sp_after_comma=remove<br/>sp_before_comma=ignore</th>
   <th class="optkey">sp_after_comma=force<br/>sp_before_comma=ignore</th>
-  <th class="optkey">space<br/>sp_after_comma</th>
+  <th class="optkey">space<br/>sp_after_comma=force<br/>sp_before_comma=ignore</th>
 </tr><tr>
 <td class="code">int a,b,c;
 int a   ,   b   ,   c;
@@ -78,14 +78,14 @@ int f(a   , b   , c);
 printf("fmt", a, b, c);
 printf("fmt"   , a   , b);
 </td>
-<td class="code">int<ins class="dot" alt="sp_after_type"></ins>a<ins class="dot" alt="sp_before_comma"></ins>,<ins class="space" alt="sp_after_comma"></ins>b<ins class="dot" alt="sp_before_comma"></ins>,<ins class="space" alt="sp_after_comma"></ins>c<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
-int<ins class="dot" alt="sp_after_type"></ins>a<ins class="dot" alt="sp_before_comma"></ins>,<ins class="space" alt="sp_after_comma"></ins>b<ins class="dot" alt="sp_before_comma"></ins>,<ins class="space" alt="sp_after_comma"></ins>c<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
+<td class="code">int<ins class="dot" alt="sp_after_type"></ins>a<ins class="space" alt="sp_before_comma"></ins>,<ins class="space" alt="sp_after_comma"></ins>b<ins class="space" alt="sp_before_comma"></ins>,<ins class="space" alt="sp_after_comma"></ins>c<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
+int<ins class="dot" alt="sp_after_type"></ins>a<ins class="space" alt="sp_before_comma"></ins>,<ins class="space" alt="sp_after_comma"></ins>b<ins class="space" alt="sp_before_comma"></ins>,<ins class="space" alt="sp_after_comma"></ins>c<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
 
-int<ins class="dot" alt="sp_after_type"></ins>f<ins class="dot" alt="sp_func_call_paren"></ins>(<ins class="dot" alt="sp_inside_fparen"></ins>a<ins class="dot" alt="sp_before_comma"></ins>,<ins class="space" alt="sp_after_comma"></ins>b<ins class="dot" alt="sp_before_comma"></ins>,<ins class="space" alt="sp_after_comma"></ins>c<ins class="dot" alt="sp_inside_fparen"></ins>)<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
-int<ins class="dot" alt="sp_after_type"></ins>f<ins class="dot" alt="sp_func_call_paren"></ins>(<ins class="dot" alt="sp_inside_fparen"></ins>a<ins class="dot" alt="sp_before_comma"></ins>,<ins class="space" alt="sp_after_comma"></ins>b<ins class="dot" alt="sp_before_comma"></ins>,<ins class="space" alt="sp_after_comma"></ins>c<ins class="dot" alt="sp_inside_fparen"></ins>)<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
+int<ins class="dot" alt="sp_after_type"></ins>f<ins class="dot" alt="sp_func_call_paren"></ins>(<ins class="dot" alt="sp_inside_fparen"></ins>a<ins class="space" alt="sp_before_comma"></ins>,<ins class="space" alt="sp_after_comma"></ins>b<ins class="space" alt="sp_before_comma"></ins>,<ins class="space" alt="sp_after_comma"></ins>c<ins class="dot" alt="sp_inside_fparen"></ins>)<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
+int<ins class="dot" alt="sp_after_type"></ins>f<ins class="dot" alt="sp_func_call_paren"></ins>(<ins class="dot" alt="sp_inside_fparen"></ins>a<ins class="space" alt="sp_before_comma"></ins>,<ins class="space" alt="sp_after_comma"></ins>b<ins class="space" alt="sp_before_comma"></ins>,<ins class="space" alt="sp_after_comma"></ins>c<ins class="dot" alt="sp_inside_fparen"></ins>)<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
 
-printf<ins class="dot" alt="sp_func_call_paren"></ins>(<ins class="dot" alt="sp_inside_fparen"></ins>"fmt"<ins class="dot" alt="sp_before_comma"></ins>,<ins class="space" alt="sp_after_comma"></ins>a<ins class="dot" alt="sp_before_comma"></ins>,<ins class="space" alt="sp_after_comma"></ins>b<ins class="dot" alt="sp_before_comma"></ins>,<ins class="space" alt="sp_after_comma"></ins>c<ins class="dot" alt="sp_inside_fparen"></ins>)<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
-printf<ins class="dot" alt="sp_func_call_paren"></ins>(<ins class="dot" alt="sp_inside_fparen"></ins>"fmt"<ins class="dot" alt="sp_before_comma"></ins>,<ins class="space" alt="sp_after_comma"></ins>a<ins class="dot" alt="sp_before_comma"></ins>,<ins class="space" alt="sp_after_comma"></ins>b<ins class="dot" alt="sp_inside_fparen"></ins>)<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins></td>
+printf<ins class="dot" alt="sp_func_call_paren"></ins>(<ins class="dot" alt="sp_inside_fparen"></ins>"fmt"<ins class="space" alt="sp_before_comma"></ins>,<ins class="space" alt="sp_after_comma"></ins>a<ins class="space" alt="sp_before_comma"></ins>,<ins class="space" alt="sp_after_comma"></ins>b<ins class="space" alt="sp_before_comma"></ins>,<ins class="space" alt="sp_after_comma"></ins>c<ins class="dot" alt="sp_inside_fparen"></ins>)<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins>
+printf<ins class="dot" alt="sp_func_call_paren"></ins>(<ins class="dot" alt="sp_inside_fparen"></ins>"fmt"<ins class="space" alt="sp_before_comma"></ins>,<ins class="space" alt="sp_after_comma"></ins>a<ins class="space" alt="sp_before_comma"></ins>,<ins class="space" alt="sp_after_comma"></ins>b<ins class="dot" alt="sp_inside_fparen"></ins>)<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins></td>
 </tr></table>
 &nbsp;
 </div>

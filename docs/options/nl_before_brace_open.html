@@ -27,7 +27,7 @@ Whether to add a newline before '{'.
   <th class="optkey">raw CPP code</th>
   <th class="optkey">nl_before_brace_open=false</th>
   <th class="optkey">nl_before_brace_open=true</th>
-  <th class="optkey">nl<br/>nl_before_brace_open</th>
+  <th class="optkey">nl<br/>nl_before_brace_open=true</th>
 </tr><tr>
 <td class="code">/*-- this is the default sample --*/
 int main(int argc, char** argv){
@@ -69,12 +69,15 @@ int main(int argc, char** argv)
 }
 </td>
 <td class="code">/*-- this is the default sample --*/
-int main(int argc, char** argv){
+int main(int argc, char** argv)
+{
     int n = 0;<ins class="dot" alt="nl_after_semicolon"></ins>
-    if(arg>=1){
+    if(arg>=1)
+    {
         printf("Hello %s!\n", argv[1]);<ins class="dot" alt="nl_after_semicolon"></ins>
         n=strlen(argv[1]);<ins class="dot" alt="nl_after_semicolon"></ins>
-    }else<ins class="dot" alt="nl_define_macro"></ins>{
+    }else<ins class="dot" alt="nl_define_macro"></ins>
+    {
         puts("Hello world!");<ins class="dot" alt="nl_after_semicolon"></ins>
     }
     return n;<ins class="dot" alt="nl_after_semicolon"></ins>

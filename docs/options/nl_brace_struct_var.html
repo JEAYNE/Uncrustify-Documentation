@@ -31,7 +31,7 @@ structures. If set to ignore, uses <a href="nl_after_brace_close.html">nl_after_
   <th class="optkey">nl_brace_struct_var=add</th>
   <th class="optkey">nl_brace_struct_var=remove</th>
   <th class="optkey">nl_brace_struct_var=force</th>
-  <th class="optkey">nl<br/>nl_brace_struct_var</th>
+  <th class="optkey">nl<br/>nl_brace_struct_var=force</th>
 </tr><tr>
 <td class="code">struct S{int a;long l;float f;char c[8]}S;
 
@@ -57,9 +57,11 @@ S;
 union U {int a; long l; float f; char c[8]}
 U;
 </td>
-<td class="code">struct S {int a;<ins class="dot" alt="nl_after_semicolon"></ins>long l;<ins class="dot" alt="nl_after_semicolon"></ins>float f;<ins class="dot" alt="nl_after_semicolon"></ins>char c[8]} S;<ins class="dot" alt="nl_after_semicolon"></ins>
+<td class="code">struct S {int a;<ins class="dot" alt="nl_after_semicolon"></ins>long l;<ins class="dot" alt="nl_after_semicolon"></ins>float f;<ins class="dot" alt="nl_after_semicolon"></ins>char c[8]}
+S;<ins class="dot" alt="nl_after_semicolon"></ins>
 
-union U {int a;<ins class="dot" alt="nl_after_semicolon"></ins>long l;<ins class="dot" alt="nl_after_semicolon"></ins>float f;<ins class="dot" alt="nl_after_semicolon"></ins>char c[8]} U;<ins class="dot" alt="nl_after_semicolon"></ins></td>
+union U {int a;<ins class="dot" alt="nl_after_semicolon"></ins>long l;<ins class="dot" alt="nl_after_semicolon"></ins>float f;<ins class="dot" alt="nl_after_semicolon"></ins>char c[8]}
+U;<ins class="dot" alt="nl_after_semicolon"></ins></td>
 </tr></table>
 &nbsp;
 </div>

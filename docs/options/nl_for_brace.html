@@ -29,7 +29,7 @@ Add or remove newline between 'for' and '{'.
   <th class="optkey">nl_for_brace=add</th>
   <th class="optkey">nl_for_brace=remove</th>
   <th class="optkey">nl_for_brace=force</th>
-  <th class="optkey">nl<br/>nl_for_brace</th>
+  <th class="optkey">nl<br/>nl_for_brace=force</th>
 </tr><tr>
 <td class="code">void f1(){for(i=0;i&lt;10;i++)a++;}
 void f2(){for(i=0;i&lt;10;i++){a++;}}
@@ -73,10 +73,14 @@ void f2(){
 }
 </td>
 <td class="code">void f1(){
-    for(i=0;<ins class="dot" alt="nl_after_semicolon"></ins>i<10;<ins class="dot" alt="nl_after_semicolon"></ins>i++) a++;<ins class="dot" alt="nl_after_semicolon"></ins>
+    for(i=0;<ins class="dot" alt="nl_after_semicolon"></ins>i<10;<ins class="dot" alt="nl_after_semicolon"></ins>i++)
+        a++;<ins class="dot" alt="nl_after_semicolon"></ins>
 }
 void f2(){
-    for(i=0;<ins class="dot" alt="nl_after_semicolon"></ins>i<10;<ins class="dot" alt="nl_after_semicolon"></ins>i++){a++;<ins class="dot" alt="nl_after_semicolon"></ins>}
+    for(i=0;<ins class="dot" alt="nl_after_semicolon"></ins>i<10;<ins class="dot" alt="nl_after_semicolon"></ins>i++)
+    {
+        a++;<ins class="dot" alt="nl_after_semicolon"></ins>
+    }
 }</td>
 </tr></table>
 &nbsp;

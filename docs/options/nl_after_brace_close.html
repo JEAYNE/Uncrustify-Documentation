@@ -28,7 +28,7 @@ necessary ';'.
   <th class="optkey">raw CPP code</th>
   <th class="optkey">nl_after_brace_close=false</th>
   <th class="optkey">nl_after_brace_close=true</th>
-  <th class="optkey">nl<br/>nl_after_brace_close</th>
+  <th class="optkey">nl<br/>nl_after_brace_close=true</th>
 </tr><tr>
 <td class="code">void f(int a){
     if ( a ) {
@@ -64,7 +64,8 @@ necessary ';'.
 <td class="code">void f(int a){
     if ( a ) {
         g();<ins class="dot" alt="nl_after_semicolon"></ins>
-    } else<ins class="dot" alt="nl_define_macro"></ins>{
+    }
+    else<ins class="dot" alt="nl_define_macro"></ins>{
         while ( a ) {
             a = h();<ins class="dot" alt="nl_after_semicolon"></ins>
         }

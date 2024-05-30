@@ -30,59 +30,47 @@ How to apply <a href="align_assign_span.html">align_assign_span</a> to function 
 <div class="hscroll">
 <table><tr>
   <th class="optkey">raw CPP code</th>
-  <th class="optkey">align_assign_decl_func=0<br/>align_assign_span=8</th>
-  <th class="optkey">align_assign_decl_func=1<br/>align_assign_span=8</th>
-  <th class="optkey">align_assign_decl_func=2<br/>align_assign_span=8</th>
+  <th class="optkey">align_assign_decl_func=0<br/>align_assign_span=3</th>
+  <th class="optkey">align_assign_decl_func=1<br/>align_assign_span=3</th>
+  <th class="optkey">align_assign_decl_func=2<br/>align_assign_span=3</th>
 </tr><tr>
-<td class="code">class foo {
-  public:
-    int id = 0;
-    virtual 
-    void foo() =0;
-  private:
-    int debugLevel =  2;
-    ~foo() =    default;
-    int done =3;
-}
+<td class="code">struct foo {
+    int id = 1;
+    virtual void f() = 0;
+    int debugLevel = 2;
+    ~foo() = default;
+    int done = 3;
+};
 </td>
-<td class="code">class foo {
-public:
-int id         = 0;
-virtual
-void foo() = 0;
-private:
-int debugLevel =  2;
-~foo()     =    default;
-int done       =3;
-}
+<td class="code">struct foo {
+    int id         = 1;
+    virtual void f() = 0;
+    int debugLevel = 2;
+    ~foo()           = default;
+    int done       = 3;
+};
 </td>
-<td class="code">class foo {
-public:
-int id         = 0;
-virtual
-void foo() = 0;
-private:
-int debugLevel =  2;
-~foo()     =    default;
-int done       =3;
-}
+<td class="code">struct foo {
+    int id         = 1;
+    virtual void f() = 0;
+    int debugLevel = 2;
+    ~foo()           = default;
+    int done       = 3;
+};
 </td>
-<td class="code">class foo {
-public:
-int id         = 0;
-virtual
-void foo() = 0;
-private:
-int debugLevel =  2;
-~foo() =    default;
-int done       =3;
-}
+<td class="code">struct foo {
+    int id         = 1;
+    virtual void f() = 0;
+    int debugLevel = 2;
+    ~foo() = default;
+    int done       = 3;
+};
 </td>
 </tr></table>
 &nbsp;
 </div>
 <h3 style="margin:0 auto;">Info</h3>
-<pre>  IMPORTANT: the default value is 0 but this default value modifie the code
+<pre>  IMPORTANT: the default value is 0 but this default value modifies the code
   BUG: the values 0 and 1 do the same thing; 0 is not working.
   Edited by JEAYNE
 </pre><hr>

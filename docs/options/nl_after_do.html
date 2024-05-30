@@ -27,7 +27,7 @@ Add or remove blank line after 'do/while' statement.
   <th class="optkey">raw CPP code</th>
   <th class="optkey">nl_after_do=false</th>
   <th class="optkey">nl_after_do=true</th>
-  <th class="optkey">nl<br/>nl_after_do</th>
+  <th class="optkey">nl<br/>nl_after_do=true</th>
 </tr><tr>
 <td class="code">void f(int a){
     do{
@@ -74,10 +74,12 @@ Add or remove blank line after 'do/while' statement.
     do<ins class="dot" alt="nl_define_macro"></ins>{
         g(a);<ins class="dot" alt="nl_after_semicolon"></ins>
     }while(a);<ins class="dot" alt="nl_after_semicolon"></ins>
+
     g(a);<ins class="dot" alt="nl_after_semicolon"></ins>
     do<ins class="dot" alt="nl_define_macro"></ins>
         g(i);<ins class="dot" alt="nl_after_semicolon"></ins>
     while(a);<ins class="dot" alt="nl_after_semicolon"></ins>
+
     do<ins class="dot" alt="nl_define_macro"></ins>{
         g(a);<ins class="dot" alt="nl_after_semicolon"></ins>
     }while(a);<ins class="dot" alt="nl_after_semicolon"></ins>

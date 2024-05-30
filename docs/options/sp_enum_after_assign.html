@@ -31,7 +31,7 @@ Overrides <a href="sp_enum_assign.html">sp_enum_assign</a>.
   <th class="optkey">sp_enum_after_assign=add</th>
   <th class="optkey">sp_enum_after_assign=remove</th>
   <th class="optkey">sp_enum_after_assign=force</th>
-  <th class="optkey">space<br/>sp_enum_after_assign</th>
+  <th class="optkey">space<br/>sp_enum_after_assign=force</th>
 </tr><tr>
 <td class="code">enum{A,B,C=-2,D,E};
 </td>
@@ -43,7 +43,7 @@ Overrides <a href="sp_enum_assign.html">sp_enum_assign</a>.
 </td>
 <td class="code">enum {A,B,C= -2,D,E};
 </td>
-<td class="code">enum<ins class="dot" alt="sp_enum_brace"></ins>{<ins class="dot" alt="sp_inside_braces_enum"></ins>A<ins class="dot" alt="sp_before_comma"></ins>,<ins class="dot" alt="sp_after_comma"></ins>B<ins class="dot" alt="sp_before_comma"></ins>,<ins class="dot" alt="sp_after_comma"></ins>C<ins class="dot" alt="sp_enum_assign"></ins>=<ins class="dot" alt="sp_enum_assign"></ins>-<ins class="dot" alt="sp_sign"></ins>2<ins class="dot" alt="sp_before_comma"></ins>,<ins class="dot" alt="sp_after_comma"></ins>D<ins class="dot" alt="sp_before_comma"></ins>,<ins class="dot" alt="sp_after_comma"></ins>E<ins class="dot" alt="sp_inside_braces_enum"></ins>}<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins></td>
+<td class="code">enum<ins class="dot" alt="sp_enum_brace"></ins>{<ins class="dot" alt="sp_inside_braces_enum"></ins>A<ins class="dot" alt="sp_before_comma"></ins>,<ins class="dot" alt="sp_after_comma"></ins>B<ins class="dot" alt="sp_before_comma"></ins>,<ins class="dot" alt="sp_after_comma"></ins>C<ins class="dot" alt="sp_enum_assign"></ins>=<ins class="space" alt="sp_enum_after_assign"></ins>-<ins class="dot" alt="sp_sign"></ins>2<ins class="dot" alt="sp_before_comma"></ins>,<ins class="dot" alt="sp_after_comma"></ins>D<ins class="dot" alt="sp_before_comma"></ins>,<ins class="dot" alt="sp_after_comma"></ins>E<ins class="dot" alt="sp_inside_braces_enum"></ins>}<ins class="dot" alt="sp_before_semi"></ins>;<ins class="dot" alt="REMOVE"></ins></td>
 </tr></table>
 &nbsp;
 </div>
